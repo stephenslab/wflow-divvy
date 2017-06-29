@@ -5,10 +5,8 @@ exclude: ["include"]
 navbar:
   title: Divvy data exploration
   left:
-    - text: "Home"
+    - text: "Overview"
       href: index.html
-    - text: "About"
-      href: about.html
     - text: "License"
       href: license.html
   right:
