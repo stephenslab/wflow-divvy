@@ -311,57 +311,66 @@ div.tocify {
 <p><strong>Last updated:</strong> 2017-06-29</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 879d558</p>
-<p>Begin by loading packages and some useful function definitions into the R environment.</p>
+<p><strong>Code version:</strong> 5c4fd93</p>
+<p>I begin by loading packages and some useful function definitions into the R environment.</p>
 <pre class="r"><code>library(data.table)
 source(&quot;../code/functions.R&quot;)</code></pre>
-<div id="read-the-data" class="section level2">
-<h2>Read the data</h2>
-<p>I wrote a function, <code>read.divvy.data</code> to read the trip and station data from the CSV files. It uses the <code>fread</code> function from the <code>data.table</code> package which is much faster than the <code>read.table</code> function. It also take a few additional steps to prepare the data so that they are in a format that are easier to work with in R.</p>
-<pre class="r"><code>divvy &lt;- read.divvy.data()</code></pre>
-<pre><code>Reading station data from ../data/Divvy_Stations_2016_Q4.csv.
-Reading trip data from ../data/Divvy_Trips_2016_Q1.csv.
-Reading trip data from ../data/Divvy_Trips_2016_04.csv.
-Reading trip data from ../data/Divvy_Trips_2016_05.csv.
-Reading trip data from ../data/Divvy_Trips_2016_06.csv.
-Reading trip data from ../data/Divvy_Trips_2016_Q3.csv.
-Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.
-Preparing Divvy data for analysis in R.</code></pre>
 <p><br></p>
-<pre class="r"><code>dim(divvy$stations)</code></pre>
-<pre><code>[1] 581   5</code></pre>
-<pre class="r"><code>names(divvy$stations)</code></pre>
-<pre><code>[1] &quot;name&quot;        &quot;latitude&quot;    &quot;longitude&quot;   &quot;dpcapacity&quot;  &quot;online_date&quot;</code></pre>
-<pre class="r"><code>dim(divvy$trips)</code></pre>
-<pre><code>[1] 3595383      12</code></pre>
-<pre class="r"><code>names(divvy$trips)</code></pre>
-<pre><code> [1] &quot;trip_id&quot;           &quot;starttime&quot;         &quot;stoptime&quot;         
- [4] &quot;bikeid&quot;            &quot;tripduration&quot;      &quot;from_station_id&quot;  
- [7] &quot;from_station_name&quot; &quot;to_station_id&quot;     &quot;to_station_name&quot;  
-[10] &quot;usertype&quot;          &quot;gender&quot;            &quot;birthyear&quot;        </code></pre>
+<div id="reading-the-data" class="section level2">
+<h2>Reading the data</h2>
+<p>I wrote a function, <code>read.divvy.data</code> to read the trip and station data from the CSV files that were downloaded to the data directory. This function uses <code>fread</code> from the <code>data.table</code> packages to read the CSV files, which is much faster than the <code>read.table</code> function. This also take a few additional steps to prepare the data so that they are in a format that is easier to work with.</p>
+<pre class="r"><code>divvy &lt;- read.divvy.data()
+# Reading station data from ../data/Divvy_Stations_2016_Q4.csv.
+# Reading trip data from ../data/Divvy_Trips_2016_Q1.csv.
+# Reading trip data from ../data/Divvy_Trips_2016_04.csv.
+# Reading trip data from ../data/Divvy_Trips_2016_05.csv.
+# Reading trip data from ../data/Divvy_Trips_2016_06.csv.
+# Reading trip data from ../data/Divvy_Trips_2016_Q3.csv.
+# Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.
+# Preparing Divvy data for analysis in R.</code></pre>
+<p><br></p>
+</div>
+<div id="a-first-glance-at-the-divvy-data" class="section level2">
+<h2>A first glance at the Divvy data</h2>
+<pre class="r"><code>dim(divvy$stations)
+# [1] 581   5
+names(divvy$stations)
+# [1] &quot;name&quot;        &quot;latitude&quot;    &quot;longitude&quot;   &quot;dpcapacity&quot;  &quot;online_date&quot;</code></pre>
+<pre class="r"><code>dim(divvy$trips)
+# [1] 3595383      12
+names(divvy$trips)
+#  [1] &quot;trip_id&quot;           &quot;starttime&quot;         &quot;stoptime&quot;         
+#  [4] &quot;bikeid&quot;            &quot;tripduration&quot;      &quot;from_station_id&quot;  
+#  [7] &quot;from_station_name&quot; &quot;to_station_id&quot;     &quot;to_station_name&quot;  
+# [10] &quot;usertype&quot;          &quot;gender&quot;            &quot;birthyear&quot;</code></pre>
+<ul>
+<li>Number of stations</li>
+<li>Number of trips in 2016</li>
+</ul>
+<p>Which station(s) had the most activity?</p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <!-- Insert the session information into the document -->
-<pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 3.3.2 (2016-10-31)
-Platform: x86_64-apple-darwin13.4.0 (64-bit)
-Running under: macOS Sierra 10.12.5
-
-locale:
-[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-
-attached base packages:
-[1] stats     graphics  grDevices utils     datasets  methods   base     
-
-other attached packages:
-[1] data.table_1.10.4
-
-loaded via a namespace (and not attached):
- [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.2    
- [5] htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.11    stringi_1.1.2  
- [9] rmarkdown_1.6   knitr_1.16      git2r_0.18.0    stringr_1.2.0  
-[13] digest_0.6.12   evaluate_0.10.1</code></pre>
+<pre class="r"><code>sessionInfo()
+# R version 3.3.2 (2016-10-31)
+# Platform: x86_64-apple-darwin13.4.0 (64-bit)
+# Running under: macOS Sierra 10.12.5
+# 
+# locale:
+# [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+# 
+# attached base packages:
+# [1] stats     graphics  grDevices utils     datasets  methods   base     
+# 
+# other attached packages:
+# [1] data.table_1.10.4
+# 
+# loaded via a namespace (and not attached):
+#  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.2    
+#  [5] htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.11    stringi_1.1.2  
+#  [9] rmarkdown_1.6   knitr_1.16      git2r_0.18.0    stringr_1.2.0  
+# [13] digest_0.6.12   evaluate_0.10.1</code></pre>
 </div>
 
 <hr>
