@@ -24,24 +24,17 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-## Test
+Instructions:
 
-Reading in a data set saved in the repo:
++ How to download the Divvy data.
 
-```{r load-iris}
-data(iris)
-x <- iris
-head(x)
-```
++ R packages that need to be installed.
 
-## Another plot
 
-```{r length-v-width}
-plot(x$Sepal.Length, x$Petal.Width)
-```
+
+<br>
 
 ## Session information
 
-<!-- Insert the session information into the document -->
 ```{r session-info}
 ```

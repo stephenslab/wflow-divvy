@@ -5,11 +5,24 @@ output:
     toc: false
 ---
 
-## What's included
++ Give brief, 1–2 sentence summary of the project. Link to the
+[Divvy data webpage](https://www.divvybikes.com/system-data).
 
-*Give overview of the project files here.*
++ Explain how to reproduce the results on your computer.
+
++ Describe the results, in sentence form (not point-form), linking to
+other pages.
 
 ## Credits
 
-*List contributors here.*
+This workflowr project was developed by [Peter
+Carbonetto](http://pcarbo.github.io) at the [University of
+Chicago](https://www.uchicago.edu).
 
+Thanks to John Blischak and Matthew Stephens for their assistance and
+support. Also, thanks to [Larry
+Layne](https://rstudio-pubs-static.s3.amazonaws.com/63061_90f5136ffdf74740b6ba4ad8f2fd72fe.html)
+and [Austin
+Wehrwein](http://www.austinwehrwein.com/data-visualization/heatmaps-with-divvy-data)
+for sharing their analyses of the Divvy trip data that inspired some
+of the investigations here.
