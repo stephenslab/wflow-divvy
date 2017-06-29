@@ -23,7 +23,7 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-I begin by loading packages and some useful function definitions into
+Begin by loading packages and some useful function definitions into
 the R environment.
 
 ```{r load-packages, message = FALSE}
@@ -31,16 +31,13 @@ library(data.table)
 source("../code/functions.R")
 ```
 
-<br>
-
-## Reading the data
+## Read the data
 
 I wrote a function, `read.divvy.data` to read the trip and station
-data from the CSV files that were downloaded to the data directory.
-This function uses `fread` from the `data.table` packages to read the
-CSV files, which is much faster than the `read.table` function. This
-also take a few additional steps to prepare the data so that they are
-in a format that is easier to work with.
+data from the CSV files. It uses the `fread` function from the
+`data.table` package which is much faster than the `read.table`
+function. It also take a few additional steps to prepare the data so
+that they are in a format that are easier to work with in R.
 
 ```{r load-data}
 divvy <- read.divvy.data()
@@ -66,6 +63,8 @@ Which station(s) had the most activity?
 
 ```{r most-trips-by-station}
 ```
+
+
 
 ## Session information
 
