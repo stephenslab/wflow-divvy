@@ -36,14 +36,23 @@ source("../code/functions.R")
 I wrote a function, `read.divvy.data` to read the trip and station
 data from the CSV files. It uses the `fread` function from the
 `data.table` package which is much faster than the `read.table`
-function. It also does a few additional data processing steps so that
-the data are in a format that are easier to work with for our
-analyses.
+function. It also take a few additional steps to prepare the data so
+that they are in a format that are easier to work with in R.
 
 ```{r load-data}
 divvy <- read.divvy.data()
 ```
 <br>
+
+```{r stations-overview}
+dim(divvy$stations)
+names(divvy$stations)
+```
+
+```{r trips-overview}
+dim(divvy$trips)
+names(divvy$trips)
+```
 
 ## Session information
 

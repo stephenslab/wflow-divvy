@@ -29,6 +29,22 @@ read.divvy.data <-
     class(x) <- "data.frame"
     trips    <- rbind(trips,x)
   }
+
+  # Set some of the table columns to factors.
+  cat("Preparing Divvy data for analysis in R.\n")
+  trips <-
+    transform(trips,
+              usertype          = factor(usertype),
+              gender            = factor(gender),
+              bikeid            = factor(bikeid),
+              from_station_id   = factor(from_station_id,stations$id),
+              to_station_id     = factor(to_station_id,stations$id),
+              from_station_name = factor(from_station_name,stations$name),
+              to_station_name   = factor(to_station_name,stations$name))
+
+  # Set the row names in the station table to the station id.
+  rownames(stations) <- stations$id
+  stations           <- stations[-1]
   
   # Return a list object containing the station data and the trip
   # data.
