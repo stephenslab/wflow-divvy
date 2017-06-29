@@ -312,8 +312,9 @@ shared across the workflowr files. -->
 <p><strong>Last updated:</strong> 2017-06-29</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository exists and R
  package git2r is installed -->
-<p><strong>Code version:</strong> 69fcfc5</p>
-<p><br> ## Test</p>
+<p><strong>Code version:</strong> 2deba18 <br></p>
+<div id="test" class="section level2">
+<h2>Test</h2>
 <p>Reading in a data set saved in the repo:</p>
 <pre class="r"><code>data(iris)
 x &lt;- iris
@@ -325,10 +326,15 @@ head(x)</code></pre>
 4          4.6         3.1          1.5         0.2  setosa
 5          5.0         3.6          1.4         0.2  setosa
 6          5.4         3.9          1.7         0.4  setosa</code></pre>
-<p><br> ## Another plot</p>
+<p><br></p>
+</div>
+<div id="another-plot" class="section level2">
+<h2>Another plot</h2>
 <pre class="r"><code>plot(x$Sepal.Length, x$Petal.Width)</code></pre>
-<p><img src="figure/first-look.Rmd/length-v-width-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p><br> ## Session information</p>
+<p><img src="figure/first-look.Rmd/length-v-width-1.png" width="672" style="display: block; margin: auto;" /> <br></p>
+</div>
+<div id="session-information" class="section level2">
+<h2>Session information</h2>
 <!-- Insert the session information into the document -->
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 3.3.2 (2016-10-31)
@@ -346,6 +352,7 @@ loaded via a namespace (and not attached):
  [5] htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.11    stringi_1.1.2  
  [9] rmarkdown_1.6   knitr_1.16      git2r_0.18.0    stringr_1.2.0  
 [13] digest_0.6.12   evaluate_0.10.1</code></pre>
+</div>
 
 <hr>
 <p>
