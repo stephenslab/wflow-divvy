@@ -311,13 +311,13 @@ div.tocify {
 <p><strong>Last updated:</strong> 2017-06-29</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> e4e8996</p>
+<p><strong>Code version:</strong> 879d558</p>
 <p>Begin by loading packages and some useful function definitions into the R environment.</p>
 <pre class="r"><code>library(data.table)
 source(&quot;../code/functions.R&quot;)</code></pre>
 <div id="read-the-data" class="section level2">
 <h2>Read the data</h2>
-<p>I wrote a function, <code>read.divvy.data</code> to read the trip and station data from the CSV files. It uses the <code>fread</code> function from the <code>data.table</code> package which is much faster than the <code>read.table</code> function. It also does a few additional data processing steps so that the data are in a format that are easier to work with for our analyses.</p>
+<p>I wrote a function, <code>read.divvy.data</code> to read the trip and station data from the CSV files. It uses the <code>fread</code> function from the <code>data.table</code> package which is much faster than the <code>read.table</code> function. It also take a few additional steps to prepare the data so that they are in a format that are easier to work with in R.</p>
 <pre class="r"><code>divvy &lt;- read.divvy.data()</code></pre>
 <pre><code>Reading station data from ../data/Divvy_Stations_2016_Q4.csv.
 Reading trip data from ../data/Divvy_Trips_2016_Q1.csv.
@@ -325,8 +325,20 @@ Reading trip data from ../data/Divvy_Trips_2016_04.csv.
 Reading trip data from ../data/Divvy_Trips_2016_05.csv.
 Reading trip data from ../data/Divvy_Trips_2016_06.csv.
 Reading trip data from ../data/Divvy_Trips_2016_Q3.csv.
-Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.</code></pre>
+Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.
+Preparing Divvy data for analysis in R.</code></pre>
 <p><br></p>
+<pre class="r"><code>dim(divvy$stations)</code></pre>
+<pre><code>[1] 581   5</code></pre>
+<pre class="r"><code>names(divvy$stations)</code></pre>
+<pre><code>[1] &quot;name&quot;        &quot;latitude&quot;    &quot;longitude&quot;   &quot;dpcapacity&quot;  &quot;online_date&quot;</code></pre>
+<pre class="r"><code>dim(divvy$trips)</code></pre>
+<pre><code>[1] 3595383      12</code></pre>
+<pre class="r"><code>names(divvy$trips)</code></pre>
+<pre><code> [1] &quot;trip_id&quot;           &quot;starttime&quot;         &quot;stoptime&quot;         
+ [4] &quot;bikeid&quot;            &quot;tripduration&quot;      &quot;from_station_id&quot;  
+ [7] &quot;from_station_name&quot; &quot;to_station_id&quot;     &quot;to_station_name&quot;  
+[10] &quot;usertype&quot;          &quot;gender&quot;            &quot;birthyear&quot;        </code></pre>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
