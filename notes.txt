@@ -1,8 +1,6 @@
 to do
 -----
-+ Update README.
-+ Create setup.md.
-+ Add licenses and license info.
+(to do items go here.)
 
 Notes
 -----
@@ -11,21 +9,3 @@ Notes
   https://www.divvybikes.com/system-data
   http://www.austinwehrwein.com/data-visualization/heatmaps-with-divvy-data
   https://rstudio-pubs-static.s3.amazonaws.com/63061_90f5136ffdf74740b6ba4ad8f2fd72fe.html
-
-* Command I used to create repo:
-  wflow_start("wflow-divvy",name = "Divvy data exploration")
-
-* Commands to download the Divvy data:
-
-  cd data
-  wget https://s3.amazonaws.com/divvy-data/tripdata/Divvy_Trips_2016_Q1Q2.zip
-  wget https://s3.amazonaws.com/divvy-data/tripdata/Divvy_Trips_2016_Q3Q4.zip
-  unzip Divvy_Trips_2016_Q1Q2.zip
-  unzip Divvy_Trips_2016_Q3Q4.zip
-  mv Divvy_Trips_2016_Q1Q2/* .
-  rmdir Divvy_Trips_2016_Q1Q2
-  rm -f *.zip
-  rm -f README_2016_Q3.txt README_2016_Q4.txt
-  
-* Add note about Divvy data license agreement.
-

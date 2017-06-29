@@ -5,8 +5,7 @@ date: 2017-06-29
 output: html_document
 ---
 
-<!-- The file analysis/chunks.R contains chunks that define default settings
-shared across the workflowr files. -->
+<!-- Define defaults shared by all workflowr files. -->
 ```{r read-chunk, include=FALSE, cache=FALSE}
 knitr::read_chunk("chunks.R")
 ```
@@ -19,28 +18,30 @@ knitr::read_chunk("chunks.R")
 ```{r last-updated, echo=FALSE, results='asis'}
 ```
 
-<!-- Insert the code version (Git commit SHA1) if Git repository exists and R
- package git2r is installed -->
+<!-- Insert the code version (Git commit SHA1) if Git repository
+ exists and R package git2r is installed -->
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-<br>
+Begin by loading packages and some useful function definitions into
+the R environment.
 
-## Test
-
-Reading in a data set saved in the repo:
-
-```{r load-iris}
-data(iris)
-x <- iris
-head(x)
+```{r load-packages, message = FALSE}
+library(data.table)
+source("../code/functions.R")
 ```
-<br>
 
-## Another plot
+## Read the data
 
-```{r length-v-width}
-plot(x$Sepal.Length, x$Petal.Width)
+I wrote a function, `read.divvy.data` to read the trip and station
+data from the CSV files. It uses the `fread` function from the
+`data.table` package which is much faster than the `read.table`
+function. It also does a few additional data processing steps so that
+the data are in a format that are easier to work with for our
+analyses.
+
+```{r load-data}
+divvy <- read.divvy.data()
 ```
 <br>
 

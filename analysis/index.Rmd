@@ -11,7 +11,10 @@ output:
 + Explain how to reproduce the results on your computer.
 
 + Describe the results, in sentence form (not point-form), linking to
-other pages.
+other pages/notebooks:
+
+    - [A first look at the Divvy data](first-look.html).
+    - *Other pages go here.*
 
 ## Credits
 
@@ -19,7 +22,8 @@ This workflowr project was developed by [Peter
 Carbonetto](http://pcarbo.github.io) at the [University of
 Chicago](https://www.uchicago.edu).
 
-Thanks to John Blischak and Matthew Stephens for their assistance and
+Thanks to [John Blischak](https://github.com/jdblischak) and
+[Matthew Stephens](http://stephenslab.uchicago.edu) for their assistance and
 support. Also, thanks to [Larry
 Layne](https://rstudio-pubs-static.s3.amazonaws.com/63061_90f5136ffdf74740b6ba4ad8f2fd72fe.html)
 and [Austin
