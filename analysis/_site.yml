@@ -10,13 +10,13 @@ navbar:
     - text: "License"
       href: license.html
   right:
-    - icon: fa-github
-      href: https://github.com/jdblischak/workflowr
+    - text: source
+      href: https://github.com/pcarbo/wflow-divvy
 output:
   html_document:
     toc: true
     toc_float: true
-    theme: cosmo
+    theme: paper
     highlight: textmate
     include:
       after_body: include/footer.html
