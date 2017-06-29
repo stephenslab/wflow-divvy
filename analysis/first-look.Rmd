@@ -23,8 +23,8 @@ knitr::read_chunk("chunks.R")
  package git2r is installed -->
 ```{r code-version, echo=FALSE, results='asis'}
 ```
-
 <br>
+
 ## Test
 
 Reading in a data set saved in the repo:
@@ -34,15 +34,15 @@ data(iris)
 x <- iris
 head(x)
 ```
-
 <br>
+
 ## Another plot
 
 ```{r length-v-width}
 plot(x$Sepal.Length, x$Petal.Width)
 ```
-
 <br>
+
 ## Session information
 
 <!-- Insert the session information into the document -->
