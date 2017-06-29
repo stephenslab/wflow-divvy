@@ -7,6 +7,8 @@ navbar:
   left:
     - text: "Overview"
       href: index.html
+    - text: "Setup"
+      href: setup.html
     - text: "License"
       href: license.html
   right:
@@ -16,7 +18,7 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: paper
+    theme: readable
     highlight: textmate
     include:
       after_body: include/footer.html

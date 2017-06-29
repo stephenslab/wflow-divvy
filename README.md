@@ -1,5 +1,3 @@
-# Divvy data exploration
+# Divvy data exploration: a workflowr project
 
-A [workflowr][] project.
-
-[workflowr]: https://github.com/jdblischak/workflowr
+View the project website [here](https://pcarbo.github.io/wflow-divvy).
