@@ -35,12 +35,12 @@ source("../code/functions.R")
 
 ## Reading the data
 
-I wrote a function, `read.divvy.data` to read the trip and station
-data from the CSV files that were downloaded to the data directory.
-This function uses `fread` from the `data.table` packages to read the
-CSV files, which is much faster than the `read.table` function. This
-also take a few additional steps to prepare the data so that they are
-in a format that is easier to work with.
+I wrote a function, `read.divvy.data`, that reads in the trip and
+station data from the CSV files that were downloaded from the Divvy
+website. This function uses `fread` from the `data.table` package,
+which is much faster than the `read.table` function for reading CSV
+files. This function takes a few additional steps to prepare the data
+so that they are in a format that is easier to work with.
 
 ```{r load-data}
 divvy <- read.divvy.data()
@@ -50,12 +50,14 @@ divvy <- read.divvy.data()
 ## A first glance at the Divvy data
 
 ```{r stations-overview}
-dim(divvy$stations)
+nrow(divvy$stations)
+ncol(divvy$stations)
 names(divvy$stations)
 ```
 
 ```{r trips-overview}
-dim(divvy$trips)
+brow(divvy$trips)
+ncol(divvy$trips)
 names(divvy$trips)
 ```
 

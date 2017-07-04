@@ -1,7 +1,6 @@
 ---
-title: "A first look at the Divvy data"
+title: "A map of the Divvy stations in Chicago"
 author: "Peter Carbonetto"
-date: 2017-06-29
 output: html_document
 ---
 
