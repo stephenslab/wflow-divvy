@@ -23,8 +23,8 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-I begin by loading packages and some useful function definitions into
-the R environment.
+I begin by loading a few packages, as well as some additional
+functions I wrote for this project, into the R environment.
 
 ```{r load-packages, message = FALSE}
 library(data.table)
@@ -56,7 +56,7 @@ names(divvy$stations)
 ```
 
 ```{r trips-overview}
-brow(divvy$trips)
+nrow(divvy$trips)
 ncol(divvy$trips)
 names(divvy$trips)
 ```
