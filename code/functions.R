@@ -30,6 +30,9 @@ read.divvy.data <-
     trips    <- rbind(trips,x)
   }
 
+  # Remove the stop times.
+  trips <- trips[-3]
+  
   # Set some of the table columns to factors.
   cat("Preparing Divvy data for analysis in R.\n")
   trips <-
@@ -42,6 +45,19 @@ read.divvy.data <-
               from_station_name = factor(from_station_name,stations$name),
               to_station_name   = factor(to_station_name,stations$name))
 
+  # Convert the start times from character strings to dates (here I'm
+  # following the suggestions made by Larry Layne and Austin
+  # Wehrwein).
+  cat("Converting dates and times.\n")
+  trips <-
+    transform(trips,
+              starttime = strptime(starttime,format = "%m/%d/%Y %H:%M"))
+  trips <-
+    transform(trips,
+              start.week = as.numeric(format(starttime,"%W")),
+              start.day  = weekdays(as.Date(starttime)),
+              start.hour = as.numeric(strftime(starttime,format = "%H")))
+  
   # Set the row names in the station table to the station id.
   rownames(stations) <- stations$id
   stations           <- stations[-1]
