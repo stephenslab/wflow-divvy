@@ -1,7 +1,12 @@
 # This file defines some functions that are used in the R Markdown
 # notebooks in the "analysis" directory.
 
-# TO DO: Explain here what this function does, and how to use it.
+# Read Divvy trip and station data from CSV files, and combine these
+# data into two data frames (one data frame for the trip data, and
+# another data frame for the station data). Steps are taken to prepare
+# the data for more convenient analysis and visualization; e.g.,
+# extracting useful information from the date-and-time character
+# strings, and converting some of the columns into factors.
 read.divvy.data <-
   function (trip.files = c("../data/Divvy_Trips_2016_Q1.csv",
                            "../data/Divvy_Trips_2016_04.csv",
