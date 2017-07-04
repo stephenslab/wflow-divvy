@@ -308,17 +308,17 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-06-29</p>
+<p><strong>Last updated:</strong> 2017-07-04</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 5c4fd93</p>
-<p>I begin by loading packages and some useful function definitions into the R environment.</p>
+<p><strong>Code version:</strong> 9f15855</p>
+<p>I begin by loading a few packages, as well as some additional functions I wrote for this project, into the R environment.</p>
 <pre class="r"><code>library(data.table)
 source(&quot;../code/functions.R&quot;)</code></pre>
 <p><br></p>
 <div id="reading-the-data" class="section level2">
 <h2>Reading the data</h2>
-<p>I wrote a function, <code>read.divvy.data</code> to read the trip and station data from the CSV files that were downloaded to the data directory. This function uses <code>fread</code> from the <code>data.table</code> packages to read the CSV files, which is much faster than the <code>read.table</code> function. This also take a few additional steps to prepare the data so that they are in a format that is easier to work with.</p>
+<p>I wrote a function, <code>read.divvy.data</code>, that reads in the trip and station data from the CSV files that were downloaded from the Divvy website. This function uses <code>fread</code> from the <code>data.table</code> package, which is much faster than the <code>read.table</code> function for reading CSV files. This function takes a few additional steps to prepare the data so that they are in a format that is easier to work with.</p>
 <pre class="r"><code>divvy &lt;- read.divvy.data()
 # Reading station data from ../data/Divvy_Stations_2016_Q4.csv.
 # Reading trip data from ../data/Divvy_Trips_2016_Q1.csv.
@@ -332,12 +332,16 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 </div>
 <div id="a-first-glance-at-the-divvy-data" class="section level2">
 <h2>A first glance at the Divvy data</h2>
-<pre class="r"><code>dim(divvy$stations)
-# [1] 581   5
+<pre class="r"><code>nrow(divvy$stations)
+# [1] 581
+ncol(divvy$stations)
+# [1] 5
 names(divvy$stations)
 # [1] &quot;name&quot;        &quot;latitude&quot;    &quot;longitude&quot;   &quot;dpcapacity&quot;  &quot;online_date&quot;</code></pre>
-<pre class="r"><code>dim(divvy$trips)
-# [1] 3595383      12
+<pre class="r"><code>nrow(divvy$trips)
+# [1] 3595383
+ncol(divvy$trips)
+# [1] 12
 names(divvy$trips)
 #  [1] &quot;trip_id&quot;           &quot;starttime&quot;         &quot;stoptime&quot;         
 #  [4] &quot;bikeid&quot;            &quot;tripduration&quot;      &quot;from_station_id&quot;  
