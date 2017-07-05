@@ -10,7 +10,6 @@ Notes
   1. Number of trips (departures) by time-of-day.
   2. Number of trips by day (show trends throughout year).
   3. Map of stations in Chicago.
-  4. Same trends, but for one station at/near University of Chicago.
 
 * Useful links:
   https://www.divvybikes.com/system-data
