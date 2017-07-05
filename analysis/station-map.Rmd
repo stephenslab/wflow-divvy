@@ -40,7 +40,7 @@ source("../code/functions.R")
 As [before](first-glance.html), I use function `read.divvy.data` to
 read the trip and station data from the CSV files.
 
-```{r load-data, cache=TRUE}
+```{r load-data}
 divvy <- read.divvy.data()
 ```
 <br>
@@ -67,7 +67,7 @@ the number of trips, the location of the downtown is apparent.
 
 I higlighted the University of Chicago Divvy station in red.
 
-```{r, fig.width=6.5, fig.height=7.5}
+```{r create-stations-map, fig.width=6.5, fig.height=7.5}
 divvy$stations <-
   transform(divvy$stations,
             at.uchicago = (name == "University Ave & 57th St"))

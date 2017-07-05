@@ -53,7 +53,7 @@ divvy <- read.divvy.data()
 
 We have information on 581 Divvy stations across the city.
 
-```{r stations-overview}
+```{r get-stations-overview}
 nrow(divvy$stations)
 print(head(divvy$stations),row.names = FALSE)
 ```
@@ -61,7 +61,7 @@ print(head(divvy$stations),row.names = FALSE)
 We also have information about the >3 million trips taken on Divvy
 bikes in 2016.
 
-```{r trips-overview}
+```{r get-trips-overview}
 nrow(divvy$trips)
 print(head(divvy$trips),row.names = FALSE)
 ```
@@ -69,7 +69,7 @@ print(head(divvy$trips),row.names = FALSE)
 Out of all the Divvy stations in Chicago, the one on Navy Pier (near
 the corner of Streeter and Grand) had the most activity by far.
 
-```{r most-trips-by-station}
+```{r get-most-trips-by-station}
 departures <- table(divvy$trips$from_station_name)
 as.matrix(head(sort(departures,decreasing = TRUE)))
 ```
@@ -80,7 +80,7 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 I will also take a close look at trip data for the main Divvy station
 on the University of Chicago campus, since this is where I work.
 
-```{r uchicago-station}
+```{r get-uchicago-station}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
 ```
 <br>
