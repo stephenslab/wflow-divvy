@@ -311,14 +311,14 @@ div.tocify {
 <p><strong>Last updated:</strong> 2017-07-05</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 5e53297</p>
-<p>I begin by loading a few packages, as well as some additional functions I wrote for this project, into the R environment.</p>
+<p><strong>Code version:</strong> 4bb29bd</p>
+<p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
 source(&quot;../code/functions.R&quot;)</code></pre>
 <p><br></p>
 <div id="reading-the-data" class="section level2">
 <h2>Reading the data</h2>
-<p>I wrote a function, <code>read.divvy.data</code>, that reads in the trip and station data from the CSV files downloaded from the <a href="https://www.divvybikes.com/system-data">Divvy website</a>. This function uses <code>fread</code> from the <code>data.table</code> package to quickly read in the data (it is much faster than <code>read.table</code>). This function also prepares the data, notably the dates and times, so that they are easier to work with.</p>
+<p>I wrote a function, <code>read.divvy.data</code>, that reads in the trip and station data from the <a href="https://www.divvybikes.com/system-data">Divvy CSV files</a>. This function uses <code>fread</code> from the <code>data.table</code> package to quickly read in the data (it is much faster than <code>read.table</code>). This function also prepares the data, notably the dates and times, so that they are easier to work with.</p>
 <pre class="r"><code>divvy &lt;- read.divvy.data()
 # Reading station data from ../data/Divvy_Stations_2016_Q4.csv.
 # Reading trip data from ../data/Divvy_Trips_2016_Q1.csv.
@@ -333,52 +333,45 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 </div>
 <div id="a-first-glance-at-the-divvy-data" class="section level2">
 <h2>A first glance at the Divvy data</h2>
-<p>We have information on 581 Divvy stations across the city of Chicago.</p>
+<p>We have information on 581 Divvy stations across the city.</p>
 <pre class="r"><code>nrow(divvy$stations)
 # [1] 581
-head(divvy$stations)
-#                           name latitude longitude dpcapacity online_date
-# 456        2112 W Peterson Ave 41.99118 -87.68359         15   5/12/2015
-# 101              63rd St Beach 41.78102 -87.57612         23   4/20/2015
-# 109          900 W Harrison St 41.87468 -87.65002         19    8/6/2013
-# 21  Aberdeen St &amp; Jackson Blvd 41.87773 -87.65479         15   6/21/2013
-# 80     Aberdeen St &amp; Monroe St 41.88042 -87.65560         19   6/26/2013
-# 346   Ada St &amp; Washington Blvd 41.88283 -87.66121         15  10/10/2013</code></pre>
-<p>In 2016, people took over 3 million trips on Divvy bikes.</p>
+print(head(divvy$stations),row.names = FALSE)
+#                        name latitude longitude dpcapacity online_date
+#         2112 W Peterson Ave 41.99118 -87.68359         15   5/12/2015
+#               63rd St Beach 41.78102 -87.57612         23   4/20/2015
+#           900 W Harrison St 41.87468 -87.65002         19    8/6/2013
+#  Aberdeen St &amp; Jackson Blvd 41.87773 -87.65479         15   6/21/2013
+#     Aberdeen St &amp; Monroe St 41.88042 -87.65560         19   6/26/2013
+#    Ada St &amp; Washington Blvd 41.88283 -87.66121         15  10/10/2013</code></pre>
+<p>We also have information about the &gt;3 million trips taken on Divvy bikes in 2016.</p>
 <pre class="r"><code>nrow(divvy$trips)
 # [1] 3595383
-head(divvy$trips)
-#   trip_id           starttime bikeid tripduration from_station_id
-# 1 9080551 2016-03-31 23:53:00    155          841             344
-# 2 9080550 2016-03-31 23:46:00   4831          649             128
-# 3 9080549 2016-03-31 23:42:00   4232          210             350
-# 4 9080548 2016-03-31 23:37:00   3464         1045             303
-# 5 9080547 2016-03-31 23:33:00   1750          202             334
-# 6 9080546 2016-03-31 23:31:00   4302          638              67
-#               from_station_name to_station_id
-# 1 Ravenswood Ave &amp; Lawrence Ave           458
-# 2       Damen Ave &amp; Chicago Ave           213
-# 3     Ashland Ave &amp; Chicago Ave           210
-# 4       Broadway &amp; Cornelia Ave           458
-# 5   Lake Shore Dr &amp; Belmont Ave           329
-# 6 Sheffield Ave &amp; Fullerton Ave           304
-#                 to_station_name   usertype gender birthyear start.week
-# 1      Broadway &amp; Thorndale Ave Subscriber   Male      1986         13
-# 2        Leavitt St &amp; North Ave Subscriber   Male      1980         13
-# 3     Ashland Ave &amp; Division St Subscriber   Male      1979         13
-# 4      Broadway &amp; Thorndale Ave Subscriber   Male      1980         13
-# 5 Lake Shore Dr &amp; Diversey Pkwy Subscriber   Male      1969         13
-# 6       Broadway &amp; Waveland Ave Subscriber   Male      1991         13
-#   start.day start.hour
-# 1  Thursday         23
-# 2  Thursday         23
-# 3  Thursday         23
-# 4  Thursday         23
-# 5  Thursday         23
-# 6  Thursday         23</code></pre>
-<p>Out of all the Divvy stations in Chicago, the one on Navy Pier (at Streeter and Grand) had the most activity.</p>
+print(head(divvy$trips),row.names = FALSE)
+#  trip_id           starttime bikeid tripduration from_station_id
+#  9080551 2016-03-31 23:53:00    155          841             344
+#  9080550 2016-03-31 23:46:00   4831          649             128
+#  9080549 2016-03-31 23:42:00   4232          210             350
+#  9080548 2016-03-31 23:37:00   3464         1045             303
+#  9080547 2016-03-31 23:33:00   1750          202             334
+#  9080546 2016-03-31 23:31:00   4302          638              67
+#              from_station_name to_station_id               to_station_name
+#  Ravenswood Ave &amp; Lawrence Ave           458      Broadway &amp; Thorndale Ave
+#        Damen Ave &amp; Chicago Ave           213        Leavitt St &amp; North Ave
+#      Ashland Ave &amp; Chicago Ave           210     Ashland Ave &amp; Division St
+#        Broadway &amp; Cornelia Ave           458      Broadway &amp; Thorndale Ave
+#    Lake Shore Dr &amp; Belmont Ave           329 Lake Shore Dr &amp; Diversey Pkwy
+#  Sheffield Ave &amp; Fullerton Ave           304       Broadway &amp; Waveland Ave
+#    usertype gender birthyear start.week start.day start.hour
+#  Subscriber   Male      1986         13  Thursday         23
+#  Subscriber   Male      1980         13  Thursday         23
+#  Subscriber   Male      1979         13  Thursday         23
+#  Subscriber   Male      1980         13  Thursday         23
+#  Subscriber   Male      1969         13  Thursday         23
+#  Subscriber   Male      1991         13  Thursday         23</code></pre>
+<p>Out of all the Divvy stations in Chicago, the one on Navy Pier (near the corner of Streeter and Grand) had the most activity by far.</p>
 <pre class="r"><code>counts &lt;- table(divvy$trips$from_station_name)
-as.matrix(head(sort(counts,decreasing=TRUE)))
+as.matrix(head(sort(counts,decreasing = TRUE)))
 #                               [,1]
 # Streeter Dr &amp; Grand Ave      90042
 # Lake Shore Dr &amp; Monroe St    51090
@@ -386,9 +379,14 @@ as.matrix(head(sort(counts,decreasing=TRUE)))
 # Clinton St &amp; Washington Blvd 47125
 # Lake Shore Dr &amp; North Blvd   45754
 # Clinton St &amp; Madison St      41744</code></pre>
-<p>I will also take a close look at trip data for the main Divvy station on the University of Chicago campus, since that is where I work.</p>
-<pre class="r"><code>sum(divvy$trips$from_station_name == &quot;University Ave &amp; 57th St&quot;)
-# [1] NA</code></pre>
+<p><br></p>
+</div>
+<div id="divvy-bikes-at-the-university-of-chicago" class="section level2">
+<h2>Divvy bikes at the University of Chicago</h2>
+<p>I will also take a close look at trip data for the main Divvy station on the University of Chicago campus, since this is where I work.</p>
+<pre class="r"><code>sum(divvy$trips$from_station_name == &quot;University Ave &amp; 57th St&quot;,na.rm = TRUE)
+# [1] 7944</code></pre>
+<p><br></p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
