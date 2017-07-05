@@ -24,7 +24,7 @@ knitr::read_chunk("chunks.R")
 ```
 
 I begin by loading a few packages, as well as some additional
-functions I wrote for this project, into the R environment.
+functions I wrote for this project.
 
 ```{r load-packages, message = FALSE}
 library(data.table)
@@ -36,12 +36,12 @@ source("../code/functions.R")
 ## Reading the data
 
 I wrote a function, `read.divvy.data`, that reads in the trip and
-station data from the CSV files downloaded from the
-[Divvy website](https://www.divvybikes.com/system-data). This function
-uses `fread` from the `data.table` package to quickly read in the data
-(it is much faster than `read.table`). This function also prepares the
-data, notably the dates and times, so that they are easier to work
-with.
+station data from the
+[Divvy CSV files](https://www.divvybikes.com/system-data). This
+function uses `fread` from the `data.table` package to quickly read in
+the data (it is much faster than `read.table`). This function also
+prepares the data, notably the dates and times, so that they are
+easier to work with.
 
 ```{r load-data}
 divvy <- read.divvy.data()
@@ -50,33 +50,36 @@ divvy <- read.divvy.data()
 
 ## A first glance at the Divvy data
 
-We have information on 581 Divvy stations across the city of Chicago.
+We have information on 581 Divvy stations across the city.
 
 ```{r stations-overview}
 nrow(divvy$stations)
-head(divvy$stations)
+print(head(divvy$stations),row.names = FALSE)
 ```
 
-In 2016, people took over 3 million trips on Divvy bikes.
+We also have information about the >3 million trips taken on Divvy
+bikes in 2016.
 
 ```{r trips-overview}
 nrow(divvy$trips)
-head(divvy$trips)
+print(head(divvy$trips),row.names = FALSE)
 ```
 
-Out of all the Divvy stations in Chicago, the one on Navy Pier (at
-Streeter and Grand) had the most activity.
+Out of all the Divvy stations in Chicago, the one on Navy Pier (near
+the corner of Streeter and Grand) had the most activity by far.
 
 ```{r most-trips-by-station}
 counts <- table(divvy$trips$from_station_name)
-as.matrix(head(sort(counts,decreasing=TRUE)))
+as.matrix(head(sort(counts,decreasing = TRUE)))
 ```
 
+## Divvy bikes at the University of Chicago
+
 I will also take a close look at trip data for the main Divvy station
-on the University of Chicago campus, since that is where I work.
+on the University of Chicago campus, since this is where I work.
 
 ```{r}
-sum(divvy$trips$from_station_name == "University Ave & 57th St")
+sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
 ```
 
 ## Session information
