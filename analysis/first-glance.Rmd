@@ -23,6 +23,8 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
+Here, we will take a brief look at the data provided by Divvy.
+
 I begin by loading a few packages, as well as some additional
 functions I wrote for this project.
 
@@ -68,8 +70,8 @@ Out of all the Divvy stations in Chicago, the one on Navy Pier (near
 the corner of Streeter and Grand) had the most activity by far.
 
 ```{r most-trips-by-station}
-counts <- table(divvy$trips$from_station_name)
-as.matrix(head(sort(counts,decreasing = TRUE)))
+departures <- table(divvy$trips$from_station_name)
+as.matrix(head(sort(departures,decreasing = TRUE)))
 ```
 <br>
 
@@ -78,7 +80,7 @@ as.matrix(head(sort(counts,decreasing = TRUE)))
 I will also take a close look at trip data for the main Divvy station
 on the University of Chicago campus, since this is where I work.
 
-```{r}
+```{r uchicago-station}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
 ```
 <br>
