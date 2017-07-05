@@ -13,7 +13,7 @@ output:
 + Describe the results, in sentence form (not point-form), linking to
 other pages/notebooks:
 
-    - [A first look at the Divvy data](first-look.html).
+    - [A first look at the Divvy data](first-glance.html).
 	- [A map of the Divvy stations in Chicago](stations-map.html).
     - *Other pages go here.*
 

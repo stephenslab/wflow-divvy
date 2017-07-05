@@ -50,28 +50,39 @@ divvy <- read.divvy.data()
 
 ## A first glance at the Divvy data
 
+We have information on 581 Divvy stations across the city of Chicago.
+
 ```{r stations-overview}
 nrow(divvy$stations)
-ncol(divvy$stations)
-names(divvy$stations)
+head(divvy$stations)
 ```
+
+In 2016, people took over 3 million trips on Divvy bikes.
 
 ```{r trips-overview}
 nrow(divvy$trips)
-ncol(divvy$trips)
-names(divvy$trips)
+head(divvy$trips)
 ```
 
-- Number of stations
-- Number of trips in 2016
-
-Which station(s) had the most activity?
+Out of all the Divvy stations in Chicago, the one on Navy Pier (at
+Streeter and Grand) had the most activity.
 
 ```{r most-trips-by-station}
+counts <- table(divvy$trips$from_station_name)
+as.matrix(head(sort(counts,decreasing=TRUE)))
+```
+
+I will also take a close look at trip data for the main Divvy station
+on the University of Chicago campus, since that is where I work.
+
+```{r}
+sum(divvy$trips$from_station_name == "University Ave & 57th St")
 ```
 
 ## Session information
 
-<!-- Insert the session information into the document -->
+This is the version of R and the packages that were used to generate
+these results.
+
 ```{r session-info}
 ```
