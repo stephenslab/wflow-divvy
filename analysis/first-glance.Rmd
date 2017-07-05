@@ -30,7 +30,6 @@ functions I wrote for this project.
 library(data.table)
 source("../code/functions.R")
 ```
-
 <br>
 
 ## Reading the data
@@ -72,6 +71,7 @@ the corner of Streeter and Grand) had the most activity by far.
 counts <- table(divvy$trips$from_station_name)
 as.matrix(head(sort(counts,decreasing = TRUE)))
 ```
+<br>
 
 ## Divvy bikes at the University of Chicago
 
@@ -81,6 +81,7 @@ on the University of Chicago campus, since this is where I work.
 ```{r}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
 ```
+<br>
 
 ## Session information
 
