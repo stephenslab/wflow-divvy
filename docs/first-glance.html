@@ -311,7 +311,7 @@ div.tocify {
 <p><strong>Last updated:</strong> 2017-07-05</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> bbd4aa2</p>
+<p><strong>Code version:</strong> 5e53297</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project, into the R environment.</p>
 <pre class="r"><code>library(data.table)
 source(&quot;../code/functions.R&quot;)</code></pre>
@@ -333,31 +333,66 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 </div>
 <div id="a-first-glance-at-the-divvy-data" class="section level2">
 <h2>A first glance at the Divvy data</h2>
+<p>We have information on 581 Divvy stations across the city of Chicago.</p>
 <pre class="r"><code>nrow(divvy$stations)
 # [1] 581
-ncol(divvy$stations)
-# [1] 5
-names(divvy$stations)
-# [1] &quot;name&quot;        &quot;latitude&quot;    &quot;longitude&quot;   &quot;dpcapacity&quot;  &quot;online_date&quot;</code></pre>
+head(divvy$stations)
+#                           name latitude longitude dpcapacity online_date
+# 456        2112 W Peterson Ave 41.99118 -87.68359         15   5/12/2015
+# 101              63rd St Beach 41.78102 -87.57612         23   4/20/2015
+# 109          900 W Harrison St 41.87468 -87.65002         19    8/6/2013
+# 21  Aberdeen St &amp; Jackson Blvd 41.87773 -87.65479         15   6/21/2013
+# 80     Aberdeen St &amp; Monroe St 41.88042 -87.65560         19   6/26/2013
+# 346   Ada St &amp; Washington Blvd 41.88283 -87.66121         15  10/10/2013</code></pre>
+<p>In 2016, people took over 3 million trips on Divvy bikes.</p>
 <pre class="r"><code>nrow(divvy$trips)
 # [1] 3595383
-ncol(divvy$trips)
-# [1] 14
-names(divvy$trips)
-#  [1] &quot;trip_id&quot;           &quot;starttime&quot;         &quot;bikeid&quot;           
-#  [4] &quot;tripduration&quot;      &quot;from_station_id&quot;   &quot;from_station_name&quot;
-#  [7] &quot;to_station_id&quot;     &quot;to_station_name&quot;   &quot;usertype&quot;         
-# [10] &quot;gender&quot;            &quot;birthyear&quot;         &quot;start.week&quot;       
-# [13] &quot;start.day&quot;         &quot;start.hour&quot;</code></pre>
-<ul>
-<li>Number of stations</li>
-<li>Number of trips in 2016</li>
-</ul>
-<p>Which station(s) had the most activity?</p>
+head(divvy$trips)
+#   trip_id           starttime bikeid tripduration from_station_id
+# 1 9080551 2016-03-31 23:53:00    155          841             344
+# 2 9080550 2016-03-31 23:46:00   4831          649             128
+# 3 9080549 2016-03-31 23:42:00   4232          210             350
+# 4 9080548 2016-03-31 23:37:00   3464         1045             303
+# 5 9080547 2016-03-31 23:33:00   1750          202             334
+# 6 9080546 2016-03-31 23:31:00   4302          638              67
+#               from_station_name to_station_id
+# 1 Ravenswood Ave &amp; Lawrence Ave           458
+# 2       Damen Ave &amp; Chicago Ave           213
+# 3     Ashland Ave &amp; Chicago Ave           210
+# 4       Broadway &amp; Cornelia Ave           458
+# 5   Lake Shore Dr &amp; Belmont Ave           329
+# 6 Sheffield Ave &amp; Fullerton Ave           304
+#                 to_station_name   usertype gender birthyear start.week
+# 1      Broadway &amp; Thorndale Ave Subscriber   Male      1986         13
+# 2        Leavitt St &amp; North Ave Subscriber   Male      1980         13
+# 3     Ashland Ave &amp; Division St Subscriber   Male      1979         13
+# 4      Broadway &amp; Thorndale Ave Subscriber   Male      1980         13
+# 5 Lake Shore Dr &amp; Diversey Pkwy Subscriber   Male      1969         13
+# 6       Broadway &amp; Waveland Ave Subscriber   Male      1991         13
+#   start.day start.hour
+# 1  Thursday         23
+# 2  Thursday         23
+# 3  Thursday         23
+# 4  Thursday         23
+# 5  Thursday         23
+# 6  Thursday         23</code></pre>
+<p>Out of all the Divvy stations in Chicago, the one on Navy Pier (at Streeter and Grand) had the most activity.</p>
+<pre class="r"><code>counts &lt;- table(divvy$trips$from_station_name)
+as.matrix(head(sort(counts,decreasing=TRUE)))
+#                               [,1]
+# Streeter Dr &amp; Grand Ave      90042
+# Lake Shore Dr &amp; Monroe St    51090
+# Theater on the Lake          47927
+# Clinton St &amp; Washington Blvd 47125
+# Lake Shore Dr &amp; North Blvd   45754
+# Clinton St &amp; Madison St      41744</code></pre>
+<p>I will also take a close look at trip data for the main Divvy station on the University of Chicago campus, since that is where I work.</p>
+<pre class="r"><code>sum(divvy$trips$from_station_name == &quot;University Ave &amp; 57th St&quot;)
+# [1] NA</code></pre>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
-<!-- Insert the session information into the document -->
+<p>This is the version of R and the packages that were used to generate these results.</p>
 <pre class="r"><code>sessionInfo()
 # R version 3.3.2 (2016-10-31)
 # Platform: x86_64-apple-darwin13.4.0 (64-bit)
