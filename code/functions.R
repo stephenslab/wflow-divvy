@@ -7,6 +7,8 @@
 # the data for more convenient analysis and visualization; e.g.,
 # extracting useful information from the date-and-time character
 # strings, and converting some of the columns into factors.
+#
+# Note that the trip end-times are not retained.
 read.divvy.data <-
   function (trip.files = c("../data/Divvy_Trips_2016_Q1.csv",
                            "../data/Divvy_Trips_2016_04.csv",
@@ -51,8 +53,7 @@ read.divvy.data <-
               to_station_name   = factor(to_station_name,stations$name))
 
   # Convert the start times from character strings to dates (here I'm
-  # following the suggestions made by Larry Layne and Austin
-  # Wehrwein).
+  # following the suggestions made by Larry Layne and Austin Wehrwein).
   cat("Converting dates and times.\n")
   trips <-
     transform(trips,

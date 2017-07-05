@@ -1,5 +1,5 @@
 ---
-title: "A first look at the Divvy data"
+title: "A first glance at the Divvy data"
 author: "Peter Carbonetto"
 date: 2017-06-29
 output: html_document
@@ -36,11 +36,12 @@ source("../code/functions.R")
 ## Reading the data
 
 I wrote a function, `read.divvy.data`, that reads in the trip and
-station data from the CSV files that were downloaded from the Divvy
-website. This function uses `fread` from the `data.table` package,
-which is much faster than the `read.table` function for reading CSV
-files. This function takes a few additional steps to prepare the data
-so that they are in a format that is easier to work with.
+station data from the CSV files downloaded from the
+[Divvy website](https://www.divvybikes.com/system-data). This function
+uses `fread` from the `data.table` package to quickly read in the data
+(it is much faster than `read.table`). This function also prepares the
+data, notably the dates and times, so that they are easier to work
+with.
 
 ```{r load-data}
 divvy <- read.divvy.data()
