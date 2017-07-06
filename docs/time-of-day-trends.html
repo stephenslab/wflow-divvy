@@ -309,8 +309,8 @@ div.tocify {
 <p><strong>Last updated:</strong> 2017-07-06</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> f86e267</p>
-<p>Here we use the Divvy trip data to examine biking trends over the course of the day.</p>
+<p><strong>Code version:</strong> e67cefb</p>
+<p>Here we use the Divvy trip data to examine biking trends over the course of a typical day in Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
 library(ggplot2)
@@ -329,21 +329,21 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 # Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.
 # Preparing Divvy data for analysis in R.
 # Converting dates and times.</code></pre>
-<p>To make it easier to compile statistics by time-of-day, I convert the “start hour” column to a factor (categorical variable).</p>
-<pre class="r"><code>divvy$trips &lt;- transform(divvy$trips,
-                         start.hour = factor(start.hour,0:23))</code></pre>
+<p>To make it easier to compile statistics by time of day, I convert the “start hour” column to a factor (<em>i.e.</em>, categorical variable).</p>
+<pre class="r"><code>divvy$trips &lt;- transform(divvy$trips,start.hour = factor(start.hour,0:23))</code></pre>
 <p><br></p>
 </div>
 <div id="count-departures" class="section level2">
 <h2>Count departures</h2>
-<p>Add text here.</p>
+<p>Now that <code>start.hour</code> is a factor, it is easy to create a bar chart showing the total number of departures at each hour.</p>
+<p>Unsurprisingly, there is very little biking activity at night. The two peaks (“modes”) in the bar chart nicely recapitulate the morning and afternoon rush hours.</p>
 <pre class="r"><code>ggplot(divvy$trips,aes(start.hour)) +
   geom_bar(fill = &quot;black&quot;,width = 0.6) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Add text here.</p>
+<p>This summary is a bit muddled because it is counting trips on the both weekdays and weekends; once we separate the counts by the day of the week, the rush-hour trends become more striking (and disappear completely on Saturday and Sunday).</p>
 <pre class="r"><code>ggplot(divvy$trips,aes(start.hour)) +
   geom_bar(fill = &quot;black&quot;,width = 0.6) +
   facet_wrap(~start.day,ncol = 2) +
@@ -384,13 +384,12 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 # [1] ggplot2_2.2.1     data.table_1.10.4
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.11     knitr_1.16       magrittr_1.5     munsell_0.4.3   
-#  [5] colorspace_1.3-2 stringr_1.2.0    plyr_1.8.4       tools_3.3.2     
-#  [9] grid_3.3.2       gtable_0.2.0     git2r_0.18.0     htmltools_0.3.6 
-# [13] yaml_2.1.14      lazyeval_0.2.0   rprojroot_1.2    digest_0.6.12   
-# [17] assertthat_0.2.0 tibble_1.2       codetools_0.2-15 evaluate_0.10.1 
-# [21] rmarkdown_1.6    labeling_0.3     stringi_1.1.2    scales_0.4.1    
-# [25] backports_1.0.5</code></pre>
+#  [1] Rcpp_0.12.11     assertthat_0.2.0 digest_0.6.12    rprojroot_1.2   
+#  [5] plyr_1.8.4       grid_3.3.2       gtable_0.2.0     backports_1.0.5 
+#  [9] git2r_0.18.0     magrittr_1.5     scales_0.4.1     evaluate_0.10.1 
+# [13] stringi_1.1.2    lazyeval_0.2.0   rmarkdown_1.6    labeling_0.3    
+# [17] tools_3.3.2      stringr_1.2.0    munsell_0.4.3    yaml_2.1.14     
+# [21] colorspace_1.3-2 htmltools_0.3.6  knitr_1.16       tibble_1.2</code></pre>
 </div>
 
 <hr>
