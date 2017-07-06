@@ -1,0 +1,92 @@
+---
+title: "A map of the Divvy stations in Chicago"
+author: "Peter Carbonetto"
+output: html_document
+---
+
+<!-- Define defaults shared by all workflowr files. -->
+```{r read-chunk, include=FALSE, cache=FALSE}
+knitr::read_chunk("chunks.R")
+```
+
+<!-- Update knitr chunk options -->
+```{r knitr-opts-chunk, include=FALSE}
+```
+
+<!-- Insert the date the file was last updated -->
+```{r last-updated, echo=FALSE, results='asis'}
+```
+
+<!-- Insert the code version (Git commit SHA1) if Git repository
+ exists and R package git2r is installed -->
+```{r code-version, echo=FALSE, results='asis'}
+```
+
+In this notebook, I will use the Divvy trip and station data to
+generate a map of Chicago.
+
+I begin by loading a few packages, as well as some additional
+functions I wrote for this project.
+
+```{r load-packages, message = FALSE}
+library(data.table)
+library(ggplot2)
+source("../code/functions.R")
+```
+<br>
+
+## Read the data
+
+As [before](first-glance.html), I use function `read.divvy.data` to
+read the trip and station data from the CSV files.
+
+```{r load-data}
+divvy <- read.divvy.data()
+```
+<br>
+
+## Get total number of departures by station
+
+I use the trip data to get the total number of departures by station.
+From these data, I create a new table column.
+
+```{r count-departures}
+divvy$stations <-
+  cbind(divvy$stations,
+    data.frame(departures = as.vector(table(divvy$trips$from_station_id))))
+summary(divvy$stations$departures)
+```
+<br>
+
+## Create a Divvy stations map
+
+Plotting the Divvy stations by geographic location (latitude and
+longitude) does a reasonable job tracing the outlines of the City of
+Chicago and the Lake Michigan shore. By scaling area of each circle by
+the number of trips, the location of the downtown is apparent.
+
+I higlighted the University of Chicago Divvy station in red.
+
+```{r create-stations-map, fig.width=6.5, fig.height=7.5}
+divvy$stations <-
+  transform(divvy$stations,
+            at.uchicago = (name == "University Ave & 57th St"))
+ggplot(divvy$stations,aes(x    = longitude,
+                          y    = latitude,
+                          fill = at.uchicago,
+                          size = sqrt(departures))) +
+  geom_point(shape = 21,color = "white") +
+  scale_fill_manual(values = c("darkblue","red")) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+<br>
+
+## Session information
+
+This is the version of R and the packages that were used to generate
+these results.
+
+```{r session-info}
+```
