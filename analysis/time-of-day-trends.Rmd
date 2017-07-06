@@ -1,5 +1,5 @@
 ---
-title: "A map of the Divvy stations in Chicago"
+title: "Divvy usage by time-of-day"
 author: "Peter Carbonetto"
 output: html_document
 ---
@@ -22,8 +22,8 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-In this notebook, I will use the Divvy trip and station data to
-generate a map of Chicago.
+Here we use the Divvy trip data to examine biking trends over the
+course of the day.
 
 I begin by loading a few packages, as well as some additional
 functions I wrote for this project.
@@ -37,50 +37,61 @@ source("../code/functions.R")
 
 ## Read the data
 
-As [before](first-glance.html), I use function `read.divvy.data` to
-read the trip and station data from the CSV files.
+Following [my earlier steps](first-glance.html), I use function
+`read.divvy.data` to read the trip and station data from the CSV
+files.
 
-```{r load-data}
+```{r load-data, cache = TRUE}
 divvy <- read.divvy.data()
 ```
-<br>
 
-## Get total number of departures by station
+To make it easier to compile statistics by time-of-day, I convert the
+"start hour" column to a factor (categorical variable).
 
-I use the trip data to get the total number of departures by station.
-From these data, I create a new table column.
-
-```{r count-departures}
-divvy$stations <-
-  cbind(divvy$stations,
-    data.frame(departures = as.vector(table(divvy$trips$from_station_id))))
-summary(divvy$stations$departures)
+```{r convert-start-hour}
+divvy$trips <- transform(divvy$trips,
+                         start.hour = factor(start.hour,0:23))
 ```
 <br>
 
-## Create a Divvy stations map
+## Count departures
 
-Plotting the Divvy stations by geographic location (latitude and
-longitude) does a reasonable job tracing the outlines of the City of
-Chicago and the Lake Michigan shore. By scaling area of each circle by
-the number of trips, the location of the downtown is apparent.
+Add text here.
 
-I higlighted the University of Chicago Divvy station in red.
-
-```{r create-stations-map, fig.width=6.5, fig.height=7.5}
-divvy$stations <-
-  transform(divvy$stations,
-            at.uchicago = (name == "University Ave & 57th St"))
-ggplot(divvy$stations,aes(x    = longitude,
-                          y    = latitude,
-                          fill = at.uchicago,
-                          size = sqrt(departures))) +
-  geom_point(shape = 21,color = "white") +
-  scale_fill_manual(values = c("darkblue","red")) +
+```{r timeofday-barchart}
+ggplot(divvy$trips,aes(start.hour)) +
+  geom_bar(fill = "black",width = 0.6) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
+
+Add text here.
+
+```{r timeofday-barchart-2}
+ggplot(divvy$trips,aes(start.hour)) +
+  geom_bar(fill = "black",width = 0.6) +
+  facet_wrap(~start.day,ncol = 2) +
+  scale_x_discrete(breaks = seq(0,24,2)) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+<br>
+
+## University of Chicago trends
+
+```{r timeofday-uchicago-barchart}
+ggplot(subset(divvy$trips,from_station_name == "University Ave & 57th St"),
+       aes(start.hour)) +
+  geom_bar(fill = "black",width = 0.6) +
+  facet_wrap(~start.day,ncol = 2) +
+  scale_x_discrete(breaks = seq(0,24,2)) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
 <br>
 
 ## Session information
