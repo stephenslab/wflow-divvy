@@ -23,7 +23,7 @@ knitr::read_chunk("chunks.R")
 ```
 
 Here we use the Divvy trip data to examine biking trends over the
-course of the day.
+course of a typical day in Chicago.
 
 I begin by loading a few packages, as well as some additional
 functions I wrote for this project.
@@ -45,18 +45,22 @@ files.
 divvy <- read.divvy.data()
 ```
 
-To make it easier to compile statistics by time-of-day, I convert the
-"start hour" column to a factor (categorical variable).
+To make it easier to compile statistics by time of day, I convert the
+"start hour" column to a factor (*i.e.*, categorical variable).
 
-```{r convert-start-hour}
-divvy$trips <- transform(divvy$trips,
-                         start.hour = factor(start.hour,0:23))
+```{r convert-start-hour, fig.height = 4, fig.width = 7}
+divvy$trips <- transform(divvy$trips,start.hour = factor(start.hour,0:23))
 ```
 <br>
 
 ## Count departures
 
-Add text here.
+Now that `start.hour` is a factor, it is easy to create a bar chart
+showing the total number of departures at each hour.
+
+Unsurprisingly, there is very little biking activity at night. The two
+peaks ("modes") in the bar chart nicely recapitulate the morning and
+afternoon rush hours.
 
 ```{r timeofday-barchart}
 ggplot(divvy$trips,aes(start.hour)) +
@@ -66,9 +70,12 @@ ggplot(divvy$trips,aes(start.hour)) +
         panel.grid.minor = element_blank())
 ```
 
-Add text here.
+This summary is a bit muddled because it is counting trips on the both
+weekdays and weekends; once we separate the counts by the day of the
+week, the rush-hour trends become more striking (and disappear
+completely on Saturday and Sunday).
 
-```{r timeofday-barchart-2}
+```{r timeofday-barchart-2, fig.height = 8.5, fig.width = 7}
 ggplot(divvy$trips,aes(start.hour)) +
   geom_bar(fill = "black",width = 0.6) +
   facet_wrap(~start.day,ncol = 2) +
