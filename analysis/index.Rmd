@@ -15,8 +15,8 @@ other pages/notebooks:
 
     - [A first glance at the Divvy data](first-glance.html).
 	- [A map of the Divvy stations in Chicago](station-map.html).
-	- [Time-of-day trends](time-of-day-trends.Rmd).
-    - *Other pages go here.*
+	- [Time-of-day trends](time-of-day-trends.html).
+    - *Other pages go here.* 
 
 ## Credits
 
