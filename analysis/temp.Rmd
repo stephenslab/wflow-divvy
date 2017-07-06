@@ -9,3 +9,7 @@ output:
 data(iris)
 summary(iris$Species)
 ```
+
+```{r, echo = FALSE}
+summary(iris$Petal.Length)
+```
