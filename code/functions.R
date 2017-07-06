@@ -61,7 +61,9 @@ read.divvy.data <-
   trips <-
     transform(trips,
               start.week = as.numeric(format(starttime,"%W")),
-              start.day  = weekdays(as.Date(starttime)),
+              start.day  = factor(weekdays(as.Date(starttime)),
+                                  c("Monday","Tuesday","Wednesday","Thursday",
+                                    "Friday","Saturday","Sunday")),
               start.hour = as.numeric(strftime(starttime,format = "%H")))
   
   # Set the row names in the station table to the station id.
