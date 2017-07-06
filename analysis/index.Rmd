@@ -15,13 +15,14 @@ other pages/notebooks:
 
     - [A first glance at the Divvy data](first-glance.html).
 	- [A map of the Divvy stations in Chicago](station-map.html).
+	- [Time-of-day trends](time-of-day-trends.Rmd).
     - *Other pages go here.*
 
 ## Credits
 
 This workflowr project was developed by [Peter
 Carbonetto](http://pcarbo.github.io) at the [University of
-Chicago](https://www.uchicago.edu). 
+Chicago](https://www.uchicago.edu).
 
 Thanks to [John Blischak](https://github.com/jdblischak) and
 [Matthew Stephens](http://stephenslab.uchicago.edu) for their assistance and
