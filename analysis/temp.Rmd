@@ -10,6 +10,6 @@ data(iris)
 summary(iris$Species)
 ```
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, results="hide"}
 summary(iris$Petal.Length)
 ```
