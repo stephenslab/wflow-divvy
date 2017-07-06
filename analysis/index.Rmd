@@ -21,7 +21,7 @@ other pages/notebooks:
 
 This workflowr project was developed by [Peter
 Carbonetto](http://pcarbo.github.io) at the [University of
-Chicago](https://www.uchicago.edu).
+Chicago](https://www.uchicago.edu). 
 
 Thanks to [John Blischak](https://github.com/jdblischak) and
 [Matthew Stephens](http://stephenslab.uchicago.edu) for their assistance and
