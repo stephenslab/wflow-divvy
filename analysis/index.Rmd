@@ -5,7 +5,7 @@ output:
     toc: false
 ---
 
-![Divvy bikes](9041673199_c214395e82_o.jpg) <br>
+![Divvy bikes](9041673199_c214395e82.jpg) <br>
 *[Photo](https://www.flickr.com/photos/jamesbondsv/9041673199) by
 [Steven Vance](https://www.flickr.com/photos/jamesbondsv) /
 [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)*
