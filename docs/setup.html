@@ -312,8 +312,10 @@ shared across the workflowr files. -->
 <p><strong>Last updated:</strong> 2017-07-07</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository exists and R
  package git2r is installed -->
-<p><strong>Code version:</strong> e4ba033</p>
+<p><strong>Code version:</strong> 730799c</p>
 <p>To reproduce the results on your own computer, please follow these setup instructions.</p>
+<div id="setup-instructions" class="section level2">
+<h2>Setup instructions</h2>
 <p>Download or clone the <a href="https://github.com/pcarbo/wflow-divvy">git repository</a> on your computer.</p>
 <p>Download the Divvy data files and copy the files to the “data” directory. I have provided a script <code>code/retrieve_divvy_data.sh</code> that will automatically retrieve the data files and move them to the expected location. Alternatively, you can view this script and follow the steps by hand. After completing this step, these files should be in the data directory:</p>
 <pre><code>Divvy_Stations_2016_Q1Q2.csv
@@ -332,6 +334,7 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <pre class="r"><code>getwd()
 # [1] &quot;/Users/pcarbo/git/wflow-divvy/analysis&quot;</code></pre>
 <p><br></p>
+</div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <p>This is the version of R and the packages that were used to generate the results from the R Markdown documents.</p>
