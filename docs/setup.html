@@ -312,12 +312,10 @@ shared across the workflowr files. -->
 <p><strong>Last updated:</strong> 2017-07-07</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository exists and R
  package git2r is installed -->
-<p><strong>Code version:</strong> 75d6e3f</p>
+<p><strong>Code version:</strong> cb681f5</p>
 <p>To reproduce the results on your own computer, please follow these setup instructions.</p>
-<ol style="list-style-type: decimal">
-<li><p>Download or clone the <a href="https://github.com/pcarbo/wflow-divvy">git repository</a> on your computer.</p></li>
-<li><p>Download the Divvy data files and copy the files to the “data” directory. I have provided a script <code>code/retrieve_divvy_data.sh</code> that can be used to automatically retrieve and prepare the data files. Alternatively, you can open this script and follow the steps by hand. After completing this step, all these files should be in the data directory:</p></li>
-</ol>
+<p>Download or clone the <a href="https://github.com/pcarbo/wflow-divvy">git repository</a> on your computer.</p>
+<p>Download the Divvy data files and copy the files to the “data” directory. I have provided a script <code>code/retrieve_divvy_data.sh</code> that will automatically retrieve the data files and move them to the expected location. Alternatively, you can view this script and follow the steps by hand. After completing this step, these files should be in the data directory:</p>
 <pre><code>Divvy_Stations_2016_Q1Q2.csv
 Divvy_Stations_2016_Q3.csv
 Divvy_Stations_2016_Q4.csv
@@ -327,10 +325,8 @@ Divvy_Trips_2016_06.csv
 Divvy_Trips_2016_Q1.csv
 Divvy_Trips_2016_Q3.csv
 Divvy_Trips_2016_Q4.csv</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li><p>Install <a href="http://cran.r-project.org">R</a> and/or <a href="https://www.rstudio.com/products/rstudio">Rstudio</a>.</p></li>
-<li><p>Install the R packages used for the analyses:</p></li>
-</ol>
+<p>Install <a href="http://cran.r-project.org">R</a> and/or <a href="https://www.rstudio.com/products/rstudio">Rstudio</a>.</p>
+<p>Install the R packages used for the analyses:</p>
 <pre class="r"><code>install.packages(c(&quot;data.table&quot;,&quot;ggplot2&quot;))</code></pre>
 <p>Once you have completed these steps, you may run the R code. When running the code, make sure your working directory is set to the “analysis” directory, e.g.,</p>
 <pre class="r"><code>getwd()
