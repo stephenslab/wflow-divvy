@@ -308,10 +308,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-05</p>
+<p><strong>Last updated:</strong> 2017-07-07</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 96f2db4</p>
+<p><strong>Code version:</strong> f7da4f6</p>
 <p>Here, we will take a brief look at the data provided by Divvy.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -319,7 +319,7 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 <p><br></p>
 <div id="reading-the-data" class="section level2">
 <h2>Reading the data</h2>
-<p>I wrote a function, <code>read.divvy.data</code>, that reads in the trip and station data from the <a href="https://www.divvybikes.com/system-data">Divvy CSV files</a>. This function uses <code>fread</code> from the <code>data.table</code> package to quickly read in the data (it is much faster than <code>read.table</code>). This function also prepares the data, notably the dates and times, so that they are easier to work with.</p>
+<p>I wrote a function, <code>read.divvy.data</code>, that reads in the trip and station data from the <a href="https://www.divvybikes.com/system-data">Divvy CSV files</a>. This function uses <code>fread</code> from the <code>data.table</code> package to quickly read in the data (it is much faster than <code>read.table</code>). This function also prepares the data, including the departure dates and times, so that they are easier to work with.</p>
 <pre class="r"><code>divvy &lt;- read.divvy.data()
 # Reading station data from ../data/Divvy_Stations_2016_Q4.csv.
 # Reading trip data from ../data/Divvy_Trips_2016_Q1.csv.
@@ -334,7 +334,7 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 </div>
 <div id="a-first-glance-at-the-divvy-data" class="section level2">
 <h2>A first glance at the Divvy data</h2>
-<p>We have information on 581 Divvy stations across the city.</p>
+<p>We have data on 581 Divvy stations across the city.</p>
 <pre class="r"><code>nrow(divvy$stations)
 # [1] 581
 print(head(divvy$stations),row.names = FALSE)
@@ -384,7 +384,7 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 </div>
 <div id="divvy-bikes-at-the-university-of-chicago" class="section level2">
 <h2>Divvy bikes at the University of Chicago</h2>
-<p>I will also take a close look at trip data for the main Divvy station on the University of Chicago campus, since this is where I work.</p>
+<p>I would also like to take a close look at the trip data for the main Divvy station on the University of Chicago campus since this is where I work.</p>
 <pre class="r"><code>sum(divvy$trips$from_station_name == &quot;University Ave &amp; 57th St&quot;,na.rm = TRUE)
 # [1] 7944</code></pre>
 <p><br></p>
@@ -415,7 +415,7 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 
 <hr>
 <p>
-    This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
+    This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>.
 </p>
 <hr>
 
