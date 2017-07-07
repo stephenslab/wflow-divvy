@@ -39,7 +39,7 @@ source("../code/functions.R")
 
 First, I read in the Divvy trip and station data from the CSV files.
 
-```{r load-data, cache = TRUE}
+```{r load-data}
 divvy <- read.divvy.data()
 ```
 
@@ -68,7 +68,7 @@ divvy$trips <-
 Here, I compile a vector containing the number of trips taken in each
 day of the year, and then I plot these numbers.
 
-```{r plot-trips-by-day, fig.height = 3, fig.width = 5}
+```{r plot-trips-by-day, fig.height = 3, fig.width = 6}
 counts.day <- as.vector(table(divvy$trips$start.dayofyear))
 ggplot(data.frame(day = 1:366,departures = counts.day),
        aes(x = day,y = departures)) +
@@ -85,7 +85,7 @@ number of trips varies widely from one day to the next, I think the
 plot will look nicer if instead we count the number of trips taken in
 each week of the year.
 
-```{r plot-trips-by-week, fig.height = 3, fig.width = 5}
+```{r plot-trips-by-week, fig.height = 3, fig.width = 6}
 counts.week <- as.vector(table(divvy$trips$start.week))
 ggplot(data.frame(week = 0:52,departures = counts.week),
        aes(x = week,y = departures)) +
@@ -99,16 +99,17 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
 Indeed, the seasonal trends are more clear in this plot; most of the
 trips are taken when the weather is better (weeks 20--40), and very
 few people are using the Divvy bikes in the cold winter months.
+
 <br>
 
 ## Seasonal trends at the University of Chicago
 
-When we analyze trips taken at the University of Chicago Divvy bike
-station, the "bump" during warmer months flattens out. This is
-probably because a large fraction of the students leave during the
+When we analyze trips taken at the University of Chicago bike station,
+the "bump" during warmer months flattens out. This is probably because
+a large fraction of University of Chicago students leave during the
 summer.
 
-```{r plot-trips-by-week-uchicago, fig.height = 3, fig.width = 5}
+```{r plot-trips-by-week-uchicago, fig.height = 3, fig.width = 6}
 dat <- subset(divvy$trips,from_station_name == "University Ave & 57th St")
 counts.week.uchicago <- as.vector(table(dat$start.week))
 ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
