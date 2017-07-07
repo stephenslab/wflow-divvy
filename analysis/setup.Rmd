@@ -38,32 +38,32 @@ retrieve and prepare the data files. Alternatively, you can open this
 script and follow the steps by hand. After completing this step,
 all these files should be in the data directory:
 
-  ```
-  Divvy_Stations_2016_Q1Q2.csv
-  Divvy_Stations_2016_Q3.csv
-  Divvy_Stations_2016_Q4.csv
-  Divvy_Trips_2016_04.csv
-  Divvy_Trips_2016_05.csv
-  Divvy_Trips_2016_06.csv
-  Divvy_Trips_2016_Q1.csv
-  Divvy_Trips_2016_Q3.csv
-  Divvy_Trips_2016_Q4.csv
-  ```
+```
+Divvy_Stations_2016_Q1Q2.csv
+Divvy_Stations_2016_Q3.csv
+Divvy_Stations_2016_Q4.csv
+Divvy_Trips_2016_04.csv
+Divvy_Trips_2016_05.csv
+Divvy_Trips_2016_06.csv
+Divvy_Trips_2016_Q1.csv
+Divvy_Trips_2016_Q3.csv
+Divvy_Trips_2016_Q4.csv
+```
 
 3. Install [R](http://cran.r-project.org) and/or
 [Rstudio](https://www.rstudio.com/products/rstudio).
 
 4. Install the R packages used for the analyses:
 
-   ```R
-   install.packages(c("data.table","ggplot2"))
-   ```
+```{r install-pkgs, eval=FALSE, echo=TRUE}
+install.packages(c("data.table","ggplot2"))
+```
 
 Once you have completed these steps, you may run the R code. When
 running the code, make sure your working directory is set to the
-"analysis" directory:
+"analysis" directory, e.g.,
 
-```{r working-directory}
+```{r working-dir}
 getwd()
 ```
 <br>
