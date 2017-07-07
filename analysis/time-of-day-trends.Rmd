@@ -41,7 +41,7 @@ Following [my earlier steps](first-glance.html), I use function
 `read.divvy.data` to read the trip and station data from the CSV
 files.
 
-```{r load-data, cache = TRUE}
+```{r load-data}
 divvy <- read.divvy.data()
 ```
 

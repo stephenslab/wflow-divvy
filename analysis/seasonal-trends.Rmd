@@ -1,0 +1,132 @@
+---
+title: "Divvy usage over the year"
+author: "Peter Carbonetto"
+output: html_document
+---
+
+<!-- Define defaults shared by all workflowr files. -->
+```{r read-chunk, include=FALSE, cache=FALSE}
+knitr::read_chunk("chunks.R")
+```
+
+<!-- Update knitr chunk options -->
+```{r knitr-opts-chunk, include=FALSE}
+```
+
+<!-- Insert the date the file was last updated -->
+```{r last-updated, echo=FALSE, results='asis'}
+```
+
+<!-- Insert the code version (Git commit SHA1) if Git repository
+ exists and R package git2r is installed -->
+```{r code-version, echo=FALSE, results='asis'}
+```
+
+In this last notebook, I use the Divvy trip data to examine biking
+trends in Chicago over the course of one year.
+
+I begin by loading a few packages, as well as some additional
+functions I wrote for this project.
+
+```{r load-packages, message = FALSE}
+library(data.table)
+library(ggplot2)
+source("../code/functions.R")
+```
+<br>
+
+## Read the data
+
+First, I read in the Divvy trip and station data from the CSV files.
+
+```{r load-data, cache = TRUE}
+divvy <- read.divvy.data()
+```
+
+I would like to analyze city-wide departures for each day of the year,
+so I create a new "day of year" column.
+
+```{r day-of-year}
+divvy$trips <-
+  transform(divvy$trips,
+    start.dayofyear = factor(as.numeric(format(divvy$trips$starttime,"%j")),
+                             1:366))
+```
+
+I also convert the "start week" column to a factor to make it easier
+to compile trip statistics for each week in the year.
+
+```{r convert-start-week}
+divvy$trips <-
+  transform(divvy$trips,
+  start.week      = factor(start.week,0:52))
+```
+<br>
+
+## Plot departures per day and per week
+
+Here, I compile a vector containing the number of trips taken in each
+day of the year, and then I plot these numbers.
+
+```{r plot-trips-by-day, fig.height = 3, fig.width = 5}
+counts.day <- as.vector(table(divvy$trips$start.dayofyear))
+ggplot(data.frame(day = 1:366,departures = counts.day),
+       aes(x = day,y = departures)) +
+  geom_point(color = "darkblue",shape = 19,size = 1) +
+  geom_line(color = "darkblue") +
+  scale_x_continuous(breaks = seq(0,350,25)) +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+There is sizeable increase in trips during summer days, but since the
+number of trips varies widely from one day to the next, I think the
+plot will look nicer if instead we count the number of trips taken in
+each week of the year.
+
+```{r plot-trips-by-week, fig.height = 3, fig.width = 5}
+counts.week <- as.vector(table(divvy$trips$start.week))
+ggplot(data.frame(week = 0:52,departures = counts.week),
+       aes(x = week,y = departures)) +
+  geom_point(color = "darkblue",shape = 19,size = 1.5) +
+  geom_line(color = "darkblue") +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+```
+
+Indeed, the seasonal trends are more clear in this plot; most of the
+trips are taken when the weather is better (weeks 20--40), and very
+few people are using the Divvy bikes in the cold winter months.
+<br>
+
+## Seasonal trends at the University of Chicago
+
+When we analyze trips taken at the University of Chicago Divvy bike
+station, the "bump" during warmer months flattens out. This is
+probably because a large fraction of the students leave during the
+summer.
+
+```{r plot-trips-by-week-uchicago, fig.height = 3, fig.width = 5}
+dat <- subset(divvy$trips,from_station_name == "University Ave & 57th St")
+counts.week.uchicago <- as.vector(table(dat$start.week))
+ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
+       aes(x = week,y = departures)) +
+  geom_point(color = "darkblue",shape = 19,size = 1.5) +
+  geom_line(color = "darkblue") +
+  theme_minimal() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+
+```
+
+<br>
+
+## Session information
+
+This is the version of R and the packages that were used to generate
+these results.
+
+```{r session-info}
+```
