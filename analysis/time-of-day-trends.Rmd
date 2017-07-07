@@ -46,7 +46,7 @@ divvy <- read.divvy.data()
 ```
 
 To make it easier to compile statistics by time of day, I convert the
-"start hour" column to a factor (*i.e.*, categorical variable).
+"start hour" column to a factor.
 
 ```{r convert-start-hour}
 divvy$trips <- transform(divvy$trips,start.hour = factor(start.hour,0:23))
@@ -56,12 +56,10 @@ divvy$trips <- transform(divvy$trips,start.hour = factor(start.hour,0:23))
 ## Count departures by time-of-day
 
 Now that `start.hour` is a factor, it is easy to create a bar chart
-showing the total number of departures at each hour.
-
-Unsurprisingly, there is very little biking activity at night.
-
-Further, the two peaks ("modes") in the bar chart nicely recapitulate
-the morning and afternoon rush hours.
+showing the total number of departures at each hour. Unsurprisingly,
+we se very little biking activity at night. Further, the two peaks
+("modes") in the bar chart nicely recapitulate the morning and
+afternoon rush hours.
 
 ```{r timeofday-barchart, fig.height = 2.5, fig.width = 5}
 ggplot(divvy$trips,aes(start.hour)) +
@@ -71,10 +69,10 @@ ggplot(divvy$trips,aes(start.hour)) +
         panel.grid.minor = element_blank())
 ```
 
-This summary is a bit muddled because it is counting trips during the
-week and on the weekends. Once we separate the counts by the day of
-the week, the rush-hour trends become more striking. (Also notice that
-the rush hours disappear on Saturday and Sunday.)
+However, this bar chart is a bit muddled because it is counting trips
+during the week and on the weekends. Once we separate the counts by
+the day of the week, the rush-hour trends become more obvious. (Also
+notice that the rush-hour weeks disappear on Saturday and Sunday.)
 
 ```{r timeofday-barchart-2, fig.height = 6, fig.width = 6}
 ggplot(divvy$trips,aes(start.hour)) +

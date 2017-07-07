@@ -48,7 +48,7 @@ divvy <- read.divvy.data()
 ## Get total number of departures by station
 
 I use the trip data to get the total number of departures by station.
-From these data, I create a new table column.
+From these data, I create a new "departures" column in the table.
 
 ```{r count-departures}
 divvy$stations <-
@@ -60,12 +60,12 @@ summary(divvy$stations$departures)
 
 ## Create a Divvy stations map
 
-Plotting the Divvy stations by geographic location (latitude and
-longitude) does a reasonable job tracing the outlines of the City of
-Chicago and the Lake Michigan shore. By scaling area of each circle by
-the number of trips, the location of the downtown is apparent.
+A plot of the Divvy stations by geographic location (latitude and
+longitude) traces the outlines of the City of Chicago and the Lake
+Michigan shore. Further, the location of the downtown is apparent by
+scaling the area of each circle by the number of trips.
 
-I higlighted the University of Chicago Divvy station in red.
+The University of Chicago Divvy station is highlighted in red.
 
 ```{r create-stations-map, fig.width=6.5, fig.height=7.5}
 divvy$stations <-

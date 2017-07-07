@@ -32,7 +32,7 @@ into webpages.
 2. [A map of the Divvy stations in Chicago.](station-map.html)
 
 3. [Exploring daily bike commuting trends from the Divvy
-data.](time-of-day-trends.html.)
+data.](time-of-day-trends.html)
 
 4. [Exploring seasonal biking trends from the Divvy
 data.](seasonal-trends.html)

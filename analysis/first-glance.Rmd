@@ -37,12 +37,12 @@ source("../code/functions.R")
 ## Reading the data
 
 I wrote a function, `read.divvy.data`, that reads in the trip and
-station data from the
-[Divvy CSV files](https://www.divvybikes.com/system-data). This
-function uses `fread` from the `data.table` package to quickly read in
-the data (it is much faster than `read.table`). This function also
-prepares the data, notably the dates and times, so that they are
-easier to work with.
+station data from the [Divvy CSV
+files](https://www.divvybikes.com/system-data). This function uses
+`fread` from the `data.table` package to quickly read in the data (it
+is much faster than `read.table`). This function also prepares the
+data, including the departure dates and times, so that they are easier
+to work with.
 
 ```{r load-data}
 divvy <- read.divvy.data()
@@ -51,7 +51,7 @@ divvy <- read.divvy.data()
 
 ## A first glance at the Divvy data
 
-We have information on 581 Divvy stations across the city.
+We have data on 581 Divvy stations across the city.
 
 ```{r get-stations-overview}
 nrow(divvy$stations)
@@ -77,8 +77,9 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 
 ## Divvy bikes at the University of Chicago
 
-I will also take a close look at trip data for the main Divvy station
-on the University of Chicago campus, since this is where I work.
+I would also like to take a close look at the trip data for the main
+Divvy station on the University of Chicago campus since this is where
+I work.
 
 ```{r get-uchicago-station}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
