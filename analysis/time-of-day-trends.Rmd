@@ -48,36 +48,37 @@ divvy <- read.divvy.data()
 To make it easier to compile statistics by time of day, I convert the
 "start hour" column to a factor (*i.e.*, categorical variable).
 
-```{r convert-start-hour, fig.height = 4, fig.width = 7}
+```{r convert-start-hour}
 divvy$trips <- transform(divvy$trips,start.hour = factor(start.hour,0:23))
 ```
 <br>
 
-## Count departures
+## Count departures by time-of-day
 
 Now that `start.hour` is a factor, it is easy to create a bar chart
 showing the total number of departures at each hour.
 
-Unsurprisingly, there is very little biking activity at night. The two
-peaks ("modes") in the bar chart nicely recapitulate the morning and
-afternoon rush hours.
+Unsurprisingly, there is very little biking activity at night.
 
-```{r timeofday-barchart}
+Further, the two peaks ("modes") in the bar chart nicely recapitulate
+the morning and afternoon rush hours.
+
+```{r timeofday-barchart, fig.height = 2.5, fig.width = 5}
 ggplot(divvy$trips,aes(start.hour)) +
-  geom_bar(fill = "black",width = 0.6) +
+  geom_bar(fill = "dodgerblue",width = 0.6) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
 
-This summary is a bit muddled because it is counting trips on the both
-weekdays and weekends; once we separate the counts by the day of the
-week, the rush-hour trends become more striking (and disappear
-completely on Saturday and Sunday).
+This summary is a bit muddled because it is counting trips during the
+week and on the weekends. Once we separate the counts by the day of
+the week, the rush-hour trends become more striking. (Also notice that
+the rush hours disappear on Saturday and Sunday.)
 
-```{r timeofday-barchart-2, fig.height = 8.5, fig.width = 7}
+```{r timeofday-barchart-2, fig.height = 6, fig.width = 6}
 ggplot(divvy$trips,aes(start.hour)) +
-  geom_bar(fill = "black",width = 0.6) +
+  geom_bar(fill = "dodgerblue",width = 0.75) +
   facet_wrap(~start.day,ncol = 2) +
   scale_x_discrete(breaks = seq(0,24,2)) +
   theme_minimal() +
@@ -86,12 +87,16 @@ ggplot(divvy$trips,aes(start.hour)) +
 ```
 <br>
 
-## University of Chicago trends
+## Time-of-day trends at University of Chicago
 
-```{r timeofday-uchicago-barchart}
+The commuting trends are different at the University of Chicago Divvy
+station---there isn't much of a morning rush hour. This may be because
+students and staff don't regularly use the Divvy bikes for commuting.
+
+```{r timeofday-uchicago-barchart, fig.height = 6, fig.width = 6}
 ggplot(subset(divvy$trips,from_station_name == "University Ave & 57th St"),
        aes(start.hour)) +
-  geom_bar(fill = "black",width = 0.6) +
+  geom_bar(fill = "dodgerblue",width = 0.75) +
   facet_wrap(~start.day,ncol = 2) +
   scale_x_discrete(breaks = seq(0,24,2)) +
   theme_minimal() +
