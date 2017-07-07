@@ -71,7 +71,7 @@ getwd()
 ## Session information
 
 This is the version of R and the packages that were used to generate
-the results from the R Markdown notebooks.
+the results from the R Markdown documents.
 
 ```{r session-info}
 ```

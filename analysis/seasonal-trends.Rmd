@@ -22,7 +22,7 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-In this last notebook, I use the Divvy trip data to examine biking
+In this last analysis, I use the Divvy trip data to examine biking
 trends in Chicago over the course of one year.
 
 I begin by loading a few packages, as well as some additional

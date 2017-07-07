@@ -22,7 +22,7 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-In this notebook, I will use the Divvy trip and station data to
+In this analysis, I will use the Divvy trip and station data to
 generate a map of Chicago.
 
 I begin by loading a few packages, as well as some additional
