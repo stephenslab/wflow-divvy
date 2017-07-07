@@ -306,10 +306,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-06</p>
+<p><strong>Last updated:</strong> 2017-07-07</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 6ef7a6c</p>
+<p><strong>Code version:</strong> 984143c</p>
 <p>In this last notebook, I use the Divvy trip data to examine biking trends in Chicago over the course of one year.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -335,14 +335,12 @@ source(&quot;../code/functions.R&quot;)</code></pre>
     start.dayofyear = factor(as.numeric(format(divvy$trips$starttime,&quot;%j&quot;)),
                              1:366))</code></pre>
 <p>I also convert the “start week” column to a factor to make it easier to compile trip statistics for each week in the year.</p>
-<pre class="r"><code>divvy$trips &lt;-
-  transform(divvy$trips,
-  start.week      = factor(start.week,0:52))</code></pre>
+<pre class="r"><code>divvy$trips &lt;- transform(divvy$trips,start.week = factor(start.week,0:52))</code></pre>
 <p><br></p>
 </div>
 <div id="plot-departures-per-day-and-per-week" class="section level2">
 <h2>Plot departures per day and per week</h2>
-<p>Here, I compile a vector containing the number of trips taken in each day of the year, and then I plot these numbers.</p>
+<p>Here, I create a new vector containing the number of trips taken in each day of the year, and then I plot these numbers.</p>
 <pre class="r"><code>counts.day &lt;- as.vector(table(divvy$trips$start.dayofyear))
 ggplot(data.frame(day = 1:366,departures = counts.day),
        aes(x = day,y = departures)) +
@@ -353,7 +351,7 @@ ggplot(data.frame(day = 1:366,departures = counts.day),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p>There is sizeable increase in trips during summer days, but since the number of trips varies widely from one day to the next, I think the plot will look nicer if instead we count the number of trips taken in each week of the year.</p>
+<p>This plot shows a sizeable increase in bike trips during summer days, but since the number of trips varies widely from one day to the next, I think the plot will look nicer if instead we count the number of trips <em>per week</em> instead of per day.</p>
 <pre class="r"><code>counts.week &lt;- as.vector(table(divvy$trips$start.week))
 ggplot(data.frame(week = 0:52,departures = counts.week),
        aes(x = week,y = departures)) +
@@ -363,7 +361,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p>Indeed, the seasonal trends are more clear in this plot; most of the trips are taken when the weather is better (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months.</p>
+<p>Indeed, the seasonal trends are less noisy in this plot; the majority of Divvy bike trips in Chicago are taken when the weather is warmer (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months.</p>
 <p><br></p>
 </div>
 <div id="seasonal-trends-at-the-university-of-chicago" class="section level2">
@@ -409,7 +407,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
 
 <hr>
 <p>
-    This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
+    This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>.
 </p>
 <hr>
 
