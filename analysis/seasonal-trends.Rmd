@@ -57,15 +57,13 @@ I also convert the "start week" column to a factor to make it easier
 to compile trip statistics for each week in the year.
 
 ```{r convert-start-week}
-divvy$trips <-
-  transform(divvy$trips,
-  start.week      = factor(start.week,0:52))
+divvy$trips <- transform(divvy$trips,start.week = factor(start.week,0:52))
 ```
 <br>
 
 ## Plot departures per day and per week
 
-Here, I compile a vector containing the number of trips taken in each
+Here, I create a new vector containing the number of trips taken in each
 day of the year, and then I plot these numbers.
 
 ```{r plot-trips-by-day, fig.height = 3, fig.width = 6}
@@ -80,10 +78,10 @@ ggplot(data.frame(day = 1:366,departures = counts.day),
         panel.grid.minor = element_blank())
 ```
 
-There is sizeable increase in trips during summer days, but since the
-number of trips varies widely from one day to the next, I think the
-plot will look nicer if instead we count the number of trips taken in
-each week of the year.
+This plot shows a sizeable increase in bike trips during summer days,
+but since the number of trips varies widely from one day to the next,
+I think the plot will look nicer if instead we count the number of
+trips *per week* instead of per day.
 
 ```{r plot-trips-by-week, fig.height = 3, fig.width = 6}
 counts.week <- as.vector(table(divvy$trips$start.week))
@@ -96,9 +94,10 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
         panel.grid.minor = element_blank())
 ```
 
-Indeed, the seasonal trends are more clear in this plot; most of the
-trips are taken when the weather is better (weeks 20--40), and very
-few people are using the Divvy bikes in the cold winter months.
+Indeed, the seasonal trends are less noisy in this plot; the majority
+of Divvy bike trips in Chicago are taken when the weather is warmer
+(weeks 20--40), and very few people are using the Divvy bikes in the
+cold winter months.
 
 <br>
 
