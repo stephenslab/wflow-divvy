@@ -5,8 +5,11 @@ output:
     toc: false
 ---
 
-+ Give brief, 1–2 sentence summary of the project. Link to the
-[Divvy data webpage](https://www.divvybikes.com/system-data).
+The purpose of this project is to gain some insight into city-wide
+biking trends by analyzing the [Divvy trip
+data](https://www.divvybikes.com/system-data). I also analyze the data
+from a Divvy bike station at the University of Chicago to compare the
+biking patterns at the university against city-wide trends.
 
 + Explain how to reproduce the results on your computer.
 
