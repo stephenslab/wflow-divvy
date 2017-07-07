@@ -27,16 +27,16 @@ knitr::read_chunk("chunks.R")
 To reproduce the results on your own computer, please follow these
 setup instructions.
 
-1. Download or clone the
+Download or clone the
 [git repository](https://github.com/pcarbo/wflow-divvy) on your
 computer.
 
-2. Download the Divvy data files and copy the files to the
-"data" directory. I have provided a script
-`code/retrieve_divvy_data.sh` that can be used to automatically
-retrieve and prepare the data files. Alternatively, you can open this
-script and follow the steps by hand. After completing this step,
-all these files should be in the data directory:
+Download the Divvy data files and copy the files to the "data"
+directory. I have provided a script `code/retrieve_divvy_data.sh` that
+will automatically retrieve the data files and move them to the
+expected location. Alternatively, you can view this script and follow
+the steps by hand. After completing this step, these files should be
+in the data directory:
 
 ```
 Divvy_Stations_2016_Q1Q2.csv
@@ -50,10 +50,10 @@ Divvy_Trips_2016_Q3.csv
 Divvy_Trips_2016_Q4.csv
 ```
 
-3. Install [R](http://cran.r-project.org) and/or
+Install [R](http://cran.r-project.org) and/or
 [Rstudio](https://www.rstudio.com/products/rstudio).
 
-4. Install the R packages used for the analyses:
+Install the R packages used for the analyses:
 
 ```{r install-pkgs, eval=FALSE, echo=TRUE}
 install.packages(c("data.table","ggplot2"))
