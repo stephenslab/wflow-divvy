@@ -14,10 +14,9 @@ output:
 other pages/notebooks:
 
     - [A first glance at the Divvy data](first-glance.html).
-	- [A map of the Divvy stations in Chicago](station-map.html).
-	- [Time-of-day trends](time-of-day-trends.html).
-	- [Seasonal trends](seasonal-trends.html)
-    - *Other pages go here.* 
+    - [A map of the Divvy stations in Chicago](station-map.html).
+    - [Time-of-day trends](time-of-day-trends.html).
+    - [Seasonal trends](seasonal-trends.html).
 
 ## Credits
 
