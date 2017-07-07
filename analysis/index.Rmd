@@ -19,7 +19,7 @@ from one single bike station at the University of Chicago to compare the
 biking patterns at the university against city-wide trends.
 
 All the results and plots presented in the pages below should be
-reproducable on your computer. First walk through the
+reproducable on your computer. Follow the
 [Setup Instructions](setup.html) if you are interested in reproducing
 the results for yourself.
 
