@@ -4,6 +4,7 @@ output:
     toc: false
 ---
 
+<br>
 ![Divvy bikes](9041673199_c214395e82.jpg) <br>
 *[Photo](https://www.flickr.com/photos/jamesbondsv/9041673199) by
 [Steven Vance](https://www.flickr.com/photos/jamesbondsv) /
@@ -35,6 +36,8 @@ data.](time-of-day-trends.html.)
 
 4. [Exploring seasonal biking trends from the Divvy
 data.](seasonal-trends.html)
+
+<br>
 
 ## Credits
 
