@@ -24,13 +24,21 @@ knitr::read_chunk("chunks.R")
 ```{r code-version, echo=FALSE, results='asis'}
 ```
 
-Instructions:
+To reproduce the results on your own computer, please follow these
+setup instructions.
 
-+ How to download the Divvy data. You should have these files in the
-data directory:
+1. Download or clone the
+[git repository](https://github.com/pcarbo/wflow-divvy) on your
+computer.
 
-  ```bash
-  README.txt
+2. Download the Divvy data files and copy the files to the
+"data" directory. I have provided a script
+`code/retrieve_divvy_data.sh` that can be used to automatically
+retrieve and prepare the data files. Alternatively, you can open this
+script and follow the steps by hand. After completing this step,
+all these files should be in the data directory:
+
+  ```
   Divvy_Stations_2016_Q1Q2.csv
   Divvy_Stations_2016_Q3.csv
   Divvy_Stations_2016_Q4.csv
@@ -42,12 +50,28 @@ data directory:
   Divvy_Trips_2016_Q4.csv
   ```
 
-+ R packages that need to be installed: 
-    - read.table from CRAN
+3. Install [R](http://cran.r-project.org) and/or
+[Rstudio](https://www.rstudio.com/products/rstudio).
 
+4. Install the R packages used for the analyses:
+
+   ```R
+   install.packages(c("data.table","ggplot2"))
+   ```
+
+Once you have completed these steps, you may run the R code. When
+running the code, make sure your working directory is set to the
+"analysis" directory:
+
+```{r working-directory}
+getwd()
+```
 <br>
 
 ## Session information
+
+This is the version of R and the packages that were used to generate
+the results from the R Markdown notebooks.
 
 ```{r session-info}
 ```
