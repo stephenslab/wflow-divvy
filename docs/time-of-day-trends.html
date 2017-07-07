@@ -309,7 +309,7 @@ div.tocify {
 <p><strong>Last updated:</strong> 2017-07-06</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> e67cefb</p>
+<p><strong>Code version:</strong> 426d238</p>
 <p>Here we use the Divvy trip data to examine biking trends over the course of a typical day in Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -333,37 +333,39 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 <pre class="r"><code>divvy$trips &lt;- transform(divvy$trips,start.hour = factor(start.hour,0:23))</code></pre>
 <p><br></p>
 </div>
-<div id="count-departures" class="section level2">
-<h2>Count departures</h2>
+<div id="count-departures-by-time-of-day" class="section level2">
+<h2>Count departures by time-of-day</h2>
 <p>Now that <code>start.hour</code> is a factor, it is easy to create a bar chart showing the total number of departures at each hour.</p>
-<p>Unsurprisingly, there is very little biking activity at night. The two peaks (“modes”) in the bar chart nicely recapitulate the morning and afternoon rush hours.</p>
+<p>Unsurprisingly, there is very little biking activity at night.</p>
+<p>Further, the two peaks (“modes”) in the bar chart nicely recapitulate the morning and afternoon rush hours.</p>
 <pre class="r"><code>ggplot(divvy$trips,aes(start.hour)) +
-  geom_bar(fill = &quot;black&quot;,width = 0.6) +
+  geom_bar(fill = &quot;dodgerblue&quot;,width = 0.6) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>This summary is a bit muddled because it is counting trips on the both weekdays and weekends; once we separate the counts by the day of the week, the rush-hour trends become more striking (and disappear completely on Saturday and Sunday).</p>
+<p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" width="480" style="display: block; margin: auto;" /></p>
+<p>This summary is a bit muddled because it is counting trips during the week and on the weekends. Once we separate the counts by the day of the week, the rush-hour trends become more striking. (Also notice that the rush hours disappear on Saturday and Sunday.)</p>
 <pre class="r"><code>ggplot(divvy$trips,aes(start.hour)) +
-  geom_bar(fill = &quot;black&quot;,width = 0.6) +
+  geom_bar(fill = &quot;dodgerblue&quot;,width = 0.75) +
   facet_wrap(~start.day,ncol = 2) +
   scale_x_discrete(breaks = seq(0,24,2)) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" width="672" style="display: block; margin: auto;" /> <br></p>
+<p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" width="576" style="display: block; margin: auto;" /> <br></p>
 </div>
-<div id="university-of-chicago-trends" class="section level2">
-<h2>University of Chicago trends</h2>
+<div id="time-of-day-trends-at-university-of-chicago" class="section level2">
+<h2>Time-of-day trends at University of Chicago</h2>
+<p>The commuting trends are different at the University of Chicago Divvy station—there isn’t much of a morning rush hour. This may be because students and staff don’t regularly use the Divvy bikes for commuting.</p>
 <pre class="r"><code>ggplot(subset(divvy$trips,from_station_name == &quot;University Ave &amp; 57th St&quot;),
        aes(start.hour)) +
-  geom_bar(fill = &quot;black&quot;,width = 0.6) +
+  geom_bar(fill = &quot;dodgerblue&quot;,width = 0.75) +
   facet_wrap(~start.day,ncol = 2) +
   scale_x_discrete(breaks = seq(0,24,2)) +
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<p><img src="figure/time-of-day-trends.Rmd/timeofday-uchicago-barchart-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/time-of-day-trends.Rmd/timeofday-uchicago-barchart-1.png" width="576" style="display: block; margin: auto;" /></p>
 <p><br></p>
 </div>
 <div id="session-information" class="section level2">
