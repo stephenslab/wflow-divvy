@@ -13,8 +13,6 @@ output:
 [Steven Vance](https://www.flickr.com/photos/jamesbondsv) /
 [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)*
 
-<title>Divvy data exploration overview</title>
-
 # Project overview
 
 The purpose of this project is to gain some insight into city-wide
