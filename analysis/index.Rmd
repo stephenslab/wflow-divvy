@@ -1,4 +1,7 @@
 ---
+title: "Overview of Divvy data exploration project"
+author: "Peter Carbonetto"
+date: 2017-07-10
 output:
   html_document:
     toc: false
@@ -9,6 +12,8 @@ output:
 *[Photo](https://www.flickr.com/photos/jamesbondsv/9041673199) by
 [Steven Vance](https://www.flickr.com/photos/jamesbondsv) /
 [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)*
+
+<title>Divvy data exploration overview</title>
 
 # Project overview
 
