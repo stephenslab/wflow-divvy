@@ -1,5 +1,5 @@
 ---
-title: "Overview of Divvy data exploration project"
+title: "Divvy data exploration project"
 author: "Peter Carbonetto"
 date: 2017-07-10
 output:
