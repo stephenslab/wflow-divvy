@@ -1,7 +1,7 @@
 ---
-# title: "Divvy data exploration project"
-# author: "Peter Carbonetto"
-# date: 2017-07-10
+title: "Divvy data exploration project"
+author: "Peter Carbonetto"
+date: 2017-07-12
 output:
   html_document:
     toc: false
