@@ -306,10 +306,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-07</p>
+<p><strong>Last updated:</strong> 2017-07-13</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> e4ba033</p>
+<p><strong>Code version:</strong> 6d02ffc</p>
 <p>In this last analysis, I use the Divvy trip data to examine biking trends in Chicago over the course of one year.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -351,7 +351,7 @@ ggplot(data.frame(day = 1:366,departures = counts.day),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p>This plot shows a sizeable increase in bike trips during summer days, but since the number of trips varies widely from one day to the next, I think the plot will look nicer if instead we count the number of trips <em>per week</em> instead of per day.</p>
+<p>This plot shows a sizeable increase in bike trips during summer days, but since the number of trips varies widely from one day to the next, I think the plot will look nicer if instead we count the number of trips <em>per week</em>.</p>
 <pre class="r"><code>counts.week &lt;- as.vector(table(divvy$trips$start.week))
 ggplot(data.frame(week = 0:52,departures = counts.week),
        aes(x = week,y = departures)) +

@@ -306,10 +306,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-07</p>
+<p><strong>Last updated:</strong> 2017-07-13</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> f7da4f6</p>
+<p><strong>Code version:</strong> 6d02ffc</p>
 <p>Here we use the Divvy trip data to examine biking trends over the course of a typical day in Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -335,7 +335,7 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 </div>
 <div id="count-departures-by-time-of-day" class="section level2">
 <h2>Count departures by time-of-day</h2>
-<p>Now that <code>start.hour</code> is a factor, it is easy to create a bar chart showing the total number of departures at each hour. Unsurprisingly, we se very little biking activity at night. Further, the two peaks (“modes”) in the bar chart nicely recapitulate the morning and afternoon rush hours.</p>
+<p>Now that <code>start.hour</code> is a factor, it is easy to create a bar chart showing the total number of departures at each hour. Unsurprisingly, we see little biking activity at night. Further, the two peaks (“modes”) in the bar chart nicely recapitulate the morning and afternoon rush hours.</p>
 <pre class="r"><code>ggplot(divvy$trips,aes(start.hour)) +
   geom_bar(fill = &quot;dodgerblue&quot;,width = 0.6) +
   theme_minimal() +

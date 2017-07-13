@@ -306,10 +306,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-07</p>
+<p><strong>Last updated:</strong> 2017-07-13</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> e4ba033</p>
+<p><strong>Code version:</strong> 6d02ffc</p>
 <p>In this analysis, I will use the Divvy trip and station data to generate a map of Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -333,7 +333,7 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 </div>
 <div id="get-total-number-of-departures-by-station" class="section level2">
 <h2>Get total number of departures by station</h2>
-<p>I use the trip data to get the total number of departures by station. From these data, I create a new “departures” column in the table.</p>
+<p>I use the trip data to get the total number of departures by station. From these data, I create a “departures” column.</p>
 <pre class="r"><code>divvy$stations &lt;-
   cbind(divvy$stations,
     data.frame(departures = as.vector(table(divvy$trips$from_station_id))))

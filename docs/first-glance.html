@@ -11,7 +11,6 @@
 
 <meta name="author" content="Peter Carbonetto" />
 
-<meta name="date" content="2017-06-29" />
 
 <title>A first glance at the Divvy data</title>
 
@@ -300,7 +299,6 @@ div.tocify {
 
 <h1 class="title toc-ignore">A first glance at the Divvy data</h1>
 <h4 class="author"><em>Peter Carbonetto</em></h4>
-<h4 class="date"><em>2017-06-29</em></h4>
 
 </div>
 
@@ -308,10 +306,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-07</p>
+<p><strong>Last updated:</strong> 2017-07-13</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> f7da4f6</p>
+<p><strong>Code version:</strong> 6d02ffc</p>
 <p>Here, we will take a brief look at the data provided by Divvy.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -384,7 +382,7 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 </div>
 <div id="divvy-bikes-at-the-university-of-chicago" class="section level2">
 <h2>Divvy bikes at the University of Chicago</h2>
-<p>I would also like to take a close look at the trip data for the main Divvy station on the University of Chicago campus since this is where I work. The Divvy bikes were rented almost 8,000 times in 2016 at that location.</p>
+<p>I would also like to take a close look at the trip data for the main Divvy station on the University of Chicago campus. The Divvy bikes were rented almost 8,000 times in 2016 at that location.</p>
 <pre class="r"><code>sum(divvy$trips$from_station_name == &quot;University Ave &amp; 57th St&quot;,na.rm = TRUE)
 # [1] 7944</code></pre>
 <p><br></p>
