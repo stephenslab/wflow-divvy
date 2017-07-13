@@ -1,7 +1,6 @@
 ---
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
-date: 2017-06-29
 output: html_document
 ---
 

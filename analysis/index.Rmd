@@ -1,7 +1,6 @@
 ---
 title: "Divvy data exploration project"
 author: "Peter Carbonetto"
-date: 2017-07-12
 output:
   html_document:
     toc: false
@@ -16,13 +15,14 @@ output:
 ## Project overview
 
 The purpose of this project is to gain some insight into city-wide
-biking trends by analyzing the [Divvy trip
-data](https://www.divvybikes.com/system-data). I also analyze trip data
-from one single bike station at the University of Chicago to compare the
-biking patterns at the university against city-wide trends.
+biking trends by analyzing the
+[Divvy trip data](https://www.divvybikes.com/system-data). Also, I
+examine trip data from one bike station at the University of Chicago
+to compare the biking patterns at the university against city-wide
+trends.
 
 All the results and plots presented in the pages below should be
-reproducable on your computer. Follow the
+reproduceable on your computer. Follow the
 [Setup Instructions](setup.html) if you are interested in reproducing
 the results for yourself.
 

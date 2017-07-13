@@ -57,7 +57,7 @@ divvy$trips <- transform(divvy$trips,start.hour = factor(start.hour,0:23))
 
 Now that `start.hour` is a factor, it is easy to create a bar chart
 showing the total number of departures at each hour. Unsurprisingly,
-we se very little biking activity at night. Further, the two peaks
+we see little biking activity at night. Further, the two peaks
 ("modes") in the bar chart nicely recapitulate the morning and
 afternoon rush hours.
 

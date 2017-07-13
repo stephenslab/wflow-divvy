@@ -81,7 +81,7 @@ ggplot(data.frame(day = 1:366,departures = counts.day),
 This plot shows a sizeable increase in bike trips during summer days,
 but since the number of trips varies widely from one day to the next,
 I think the plot will look nicer if instead we count the number of
-trips *per week* instead of per day.
+trips *per week*.
 
 ```{r plot-trips-by-week, fig.height = 3, fig.width = 6}
 counts.week <- as.vector(table(divvy$trips$start.week))

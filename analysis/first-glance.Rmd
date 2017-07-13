@@ -1,7 +1,6 @@
 ---
 title: "A first glance at the Divvy data"
 author: "Peter Carbonetto"
-date: 2017-06-29
 output: html_document
 ---
 
@@ -78,9 +77,8 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 ## Divvy bikes at the University of Chicago
 
 I would also like to take a close look at the trip data for the main
-Divvy station on the University of Chicago campus since this is where
-I work. The Divvy bikes were rented almost 8,000 times in 2016 at that
-location.
+Divvy station on the University of Chicago campus. The Divvy bikes
+were rented almost 8,000 times in 2016 at that location.
 
 ```{r get-uchicago-station}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)

@@ -48,7 +48,7 @@ divvy <- read.divvy.data()
 ## Get total number of departures by station
 
 I use the trip data to get the total number of departures by station.
-From these data, I create a new "departures" column in the table.
+From these data, I create a "departures" column.
 
 ```{r count-departures}
 divvy$stations <-
