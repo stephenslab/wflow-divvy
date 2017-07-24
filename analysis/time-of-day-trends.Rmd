@@ -131,8 +131,8 @@ these results.
 ```
 
 ```{r, results="asis", echo=FALSE}
-# This configures MathJax to only use TeX fonts so that math formulae
-# are rendered more consistently in different platforms.
+# This code configures MathJax to only use TeX fonts so that math
+# formulae are rendered more consistently in different platforms.
 cat("
 <script type=\"text/x-mathjax-config\">
   MathJax.Hub.Config({
