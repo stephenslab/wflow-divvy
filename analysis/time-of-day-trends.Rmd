@@ -41,7 +41,7 @@ Following [my earlier steps](first-glance.html), I use function
 `read.divvy.data` to read the trip and station data from the CSV
 files.
 
-```{r load-data}
+```{r load-data, cache=FALSE}
 divvy <- read.divvy.data()
 ```
 
@@ -70,9 +70,19 @@ ggplot(divvy$trips,aes(start.hour)) +
 ```
 
 However, this bar chart is a bit muddled because it is counting trips
-during the week and on the weekends. Once we separate the counts by
-the day of the week, the rush-hour trends become more obvious. (Also
-notice that the rush-hour weeks disappear on Saturday and Sunday.)
+during the week and on the weekends. Consider that the bin count
+$x[h]$ for hour $h$ in the histogram above is a sum of the counts for
+each day of the week:
+
+$$x[h] =
+x_{\mathsf{Mon}}[h] + x_{\mathsf{Tue}}[h] + x_{\mathsf{Wed}}[h] +
+x_{\mathsf{Thu}}[h] + x_{\mathsf{Fri}}[h] + x_{\mathsf{Sat}}[h] +
+x_{\mathsf{Sun}}[h]
+$$
+
+Once we plot the counts separately for each the day of the week, the
+rush-hour trends become more obvious. (Also notice that the rush-hour
+weeks disappear on Saturday and Sunday.)
 
 ```{r timeofday-barchart-2, fig.height = 6, fig.width = 6}
 ggplot(divvy$trips,aes(start.hour)) +
