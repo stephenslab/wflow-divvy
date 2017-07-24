@@ -4,7 +4,5 @@
 .Ruserdata
 .Rapp.history
 .DS_Store
-data/*.csv
-data/README.txt
 
 
