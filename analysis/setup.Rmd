@@ -29,7 +29,7 @@ setup instructions.
 ## Setup instructions
 
 Download or clone the
-[git repository](https://github.com/pcarbo/wflow-divvy) on your
+[git repository](https://github.com/stephenslab/wflow-divvy) on your
 computer.
 
 Download the Divvy data files and copy the files to the "data"

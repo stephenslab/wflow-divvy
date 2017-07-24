@@ -13,7 +13,7 @@ navbar:
       href: license.html
   right:
     - text: source
-      href: https://github.com/pcarbo/wflow-divvy
+      href: https://github.com/stephenslab/wflow-divvy
 output:
   html_document:
     toc: true
