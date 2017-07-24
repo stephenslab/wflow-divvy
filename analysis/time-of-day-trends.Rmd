@@ -41,7 +41,7 @@ Following [my earlier steps](first-glance.html), I use function
 `read.divvy.data` to read the trip and station data from the CSV
 files.
 
-```{r load-data, cache=FALSE}
+```{r load-data}
 divvy <- read.divvy.data()
 ```
 
@@ -74,11 +74,19 @@ during the week and on the weekends. Consider that the bin count
 $x[h]$ for hour $h$ in the histogram above is a sum of the counts for
 each day of the week:
 
-$$x[h] =
-x_{\mathsf{Mon}}[h] + x_{\mathsf{Tue}}[h] + x_{\mathsf{Wed}}[h] +
+$$
+\begin{align}
+x[h] 
+& = \sum_{i\;\in\;\mathsf{DaysOfTheWeek}} x_i[h] \\
+& = x_{\mathsf{Mon}}[h] + x_{\mathsf{Tue}}[h] + x_{\mathsf{Wed}}[h] +
 x_{\mathsf{Thu}}[h] + x_{\mathsf{Fri}}[h] + x_{\mathsf{Sat}}[h] +
 x_{\mathsf{Sun}}[h]
+\end{align}
 $$
+
+*Note:* The math above is embedded in the webpage using 
+[MathJax](https://github.com/mathjax/MathJax). See [here](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+for an excellent reference on MathJax.
 
 Once we plot the counts separately for each the day of the week, the
 rush-hour trends become more obvious. (Also notice that the rush-hour
@@ -121,3 +129,16 @@ these results.
 
 ```{r session-info}
 ```
+
+```{r, results="asis", echo=FALSE}
+# This configures MathJax to only use TeX fonts so that math formulae
+# are rendered more consistently in different platforms.
+cat("
+<script type=\"text/x-mathjax-config\">
+  MathJax.Hub.Config({
+    \"HTML-CSS\": { availableFonts: [\"TeX\"] }
+  });
+</script>
+")
+```
+
