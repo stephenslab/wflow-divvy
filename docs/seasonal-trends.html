@@ -306,10 +306,10 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-24</p>
+<p><strong>Last updated:</strong> 2017-07-31</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 3464086</p>
+<p><strong>Code version:</strong> c6e8686</p>
 <p>In this last analysis, I use the Divvy trip data to examine biking trends in Chicago over the course of one year.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -361,8 +361,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p>Indeed, the seasonal trends are less noisy in this plot; the majority of Divvy bike trips in Chicago are taken when the weather is warmer (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months.</p>
-<p><br></p>
+<p>Indeed, the seasonal trends are less noisy in this plot; the majority of Divvy bike trips in Chicago are taken when the weather is warmer (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months. <br> <br></p>
 </div>
 <div id="seasonal-trends-at-the-university-of-chicago" class="section level2">
 <h2>Seasonal trends at the University of Chicago</h2>
@@ -376,8 +375,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p><br></p>
+<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" width="576" style="display: block; margin: auto;" /> <br></p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
