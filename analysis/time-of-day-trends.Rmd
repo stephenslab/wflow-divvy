@@ -119,7 +119,6 @@ ggplot(subset(divvy$trips,from_station_name == "University Ave & 57th St"),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
-
 <br>
 
 ## Session information

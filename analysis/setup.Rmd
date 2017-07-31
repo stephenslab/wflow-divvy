@@ -25,6 +25,8 @@ knitr::read_chunk("chunks.R")
 
 To reproduce the results on your own computer, please follow these
 setup instructions.
+<br>
+<br>
 
 ## Setup instructions
 
@@ -67,6 +69,7 @@ running the code, make sure your working directory is set to the
 ```{r working-dir}
 getwd()
 ```
+<br>
 
 ## Session information
 

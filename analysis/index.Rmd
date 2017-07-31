@@ -11,6 +11,8 @@ output:
 *[Photo](https://www.flickr.com/photos/jamesbondsv/9041673199) by
 [Steven Vance](https://www.flickr.com/photos/jamesbondsv) /
 [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)*
+<br>
+<br>
 
 ## Project overview
 
@@ -39,8 +41,7 @@ data.](time-of-day-trends.html)
 
 4. [Exploring seasonal biking trends from the Divvy
 data.](seasonal-trends.html)
-
-<br>
+<br><br>
 
 ## Credits
 
