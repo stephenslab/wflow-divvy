@@ -52,7 +52,7 @@ We have data on 581 Divvy stations across the city.
 
 ```{r get-stations-overview}
 nrow(divvy$stations)
-print(head(divvy$stations))
+print(head(divvy$stations),row.names = FALSE)
 ```
 
 We also have information about the >3 million trips taken on Divvy
