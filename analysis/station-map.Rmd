@@ -33,7 +33,6 @@ library(data.table)
 library(ggplot2)
 source("../code/functions.R")
 ```
-<br>
 
 ## Read the data
 
@@ -43,7 +42,6 @@ read the trip and station data from the CSV files.
 ```{r load-data}
 divvy <- read.divvy.data()
 ```
-<br>
 
 ## Get total number of departures by station
 
@@ -56,7 +54,6 @@ divvy$stations <-
     data.frame(departures = as.vector(table(divvy$trips$from_station_id))))
 summary(divvy$stations$departures)
 ```
-<br>
 
 ## Create a Divvy stations map
 
@@ -81,7 +78,6 @@ ggplot(divvy$stations,aes(x    = longitude,
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
-<br>
 
 ## Session information
 

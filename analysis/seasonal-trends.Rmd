@@ -33,7 +33,6 @@ library(data.table)
 library(ggplot2)
 source("../code/functions.R")
 ```
-<br>
 
 ## Read the data
 
@@ -59,7 +58,6 @@ to compile trip statistics for each week in the year.
 ```{r convert-start-week}
 divvy$trips <- transform(divvy$trips,start.week = factor(start.week,0:52))
 ```
-<br>
 
 ## Plot departures per day and per week
 
@@ -98,8 +96,6 @@ Indeed, the seasonal trends are less noisy in this plot; the majority
 of Divvy bike trips in Chicago are taken when the weather is warmer
 (weeks 20--40), and very few people are using the Divvy bikes in the
 cold winter months.
-<br>
-<br>
 
 ## Seasonal trends at the University of Chicago
 
@@ -120,7 +116,6 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
         panel.grid.minor = element_blank())
 
 ```
-<br>
 
 ## Session information
 

@@ -31,7 +31,6 @@ functions I wrote for this project.
 library(data.table)
 source("../code/functions.R")
 ```
-<br>
 
 ## Reading the data
 
@@ -46,7 +45,6 @@ to work with.
 ```{r load-data}
 divvy <- read.divvy.data()
 ```
-<br>
 
 ## A first glance at the Divvy data
 
@@ -72,7 +70,6 @@ the corner of Streeter and Grand) had the most activity by far.
 departures <- table(divvy$trips$from_station_name)
 as.matrix(head(sort(departures,decreasing = TRUE)))
 ```
-<br>
 
 ## Divvy bikes at the University of Chicago
 
@@ -83,7 +80,6 @@ were rented almost 8,000 times in 2016 at that location.
 ```{r get-uchicago-station}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
 ```
-<br>
 
 ## Session information
 

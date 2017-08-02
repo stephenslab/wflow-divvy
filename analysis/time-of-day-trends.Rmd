@@ -33,7 +33,6 @@ library(data.table)
 library(ggplot2)
 source("../code/functions.R")
 ```
-<br>
 
 ## Read the data
 
@@ -51,7 +50,6 @@ To make it easier to compile statistics by time of day, I convert the
 ```{r convert-start-hour}
 divvy$trips <- transform(divvy$trips,start.hour = factor(start.hour,0:23))
 ```
-<br>
 
 ## Count departures by time-of-day
 
@@ -101,7 +99,6 @@ ggplot(divvy$trips,aes(start.hour)) +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
-<br>
 
 ## Time-of-day trends at University of Chicago
 
@@ -119,7 +116,6 @@ ggplot(subset(divvy$trips,from_station_name == "University Ave & 57th St"),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
-<br>
 
 ## Session information
 
