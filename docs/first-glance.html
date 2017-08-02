@@ -292,6 +292,12 @@ div.tocify {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
 
 <div class="fluid-row" id="header">
 
@@ -306,15 +312,14 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-31</p>
+<p><strong>Last updated:</strong> 2017-08-02</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> c6e8686</p>
+<p><strong>Code version:</strong> e56e63d</p>
 <p>Here, we will take a brief look at the data provided by Divvy.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
 source(&quot;../code/functions.R&quot;)</code></pre>
-<p><br></p>
 <div id="reading-the-data" class="section level2">
 <h2>Reading the data</h2>
 <p>I wrote a function, <code>read.divvy.data</code>, that reads in the trip and station data from the <a href="https://www.divvybikes.com/system-data">Divvy CSV files</a>. This function uses <code>fread</code> from the <code>data.table</code> package to quickly read in the data (it is much faster than <code>read.table</code>). This function also prepares the data, including the departure dates and times, so that they are easier to work with.</p>
@@ -328,7 +333,6 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 # Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.
 # Preparing Divvy data for analysis in R.
 # Converting dates and times.</code></pre>
-<p><br></p>
 </div>
 <div id="a-first-glance-at-the-divvy-data" class="section level2">
 <h2>A first glance at the Divvy data</h2>
@@ -378,14 +382,12 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 # Clinton St &amp; Washington Blvd 47125
 # Lake Shore Dr &amp; North Blvd   45754
 # Clinton St &amp; Madison St      41744</code></pre>
-<p><br></p>
 </div>
 <div id="divvy-bikes-at-the-university-of-chicago" class="section level2">
 <h2>Divvy bikes at the University of Chicago</h2>
 <p>I would also like to take a close look at the trip data for the main Divvy station on the University of Chicago campus. The Divvy bikes were rented almost 8,000 times in 2016 at that location.</p>
 <pre class="r"><code>sum(divvy$trips$from_station_name == &quot;University Ave &amp; 57th St&quot;,na.rm = TRUE)
 # [1] 7944</code></pre>
-<p><br></p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
@@ -419,7 +421,8 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 
 <hr>
 <p>This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was
-created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>.
+created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
+0.7.0.
 </p>
 <hr>
 

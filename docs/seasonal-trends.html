@@ -292,6 +292,12 @@ div.tocify {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
 
 <div class="fluid-row" id="header">
 
@@ -306,16 +312,15 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-31</p>
+<p><strong>Last updated:</strong> 2017-08-02</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> c6e8686</p>
+<p><strong>Code version:</strong> e56e63d</p>
 <p>In this last analysis, I use the Divvy trip data to examine biking trends in Chicago over the course of one year.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
 library(ggplot2)
 source(&quot;../code/functions.R&quot;)</code></pre>
-<p><br></p>
 <div id="read-the-data" class="section level2">
 <h2>Read the data</h2>
 <p>First, I read in the Divvy trip and station data from the CSV files.</p>
@@ -336,7 +341,6 @@ source(&quot;../code/functions.R&quot;)</code></pre>
                              1:366))</code></pre>
 <p>I also convert the “start week” column to a factor to make it easier to compile trip statistics for each week in the year.</p>
 <pre class="r"><code>divvy$trips &lt;- transform(divvy$trips,start.week = factor(start.week,0:52))</code></pre>
-<p><br></p>
 </div>
 <div id="plot-departures-per-day-and-per-week" class="section level2">
 <h2>Plot departures per day and per week</h2>
@@ -361,7 +365,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p>Indeed, the seasonal trends are less noisy in this plot; the majority of Divvy bike trips in Chicago are taken when the weather is warmer (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months. <br> <br></p>
+<p>Indeed, the seasonal trends are less noisy in this plot; the majority of Divvy bike trips in Chicago are taken when the weather is warmer (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months.</p>
 </div>
 <div id="seasonal-trends-at-the-university-of-chicago" class="section level2">
 <h2>Seasonal trends at the University of Chicago</h2>
@@ -375,7 +379,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" width="576" style="display: block; margin: auto;" /> <br></p>
+<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" width="576" style="display: block; margin: auto;" /></p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
@@ -411,7 +415,8 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
 
 <hr>
 <p>This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was
-created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>.
+created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
+0.7.0.
 </p>
 <hr>
 

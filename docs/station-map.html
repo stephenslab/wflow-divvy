@@ -292,6 +292,12 @@ div.tocify {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
 
 <div class="fluid-row" id="header">
 
@@ -306,16 +312,15 @@ div.tocify {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-07-31</p>
+<p><strong>Last updated:</strong> 2017-08-02</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> c6e8686</p>
+<p><strong>Code version:</strong> e56e63d</p>
 <p>In this analysis, I will use the Divvy trip and station data to generate a map of Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
 library(ggplot2)
 source(&quot;../code/functions.R&quot;)</code></pre>
-<p><br></p>
 <div id="read-the-data" class="section level2">
 <h2>Read the data</h2>
 <p>As <a href="first-glance.html">before</a>, I use function <code>read.divvy.data</code> to read the trip and station data from the CSV files.</p>
@@ -329,7 +334,6 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 # Reading trip data from ../data/Divvy_Trips_2016_Q4.csv.
 # Preparing Divvy data for analysis in R.
 # Converting dates and times.</code></pre>
-<p><br></p>
 </div>
 <div id="get-total-number-of-departures-by-station" class="section level2">
 <h2>Get total number of departures by station</h2>
@@ -340,7 +344,6 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 summary(divvy$stations$departures)
 #    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #       1     557    3058    6188    9029   90040</code></pre>
-<p><br></p>
 </div>
 <div id="create-a-divvy-stations-map" class="section level2">
 <h2>Create a Divvy stations map</h2>
@@ -358,7 +361,7 @@ ggplot(divvy$stations,aes(x    = longitude,
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<p><img src="figure/station-map.Rmd/create-stations-map-1.png" width="624" style="display: block; margin: auto;" /> <br></p>
+<p><img src="figure/station-map.Rmd/create-stations-map-1.png" width="624" style="display: block; margin: auto;" /></p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
@@ -394,7 +397,8 @@ ggplot(divvy$stations,aes(x    = longitude,
 
 <hr>
 <p>This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was
-created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>.
+created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
+0.7.0.
 </p>
 <hr>
 
