@@ -29,8 +29,8 @@ setup instructions.
 ## Setup instructions
 
 Download or clone the
-[git repository](https://github.com/stephenslab/wflow-divvy) on your
-computer.
+[git repository](https://github.com/stephenslab/wflow-divvy)
+on your computer.
 
 Download the Divvy data files and copy the files to the "data"
 directory. I have provided a script `code/retrieve_divvy_data.sh` that
