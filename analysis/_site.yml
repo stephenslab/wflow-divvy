@@ -16,8 +16,8 @@ navbar:
       href: https://github.com/stephenslab/wflow-divvy
 output:
   html_document:
-    toc: true
-    toc_float: true
+    toc: false
+    toc_float: false
     theme: readable
     highlight: textmate
     include:
