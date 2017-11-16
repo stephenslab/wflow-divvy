@@ -24,7 +24,7 @@ knitr::read_chunk("chunks.R")
 ```
 
 To reproduce the results on your own computer, please follow these
-setup instructions.
+setup instructions. 
 
 ## Setup instructions
 

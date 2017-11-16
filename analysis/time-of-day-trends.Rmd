@@ -23,7 +23,7 @@ knitr::read_chunk("chunks.R")
 ```
 
 Here we use the Divvy trip data to examine biking trends over the
-course of a typical day in Chicago.
+course of a typical day in Chicago. 
 
 I begin by loading a few packages, as well as some additional
 functions I wrote for this project.
