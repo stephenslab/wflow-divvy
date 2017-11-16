@@ -24,8 +24,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -34,10 +34,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+  }
 }
 </script>
 
@@ -313,10 +315,10 @@ div.section {
 shared across the workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-08-02</p>
+<p><strong>Last updated:</strong> 2017-11-16</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository exists and R
  package git2r is installed -->
-<p><strong>Code version:</strong> 89aeaeb</p>
+<p><strong>Code version:</strong> 9463eb6</p>
 <p>To reproduce the results on your own computer, please follow these setup instructions.</p>
 <div id="setup-instructions" class="section level2">
 <h2>Setup instructions</h2>
@@ -342,9 +344,13 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <h2>Session information</h2>
 <p>This is the version of R and the packages that were used to generate the results from the R Markdown documents.</p>
 <pre class="r"><code>sessionInfo()
-# R version 3.3.2 (2016-10-31)
-# Platform: x86_64-apple-darwin13.4.0 (64-bit)
-# Running under: macOS Sierra 10.12.5
+# R version 3.4.1 (2017-06-30)
+# Platform: x86_64-apple-darwin15.6.0 (64-bit)
+# Running under: macOS Sierra 10.12.6
+# 
+# Matrix products: default
+# BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
+# LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
 # 
 # locale:
 # [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -353,10 +359,10 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # loaded via a namespace (and not attached):
-#  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.2    
-#  [5] htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.12    stringi_1.1.2  
-#  [9] rmarkdown_1.6   knitr_1.16      git2r_0.19.0    stringr_1.2.0  
-# [13] digest_0.6.12   evaluate_0.10.1</code></pre>
+#  [1] compiler_3.4.1  backports_1.1.0 magrittr_1.5    rprojroot_1.2  
+#  [5] tools_3.4.1     htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.13   
+#  [9] stringi_1.1.5   rmarkdown_1.7   knitr_1.17      git2r_0.19.0   
+# [13] stringr_1.2.0   digest_0.6.12   evaluate_0.10.1</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
@@ -368,7 +374,7 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <hr>
 <p>This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was
 created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
-0.7.0.
+0.8.0.
 </p>
 <hr>
 

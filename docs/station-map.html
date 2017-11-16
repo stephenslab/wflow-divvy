@@ -24,8 +24,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -34,10 +34,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+  }
 }
 </script>
 
@@ -312,13 +314,14 @@ div.section {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-08-02</p>
+<p><strong>Last updated:</strong> 2017-11-16</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> e56e63d</p>
+<p><strong>Code version:</strong> 9463eb6</p>
 <p>In this analysis, I will use the Divvy trip and station data to generate a map of Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
+# Warning: package &#39;data.table&#39; was built under R version 3.4.2
 library(ggplot2)
 source(&quot;../code/functions.R&quot;)</code></pre>
 <div id="read-the-data" class="section level2">
@@ -343,7 +346,7 @@ source(&quot;../code/functions.R&quot;)</code></pre>
     data.frame(departures = as.vector(table(divvy$trips$from_station_id))))
 summary(divvy$stations$departures)
 #    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#       1     557    3058    6188    9029   90040</code></pre>
+#       1     557    3058    6188    9029   90042</code></pre>
 </div>
 <div id="create-a-divvy-stations-map" class="section level2">
 <h2>Create a Divvy stations map</h2>
@@ -367,9 +370,13 @@ ggplot(divvy$stations,aes(x    = longitude,
 <h2>Session information</h2>
 <p>This is the version of R and the packages that were used to generate these results.</p>
 <pre class="r"><code>sessionInfo()
-# R version 3.3.2 (2016-10-31)
-# Platform: x86_64-apple-darwin13.4.0 (64-bit)
-# Running under: macOS Sierra 10.12.5
+# R version 3.4.1 (2017-06-30)
+# Platform: x86_64-apple-darwin15.6.0 (64-bit)
+# Running under: macOS Sierra 10.12.6
+# 
+# Matrix products: default
+# BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
+# LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
 # 
 # locale:
 # [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -378,15 +385,18 @@ ggplot(divvy$stations,aes(x    = longitude,
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # other attached packages:
-# [1] ggplot2_2.2.1     data.table_1.10.4
+# [1] ggplot2_2.2.1       data.table_1.10.4-3
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.12     assertthat_0.2.0 digest_0.6.12    rprojroot_1.2   
-#  [5] plyr_1.8.4       grid_3.3.2       gtable_0.2.0     backports_1.0.5 
-#  [9] git2r_0.19.0     magrittr_1.5     scales_0.4.1     evaluate_0.10.1 
-# [13] stringi_1.1.2    lazyeval_0.2.0   rmarkdown_1.6    labeling_0.3    
-# [17] tools_3.3.2      stringr_1.2.0    munsell_0.4.3    yaml_2.1.14     
-# [21] colorspace_1.3-2 htmltools_0.3.6  knitr_1.16       tibble_1.2</code></pre>
+#  [1] Rcpp_0.12.13      knitr_1.17        magrittr_1.5     
+#  [4] munsell_0.4.3     colorspace_1.3-2  rlang_0.1.2      
+#  [7] stringr_1.2.0     plyr_1.8.4        tools_3.4.1      
+# [10] grid_3.4.1        gtable_0.2.0      git2r_0.19.0     
+# [13] htmltools_0.3.6   yaml_2.1.14       lazyeval_0.2.1   
+# [16] rprojroot_1.2     digest_0.6.12     tibble_1.3.4     
+# [19] evaluate_0.10.1   rmarkdown_1.7     labeling_0.3     
+# [22] stringi_1.1.5     compiler_3.4.1    scales_0.4.1.9002
+# [25] backports_1.1.0</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
@@ -398,7 +408,7 @@ ggplot(divvy$stations,aes(x    = longitude,
 <hr>
 <p>This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was
 created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
-0.7.0.
+0.8.0.
 </p>
 <hr>
 
