@@ -38,7 +38,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
   }
 }
 </script>
@@ -315,10 +315,10 @@ div.section {
 shared across the workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2017-11-16</p>
+<p><strong>Last updated:</strong> 2018-01-18</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository exists and R
  package git2r is installed -->
-<p><strong>Code version:</strong> 9463eb6</p>
+<p><strong>Code version:</strong> 93a3a86</p>
 <p>To reproduce the results on your own computer, please follow these setup instructions.</p>
 <div id="setup-instructions" class="section level2">
 <h2>Setup instructions</h2>
@@ -344,9 +344,9 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <h2>Session information</h2>
 <p>This is the version of R and the packages that were used to generate the results from the R Markdown documents.</p>
 <pre class="r"><code>sessionInfo()
-# R version 3.4.1 (2017-06-30)
+# R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS Sierra 10.12.6
+# Running under: macOS High Sierra 10.13.2
 # 
 # Matrix products: default
 # BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
@@ -359,10 +359,10 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # loaded via a namespace (and not attached):
-#  [1] compiler_3.4.1  backports_1.1.0 magrittr_1.5    rprojroot_1.2  
-#  [5] tools_3.4.1     htmltools_0.3.6 yaml_2.1.14     Rcpp_0.12.13   
-#  [9] stringi_1.1.5   rmarkdown_1.7   knitr_1.17      git2r_0.19.0   
-# [13] stringr_1.2.0   digest_0.6.12   evaluate_0.10.1</code></pre>
+#  [1] compiler_3.4.3  backports_1.1.2 magrittr_1.5    rprojroot_1.3-2
+#  [5] tools_3.4.3     htmltools_0.3.6 yaml_2.1.16     Rcpp_0.12.14   
+#  [9] stringi_1.1.6   rmarkdown_1.8   knitr_1.18      git2r_0.21.0   
+# [13] stringr_1.2.0   digest_0.6.13   evaluate_0.10.1</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
