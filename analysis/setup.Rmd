@@ -66,6 +66,7 @@ running the code, make sure your working directory is set to the
 
 ```{r working-dir}
 getwd()
+getwd()
 ```
 
 ## Session information
