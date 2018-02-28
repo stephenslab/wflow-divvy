@@ -1,26 +1,15 @@
 ---
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
-output: html_document
+repdoc:
+  seed: 1
+output: repdoc::repdoc_html
 ---
 
 <!-- The file analysis/chunks.R contains chunks that define default settings
 shared across the workflowr files. -->
 ```{r read-chunk, include=FALSE, cache=FALSE}
 knitr::read_chunk("chunks.R")
-```
-
-<!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-```
-
-<!-- Insert the date the file was last updated -->
-```{r last-updated, echo=FALSE, results='asis'}
-```
-
-<!-- Insert the code version (Git commit SHA1) if Git repository exists and R
- package git2r is installed -->
-```{r code-version, echo=FALSE, results='asis'}
 ```
 
 To reproduce the results on your own computer, please follow these
@@ -66,7 +55,6 @@ running the code, make sure your working directory is set to the
 
 ```{r working-dir}
 getwd()
-getwd()
 ```
 
 ## Session information
@@ -74,5 +62,3 @@ getwd()
 This is the version of R and the packages that were used to generate
 the results from the R Markdown documents.
 
-```{r session-info}
-```
