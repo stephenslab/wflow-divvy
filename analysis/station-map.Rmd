@@ -1,25 +1,18 @@
 ---
 title: "A map of the Divvy stations in Chicago"
 author: "Peter Carbonetto"
-output: html_document
+output: repdoc::repdoc_html
 ---
-
-<!-- Define defaults shared by all workflowr files. -->
-```{r read-chunk, include=FALSE, cache=FALSE}
-knitr::read_chunk("chunks.R")
-```
 
 <!-- Update knitr chunk options -->
 ```{r knitr-opts-chunk, include=FALSE}
-```
-
-<!-- Insert the date the file was last updated -->
-```{r last-updated, echo=FALSE, results='asis'}
-```
-
-<!-- Insert the code version (Git commit SHA1) if Git repository
- exists and R package git2r is installed -->
-```{r code-version, echo=FALSE, results='asis'}
+knitr::opts_chunk$set(
+  comment = "#",
+  collapse = TRUE,
+  fig.align = "center",
+  tidy = FALSE,
+  fig.path = paste0("figure/", knitr::current_input(), "/")
+)
 ```
 
 In this analysis, I will use the Divvy trip and station data to
