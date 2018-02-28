@@ -313,12 +313,6 @@ div.section {
 
 <!-- The file analysis/chunks.R contains chunks that define default settings
 shared across the workflowr files. -->
-<!-- Update knitr chunk options -->
-<!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2018-02-27</p>
-<!-- Insert the code version (Git commit SHA1) if Git repository exists and R
- package git2r is installed -->
-<p><strong>Code version:</strong> 2d5dfd7</p>
 <p>To reproduce the results on your own computer, please follow these setup instructions.</p>
 <div id="setup-instructions" class="section level2">
 <h2>Setup instructions</h2>
@@ -337,34 +331,12 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <p>Install the R packages used for the analyses:</p>
 <pre class="r"><code>install.packages(c(&quot;data.table&quot;,&quot;ggplot2&quot;))</code></pre>
 <p>Once you have completed these steps, you may run the R code. When running the code, make sure your working directory is set to the “analysis” directory, e.g.,</p>
-<pre class="r"><code>getwd()
-# [1] &quot;/Users/pcarbo/git/wflow-divvy/analysis&quot;
-getwd()
-# [1] &quot;/Users/pcarbo/git/wflow-divvy/analysis&quot;</code></pre>
+<pre class="r"><code>getwd()</code></pre>
+<pre><code>## [1] &quot;/Users/pcarbo/git/wflow-divvy/analysis&quot;</code></pre>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <p>This is the version of R and the packages that were used to generate the results from the R Markdown documents.</p>
-<pre class="r"><code>sessionInfo()
-# R version 3.4.3 (2017-11-30)
-# Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS High Sierra 10.13.3
-# 
-# Matrix products: default
-# BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
-# LAPACK: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRlapack.dylib
-# 
-# locale:
-# [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-# 
-# attached base packages:
-# [1] stats     graphics  grDevices utils     datasets  methods   base     
-# 
-# loaded via a namespace (and not attached):
-#  [1] compiler_3.4.3  backports_1.1.2 magrittr_1.5    rprojroot_1.3-2
-#  [5] tools_3.4.3     htmltools_0.3.6 yaml_2.1.16     Rcpp_0.12.15   
-#  [9] stringi_1.1.6   rmarkdown_1.8   knitr_1.19      git2r_0.21.0   
-# [13] stringr_1.2.0   digest_0.6.15   evaluate_0.10.1</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
