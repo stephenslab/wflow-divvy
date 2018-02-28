@@ -1,15 +1,18 @@
 ---
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
-repdoc:
-  seed: 1
 output: repdoc::repdoc_html
 ---
 
-<!-- The file analysis/chunks.R contains chunks that define default settings
-shared across the workflowr files. -->
-```{r read-chunk, include=FALSE, cache=FALSE}
-knitr::read_chunk("chunks.R")
+<!-- Update knitr chunk options -->
+```{r knitr-opts-chunk, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#",
+  collapse = TRUE,
+  fig.align = "center",
+  tidy = FALSE,
+  fig.path = paste0("figure/", knitr::current_input(), "/")
+)
 ```
 
 To reproduce the results on your own computer, please follow these
@@ -61,4 +64,3 @@ getwd()
 
 This is the version of R and the packages that were used to generate
 the results from the R Markdown documents.
-
