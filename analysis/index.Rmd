@@ -2,7 +2,14 @@
 title: "Divvy data exploration project"
 author: "Peter Carbonetto"
 site: repdoc::repdoc_site
+repdoc:
+  seed: 1
 ---
+
+<!-- Update knitr chunk options -->
+```{r knitr-opts-chunk, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
 
 <br>
 ![Divvy bikes](divvy.jpg) <br>
@@ -53,7 +60,4 @@ Wehrwein](http://www.austinwehrwein.com/data-visualization/heatmaps-with-divvy-d
 for sharing their analyses of the Divvy trip data that inspired some
 of the investigations here.
 
-<!-- For hiding the Session Information chunk. -->
-```{r}
-knitr::opts_chunk$set(eval = FALSE,echo = FALSE)
-```
+
