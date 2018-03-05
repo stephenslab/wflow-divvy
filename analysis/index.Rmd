@@ -2,7 +2,7 @@
 title: "Divvy data exploration project"
 author: "Peter Carbonetto"
 output:
-  html_document:
+  repdoc::repdoc_html:
     toc: false
 ---
 
