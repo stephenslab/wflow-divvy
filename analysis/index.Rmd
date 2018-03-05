@@ -1,6 +1,7 @@
 ---
 title: "Divvy data exploration project"
 author: "Peter Carbonetto"
+site: repdoc::repdoc_site
 ---
 
 <br>
