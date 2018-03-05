@@ -8,7 +8,7 @@ repdoc:
 
 <!-- Update knitr chunk options -->
 ```{r knitr-opts-chunk, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE)
+knitr::opts_chunk$set(collapse = TRUE, comment = "#")
 ```
 
 <br>
