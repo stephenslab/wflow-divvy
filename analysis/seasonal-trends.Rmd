@@ -1,7 +1,7 @@
 ---
 title: "Divvy usage over the year"
 author: "Peter Carbonetto"
-output: html_document
+output: repdoc::repdoc_html
 ---
 
 <!-- Update knitr chunk options -->
@@ -102,12 +102,4 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 
-```
-
-## Session information
-
-This is the version of R and the packages that were used to generate
-these results.
-
-```{r session-info}
 ```
