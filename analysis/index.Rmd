@@ -1,11 +1,11 @@
 ---
 title: "Divvy data exploration project"
 author: "Peter Carbonetto"
+site: repdoc::repdoc_site
 output:
   repdoc::repdoc_html:
     toc: false
 repdoc:
-  seed: 1
   sessioninfo: ""
 ---
 
