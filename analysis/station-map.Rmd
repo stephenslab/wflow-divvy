@@ -2,17 +2,13 @@
 title: "A map of the Divvy stations in Chicago"
 author: "Peter Carbonetto"
 output: repdoc::repdoc_html
+repdoc:
+  seed: 1
 ---
 
 <!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-knitr::opts_chunk$set(
-  comment = "#",
-  collapse = TRUE,
-  fig.align = "center",
-  tidy = FALSE,
-  fig.path = paste0("figure/", knitr::current_input(), "/")
-)
+```{r knitr-options, include=FALSE, cache=FALSE}
+source("knitr.opts.R")
 ```
 
 In this analysis, I will use the Divvy trip and station data to
@@ -72,10 +68,3 @@ ggplot(divvy$stations,aes(x    = longitude,
         panel.grid.minor = element_blank())
 ```
 
-## Session information
-
-This is the version of R and the packages that were used to generate
-these results.
-
-```{r session-info}
-```

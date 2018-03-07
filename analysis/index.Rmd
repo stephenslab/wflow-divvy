@@ -8,8 +8,8 @@ repdoc:
 ---
 
 <!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-knitr::opts_chunk$set(collapse = TRUE, comment = "#")
+```{r knitr-options, include=FALSE, cache=FALSE}
+source("knitr.opts.R")
 ```
 
 <br>
