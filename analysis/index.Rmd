@@ -4,6 +4,7 @@ author: "Peter Carbonetto"
 site: repdoc::repdoc_site
 repdoc:
   seed: 1
+  sessioninfo: ""
 ---
 
 <!-- Update knitr chunk options -->
