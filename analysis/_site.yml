@@ -23,5 +23,3 @@ output:
     include:
       before_body: include/header.html
       after_body: include/footer.html
-repdoc:
-  seed: 1

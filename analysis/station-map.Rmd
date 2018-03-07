@@ -2,8 +2,6 @@
 title: "A map of the Divvy stations in Chicago"
 author: "Peter Carbonetto"
 site: repdoc::repdoc_site
-repdoc:
-  seed: 1
 ---
 
 <!-- Update knitr chunk options -->
