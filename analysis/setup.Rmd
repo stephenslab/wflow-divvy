@@ -7,14 +7,8 @@ repdoc:
 ---
 
 <!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-knitr::opts_chunk$set(
-  comment = "#",
-  collapse = TRUE,
-  fig.align = "center",
-  tidy = FALSE,
-  fig.path = paste0("figure/", knitr::current_input(), "/")
-)
+```{r read-chunk, include=FALSE, cache=FALSE}
+knitr::read_chunk("chunks.R")
 ```
 
 To reproduce the results on your own computer, please follow these
