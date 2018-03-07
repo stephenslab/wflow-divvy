@@ -14,4 +14,12 @@ navbar:
   right:
     - text: source
       href: https://github.com/stephenslab/wflow-divvy
-output: repdoc::repdoc_html
+output:
+  repdoc::repdoc_html:
+    toc: true
+    toc_float: true
+    theme: readable
+    highlight: textmate
+    include:
+      before_body: include/header.html
+      after_body: include/footer.html
