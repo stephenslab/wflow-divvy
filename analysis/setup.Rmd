@@ -1,7 +1,9 @@
 ---
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
-output: repdoc::repdoc_html
+output:
+  repdoc::repdoc_html:
+    toc: false
 repdoc:
   seed: 1
 ---
