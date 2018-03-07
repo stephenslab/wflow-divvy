@@ -1,8 +1,11 @@
 ---
 title: "License"
 output:
-  html_document:
+  repdoc::repdoc_html:
     toc: false
+repdoc:
+  seed: 1
+  sessioninfo: ""
 ---
 
 All source code and software in this repository are made available
