@@ -5,8 +5,6 @@ site: repdoc::repdoc_site
 output:
   repdoc::repdoc_html:
     toc: false
-repdoc:
-  seed: 1
 ---
 
 <!-- Update knitr chunk options -->
