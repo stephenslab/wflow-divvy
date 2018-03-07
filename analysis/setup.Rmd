@@ -2,6 +2,8 @@
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
 output: repdoc::repdoc_html
+repdoc:
+  seed: 1
 ---
 
 <!-- Update knitr chunk options -->
@@ -59,8 +61,3 @@ running the code, make sure your working directory is set to the
 ```{r working-dir}
 getwd()
 ```
-
-## Session information
-
-This is the version of R and the packages that were used to generate
-the results from the R Markdown documents.
