@@ -5,6 +5,7 @@ output:
   repdoc::repdoc_html:
     toc: false
 repdoc:
+  seed: 1
   sessioninfo: ""
 ---
 
