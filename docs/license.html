@@ -15,12 +15,12 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -195,6 +195,12 @@ $(document).ready(function () {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
 
 <div class="fluid-row" id="header">
 
@@ -205,9 +211,177 @@ $(document).ready(function () {
 </div>
 
 
+<strong>Reproducibility report:</strong>
+<p>
+These results were generated with version <a href="https://github.com/stephenslab/wflow-divvy/tree/bafd5a1c44a3d74ccc2b41a815618249d7705b4c" target="_blank">bafd5a1</a> on 2018-03-07
+</p>
+<p>
+<strong style="color:blue;">✔ SUCCESS:</strong> The R Markdown file is up-to-date
+</p>
+<details> <summary>Click here to see past versions of the R Markdown file:</summary>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/0a4ed0967d0615720d41524289b2a64f07677b4d/analysis/license.Rmd" target="_blank">0a4ed09</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/bafd5a1c44a3d74ccc2b41a815618249d7705b4c/analysis/license.Rmd" target="_blank">bafd5a1</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/01d6187115db368727519e1ec556d324e9f8ba52/analysis/license.Rmd" target="_blank">01d6187</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-11-16
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/165787d0721376ae58f08819e8489659e837c558/analysis/license.Rmd" target="_blank">165787d</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-04
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/ce27a1b640d0ff31b0b8dbd876bbf2bf8c99635d/analysis/license.Rmd" target="_blank">ce27a1b</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/538951e0e30a5cf8fac46d410dd01500b9100521/analysis/license.Rmd" target="_blank">538951e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/e803dcdd1f452963e12d9cfde44bf4f8b2f5ce7c/analysis/license.Rmd" target="_blank">e803dcd</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/b300c7c161b343a74a3d5eec2cacbebc8668ce70/analysis/license.Rmd" target="_blank">b300c7c</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-28
+</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>
+<strong style="color:blue;">✔ SUCCESS:</strong> These results were generated in a clean R environment
+</p>
+<details> <summary>Click here to see the status of the Git repository:</summary>
+<pre><code>
+Ignored files:
+    Ignored:    .DS_Store
+    Ignored:    analysis/.DS_Store
+    Ignored:    data/Divvy_Stations_2016_Q1Q2.csv
+    Ignored:    data/Divvy_Stations_2016_Q3.csv
+    Ignored:    data/Divvy_Stations_2016_Q4.csv
+    Ignored:    data/Divvy_Trips_2016_04.csv
+    Ignored:    data/Divvy_Trips_2016_05.csv
+    Ignored:    data/Divvy_Trips_2016_06.csv
+    Ignored:    data/Divvy_Trips_2016_Q1.csv
+    Ignored:    data/Divvy_Trips_2016_Q3.csv
+    Ignored:    data/Divvy_Trips_2016_Q4.csv
+    Ignored:    data/README.txt
+    Ignored:    data/data.tar.gz
+    Ignored:    docs/.DS_Store
+
+Untracked files:
+    Untracked:  docs/seasonal-trends_files/figure-html/plot-trips-by-day-1.png
+    Untracked:  docs/seasonal-trends_files/figure-html/plot-trips-by-week-1.png
+    Untracked:  docs/seasonal-trends_files/figure-html/plot-trips-by-week-uchicago-1.png
+
+Unstaged changes:
+    Modified:   analysis/first-glance.Rmd
+    Modified:   analysis/station-map.Rmd
+    Modified:   docs/index.html
+    Modified:   docs/setup.html
+
+</code></pre>
+</details>
+<p>
+<strong style="color:blue;">✔ SUCCESS:</strong> These results were generated with the seed 12345
+</p>
+<p>
+<strong style="color:red;">✖ WARNING:</strong> The session information was <strong>not</strong> recorded at the end of the analysis
+</p>
+<hr />
 <p>All source code and software in this repository are made available under the terms of the <a href="https://opensource.org/licenses/mit-license.html">MIT license</a>.</p>
 <p>Note that the <a href="https://www.divvybikes.com/system-data">Divvy data</a> are made available under a <a href="https://www.divvybikes.com/data-license-agreement">separate license agreement</a>.</p>
+<div id="session-information" class="section level2">
+<h2>Session information</h2>
+</div>
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<hr>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a href="https://github.com/jdblischak/repdoc">repdoc</a>
+</p>
+<hr>
 
 
 
