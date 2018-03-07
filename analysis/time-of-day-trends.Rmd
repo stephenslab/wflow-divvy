@@ -1,25 +1,14 @@
 ---
 title: "Divvy usage by time-of-day"
 author: "Peter Carbonetto"
-output: html_document
+site: repdoc::repdoc_site
+repdoc:
+  seed: 1
 ---
 
-<!-- Define defaults shared by all workflowr files. -->
-```{r read-chunk, include=FALSE, cache=FALSE}
-knitr::read_chunk("chunks.R")
-```
-
 <!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-```
-
-<!-- Insert the date the file was last updated -->
-```{r last-updated, echo=FALSE, results='asis'}
-```
-
-<!-- Insert the code version (Git commit SHA1) if Git repository
- exists and R package git2r is installed -->
-```{r code-version, echo=FALSE, results='asis'}
+```{r knitr-options, include=FALSE, cache=FALSE}
+source("knitr.opts.R")
 ```
 
 Here we use the Divvy trip data to examine biking trends over the
@@ -115,12 +104,4 @@ ggplot(subset(divvy$trips,from_station_name == "University Ave & 57th St"),
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
-```
-
-## Session information
-
-This is the version of R and the packages that were used to generate
-these results.
-
-```{r session-info}
 ```

@@ -1,7 +1,7 @@
 ---
 title: "A map of the Divvy stations in Chicago"
 author: "Peter Carbonetto"
-output: repdoc::repdoc_html
+site: repdoc::repdoc_site
 repdoc:
   seed: 1
 ---
@@ -67,4 +67,3 @@ ggplot(divvy$stations,aes(x    = longitude,
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())
 ```
-

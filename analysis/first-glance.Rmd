@@ -1,7 +1,7 @@
 ---
 title: "A first glance at the Divvy data"
 author: "Peter Carbonetto"
-output: repdoc::repdoc_html
+site: repdoc::repdoc_site
 repdoc:
   seed: 1
 ---
@@ -68,12 +68,4 @@ were rented almost 8,000 times in 2016 at that location.
 
 ```{r get-uchicago-station}
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
-```
-
-## Session information
-
-This is the version of R and the packages that were used to generate
-these results.
-
-```{r session-info}
 ```

@@ -1,7 +1,9 @@
 ---
 title: "Divvy usage over the year"
 author: "Peter Carbonetto"
-output: repdoc::repdoc_html
+site: repdoc::repdoc_site
+repdoc:
+  seed: 1
 ---
 
 <!-- Update knitr chunk options -->
