@@ -1,25 +1,29 @@
 name: Divvy data exploration
-output_dir: "../docs"
-include: [".nojekyll"]
-exclude: ["include"]
+output_dir: ../docs
+include: .nojekyll
+exclude: include
 navbar:
   title: Divvy data exploration
   left:
-    - text: "Overview"
-      href: index.html
-    - text: "Setup"
-      href: setup.html
-    - text: "License"
-      href: license.html
+  - text: Overview
+    href: index.html
+  - text: Setup
+    href: setup.html
+  - text: License
+    href: license.html
   right:
-    - text: source
-      href: https://github.com/stephenslab/wflow-divvy
+  - text: source
+    href: https://github.com/stephenslab/wflow-divvy
 output:
   html_document:
-    toc: true
-    toc_float: true
+    toc: yes
+    toc_float: yes
     theme: readable
     highlight: textmate
+    code_folding: none
     include:
       before_body: include/header.html
       after_body: include/footer.html
+    lib_dir: site_libs
+    self_contained: no
+
