@@ -1,7 +1,9 @@
 ---
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
-output: html_document
+output:
+  html_document:
+    code_folding: "none"
 ---
 
 <!-- The file analysis/chunks.R contains chunks that define default settings
@@ -65,7 +67,6 @@ running the code, make sure your working directory is set to the
 "analysis" directory, e.g.,
 
 ```{r working-dir}
-getwd()
 getwd()
 ```
 

@@ -4,6 +4,7 @@ author: "Peter Carbonetto"
 output:
   html_document:
     toc: false
+    code_folding: "none"
 ---
 
 <br>
