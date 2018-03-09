@@ -3,7 +3,6 @@ title: "License"
 output:
   html_document:
     toc: false
-    code_folding: "none"
 ---
 
 All source code and software in this repository are made available

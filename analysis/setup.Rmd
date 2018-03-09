@@ -1,9 +1,7 @@
----
+x---
 title: "Setup for Divvy data analysis"
 author: "Peter Carbonetto"
-output:
-  html_document:
-    code_folding: "none"
+output: html_document
 ---
 
 <!-- The file analysis/chunks.R contains chunks that define default settings
