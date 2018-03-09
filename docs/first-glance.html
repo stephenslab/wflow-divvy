@@ -24,6 +24,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -163,6 +164,14 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
 
 
@@ -303,6 +312,14 @@ div.section {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
 
 
 <h1 class="title toc-ignore">A first glance at the Divvy data</h1>
@@ -314,10 +331,10 @@ div.section {
 <!-- Define defaults shared by all workflowr files. -->
 <!-- Update knitr chunk options -->
 <!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2018-01-23</p>
+<p><strong>Last updated:</strong> 2018-03-09</p>
 <!-- Insert the code version (Git commit SHA1) if Git repository
  exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 96c320f</p>
+<p><strong>Code version:</strong> 599efc1</p>
 <p>Here, we will take a brief look at the data provided by Divvy.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -397,7 +414,7 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 <pre class="r"><code>sessionInfo()
 # R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS High Sierra 10.13.2
+# Running under: macOS High Sierra 10.13.3
 # 
 # Matrix products: default
 # BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
@@ -414,9 +431,9 @@ as.matrix(head(sort(departures,decreasing = TRUE)))
 # 
 # loaded via a namespace (and not attached):
 #  [1] compiler_3.4.3  backports_1.1.2 magrittr_1.5    rprojroot_1.3-2
-#  [5] tools_3.4.3     htmltools_0.3.6 yaml_2.1.16     Rcpp_0.12.15   
-#  [9] stringi_1.1.6   rmarkdown_1.8   knitr_1.18      git2r_0.21.0   
-# [13] stringr_1.2.0   digest_0.6.13   evaluate_0.10.1</code></pre>
+#  [5] tools_3.4.3     htmltools_0.3.6 yaml_2.1.17     Rcpp_0.12.15   
+#  [9] stringi_1.1.6   rmarkdown_1.9   knitr_1.20      git2r_0.21.0   
+# [13] stringr_1.3.0   digest_0.6.15   evaluate_0.10.1</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
