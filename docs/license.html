@@ -211,17 +211,34 @@ div.section {
 </div>
 
 
-<strong>Reproducibility report:</strong>
-<p>
-These results were generated with version <a href="https://github.com/stephenslab/wflow-divvy/tree/1faa524bf8e7987fc708d4eaecbfe5b98866d546" target="_blank">1faa524</a> on 2018-03-07
-</p>
-<p>
-<strong style="color:blue;">✔ SUCCESS:</strong> The R Markdown file is up-to-date
-</p>
-<details> <summary>Click here to see past versions of the R Markdown file:</summary>
+<p><strong>Last updated:</strong> 2018-03-09</p>
+<strong>repdoc checks:</strong> <small>(Click a bullet for more information)</small>
+<ul>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/fcb436c16a1b3f454d90916dcec74e78b957a3a5" target="_blank">fcb436c</a> </summary></p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_commit</code>). repdoc only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+<pre><code>
+Unstaged changes:
+    Modified:   analysis/index.Rmd
+    Modified:   docs/setup.html
+
+</code></pre>
+</details>
+</li>
+</ul>
+<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
+<ul>
 <table style="border-collapse:separate; border-spacing:5px;">
 <thead>
 <tr>
+<th style="text-align:left;">
+File
+</th>
 <th style="text-align:left;">
 Version
 </th>
@@ -231,12 +248,35 @@ Author
 <th style="text-align:left;">
 Date
 </th>
+<th style="text-align:left;">
+Message
+</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/0a4ed0967d0615720d41524289b2a64f07677b4d/analysis/license.Rmd" target="_blank">0a4ed09</a>
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/891978b6a68b86fdb25b122bd4e7c76977886010/analysis/license.Rmd" target="_blank">891978b</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-09
+</td>
+<td style="text-align:left;">
+wflow_publish(c(“index.Rmd”, “setup.Rmd”, “license.Rmd”))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/5f5e3ee23caa77fc624e0f934d5041864be22c19/docs/license.html" target="_blank">5f5e3ee</a>
 </td>
 <td style="text-align:left;">
 Peter Carbonetto
@@ -244,19 +284,14 @@ Peter Carbonetto
 <td style="text-align:left;">
 2018-03-07
 </td>
-</tr>
-<tr>
 <td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/bafd5a1c44a3d74ccc2b41a815618249d7705b4c/analysis/license.Rmd" target="_blank">bafd5a1</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-03-07
+Set seed=1 in several .Rmd files.
 </td>
 </tr>
 <tr>
+<td style="text-align:left;">
+Rmd
+</td>
 <td style="text-align:left;">
 <a href="https://github.com/stephenslab/wflow-divvy/blob/1faa524bf8e7987fc708d4eaecbfe5b98866d546/analysis/license.Rmd" target="_blank">1faa524</a>
 </td>
@@ -266,8 +301,150 @@ Peter Carbonetto
 <td style="text-align:left;">
 2018-03-07
 </td>
+<td style="text-align:left;">
+wflow_publish(c(“index.Rmd”, “setup.Rmd”, “license.Rmd”))
+</td>
 </tr>
 <tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/df4c3f546936bf33e106c7c9ecd24dd66814b05f/docs/license.html" target="_blank">df4c3f5</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+<td style="text-align:left;">
+Ran wflow_publish(c(“index.Rmd”,“setup.Rmd”,“license.Rmd”)).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/57708c9945a11847b88f3f9cc8a161120562ea94/docs/license.html" target="_blank">57708c9</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+<td style="text-align:left;">
+Fixed mistake in using repdoc.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/bafd5a1c44a3d74ccc2b41a815618249d7705b4c/analysis/license.Rmd" target="_blank">bafd5a1</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+<td style="text-align:left;">
+wflow_publish(c(“index.Rmd”, “setup.Rmd”, “license.Rmd”))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/f482cd5d6e6daf97c8905e44e32da1fbf1a36fd2/docs/license.html" target="_blank">f482cd5</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/0a4ed0967d0615720d41524289b2a64f07677b4d/analysis/license.Rmd" target="_blank">0a4ed09</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-07
+</td>
+<td style="text-align:left;">
+wflow_publish(“license.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/7598d55dc75f19b6a72ad97110f3fae407c3af86/docs/license.html" target="_blank">7598d55</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-01-23
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/license.html" target="_blank">b32e833</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-01-18
+</td>
+<td style="text-align:left;">
+Re-built all webpages using workflowr v0.1.0.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/0401587544d2d17622959a6992dc474c1109cd06/docs/license.html" target="_blank">0401587</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-11-16
+</td>
+<td style="text-align:left;">
+Updated license.html, setup.html, station-map.html and
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
 <td style="text-align:left;">
 <a href="https://github.com/stephenslab/wflow-divvy/blob/01d6187115db368727519e1ec556d324e9f8ba52/analysis/license.Rmd" target="_blank">01d6187</a>
 </td>
@@ -277,8 +454,99 @@ Peter Carbonetto
 <td style="text-align:left;">
 2017-11-16
 </td>
+<td style="text-align:left;">
+Updated footer.
+</td>
 </tr>
 <tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/d7ad758418dc9836e75a39d7c82aabd6ca89c3ac/docs/license.html" target="_blank">d7ad758</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-08-02
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/d13371c6d68ab77cf1cfc51da25b04ec597e342d/docs/license.html" target="_blank">d13371c</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/3334de6db892403d51f0922893474949d31a5786/docs/license.html" target="_blank">3334de6</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/license.html" target="_blank">727b8d9</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-13
+</td>
+<td style="text-align:left;">
+Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/aca0d9e30291b190b37f8e85ab63b92d191ad4ae/docs/license.html" target="_blank">aca0d9e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-04
+</td>
+<td style="text-align:left;">
+Made a few small adjustments to license.Rmd.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
 <td style="text-align:left;">
 <a href="https://github.com/stephenslab/wflow-divvy/blob/165787d0721376ae58f08819e8489659e837c558/analysis/license.Rmd" target="_blank">165787d</a>
 </td>
@@ -288,10 +556,16 @@ Peter Carbonetto
 <td style="text-align:left;">
 2017-07-04
 </td>
+<td style="text-align:left;">
+wflow_publish(“license.Rmd”)
+</td>
 </tr>
 <tr>
 <td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/ce27a1b640d0ff31b0b8dbd876bbf2bf8c99635d/analysis/license.Rmd" target="_blank">ce27a1b</a>
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/5fcd514522003359b87583f34f3332546315179b/docs/license.html" target="_blank">5fcd514</a>
 </td>
 <td style="text-align:left;">
 Peter Carbonetto
@@ -299,19 +573,14 @@ Peter Carbonetto
 <td style="text-align:left;">
 2017-06-29
 </td>
-</tr>
-<tr>
 <td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/538951e0e30a5cf8fac46d410dd01500b9100521/analysis/license.Rmd" target="_blank">538951e</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-06-29
+Build site.
 </td>
 </tr>
 <tr>
+<td style="text-align:left;">
+Rmd
+</td>
 <td style="text-align:left;">
 <a href="https://github.com/stephenslab/wflow-divvy/blob/e803dcdd1f452963e12d9cfde44bf4f8b2f5ce7c/analysis/license.Rmd" target="_blank">e803dcd</a>
 </td>
@@ -321,8 +590,133 @@ Peter Carbonetto
 <td style="text-align:left;">
 2017-06-29
 </td>
+<td style="text-align:left;">
+wflow_publish(list.files(pattern = “*.Rmd“))
+</td>
 </tr>
 <tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/8b33acc42e2d7c7597c053d51992744cd3785bcd/docs/license.html" target="_blank">8b33acc</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+<td style="text-align:left;">
+Re-built site with addition of setup and “first look” notebooks.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/538951e0e30a5cf8fac46d410dd01500b9100521/analysis/license.Rmd" target="_blank">538951e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+<td style="text-align:left;">
+wflow_publish(list.files(pattern = “*.Rmd“))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/54a9c154f13393c5eee33f0be35e8f39c80be896/docs/license.html" target="_blank">54a9c15</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+<td style="text-align:left;">
+Trying readable theme.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/fa2912388b0e23094af49b9da9a4e3807a5848c8/docs/license.html" target="_blank">fa29123</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/66fc380500e0cc92bb267bbe4ff9ce6fd5f1cec0/docs/license.html" target="_blank">66fc380</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+<td style="text-align:left;">
+Updated index.html and license.html using wflow_publish().
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/ce27a1b640d0ff31b0b8dbd876bbf2bf8c99635d/analysis/license.Rmd" target="_blank">ce27a1b</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-29
+</td>
+<td style="text-align:left;">
+Added license info and deleted about.Rmd.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://htmlpreview.github.io/?https://github.com/stephenslab/wflow-divvy/blob/10000611cb764b9c12876da0a79e65cdc56768d8/docs/license.html" target="_blank">1000061</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-06-28
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
 <td style="text-align:left;">
 <a href="https://github.com/stephenslab/wflow-divvy/blob/b300c7c161b343a74a3d5eec2cacbebc8668ce70/analysis/license.Rmd" target="_blank">b300c7c</a>
 </td>
@@ -332,56 +726,18 @@ Peter Carbonetto
 <td style="text-align:left;">
 2017-06-28
 </td>
+<td style="text-align:left;">
+Start workflowr project.
+</td>
 </tr>
 </tbody>
 </table>
-</details>
-<p>
-<strong style="color:blue;">✔ SUCCESS:</strong> These results were generated in a clean R environment
-</p>
-<details> <summary>Click here to see the status of the Git repository:</summary>
-<pre><code>
-Ignored files:
-    Ignored:    .DS_Store
-    Ignored:    analysis/.DS_Store
-    Ignored:    data/Divvy_Stations_2016_Q1Q2.csv
-    Ignored:    data/Divvy_Stations_2016_Q3.csv
-    Ignored:    data/Divvy_Stations_2016_Q4.csv
-    Ignored:    data/Divvy_Trips_2016_04.csv
-    Ignored:    data/Divvy_Trips_2016_05.csv
-    Ignored:    data/Divvy_Trips_2016_06.csv
-    Ignored:    data/Divvy_Trips_2016_Q1.csv
-    Ignored:    data/Divvy_Trips_2016_Q3.csv
-    Ignored:    data/Divvy_Trips_2016_Q4.csv
-    Ignored:    data/README.txt
-    Ignored:    data/data.tar.gz
-    Ignored:    docs/.DS_Store
-
-Untracked files:
-    Untracked:  docs/seasonal-trends_files/figure-html/plot-trips-by-day-1.png
-    Untracked:  docs/seasonal-trends_files/figure-html/plot-trips-by-week-1.png
-    Untracked:  docs/seasonal-trends_files/figure-html/plot-trips-by-week-uchicago-1.png
-
-Unstaged changes:
-    Modified:   analysis/first-glance.Rmd
-    Modified:   analysis/station-map.Rmd
-    Modified:   docs/index.html
-    Modified:   docs/setup.html
-
-</code></pre>
-</details>
-<p>
-<strong style="color:blue;">✔ SUCCESS:</strong> These results were generated with the seed 1
-</p>
-<p>
-<strong style="color:red;">✖ WARNING:</strong> The session information was <strong>not</strong> recorded at the end of the analysis
-</p>
+<p></details></p>
+</ul>
+<p></details></p>
 <hr />
 <p>All source code and software in this repository are made available under the terms of the <a href="https://opensource.org/licenses/mit-license.html">MIT license</a>.</p>
 <p>Note that the <a href="https://www.divvybikes.com/system-data">Divvy data</a> are made available under a <a href="https://www.divvybikes.com/data-license-agreement">separate license agreement</a>.</p>
-<div id="session-information" class="section level2">
-<h2>Session information</h2>
-</div>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -390,7 +746,10 @@ Unstaged changes:
 </script>
 <hr>
 <p>
-This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a href="https://github.com/jdblischak/repdoc">repdoc</a>
+This reproducible <a href="http://rmarkdown.rstudio.com">R
+                Markdown</a> analysis was created with <a
+                href="https://github.com/jdblischak/repdoc">repdoc</a> 
+0.0.0.9001
 </p>
 <hr>
 
