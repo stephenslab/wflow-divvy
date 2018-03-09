@@ -62,5 +62,3 @@ and [Austin
 Wehrwein](http://www.austinwehrwein.com/data-visualization/heatmaps-with-divvy-data)
 for sharing their analyses of the Divvy trip data that inspired some
 of the investigations here.
-
-
