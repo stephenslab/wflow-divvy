@@ -1,29 +1,15 @@
 ---
 title: "A map of the Divvy stations in Chicago"
 author: "Peter Carbonetto"
-output: html_document
+output: workflowr::wflow_html
 ---
-
-<!-- Define defaults shared by all workflowr files. -->
-```{r read-chunk, include=FALSE, cache=FALSE}
-knitr::read_chunk("chunks.R")
-```
-
-<!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-```
-
-<!-- Insert the date the file was last updated -->
-```{r last-updated, echo=FALSE, results='asis'}
-```
-
-<!-- Insert the code version (Git commit SHA1) if Git repository
- exists and R package git2r is installed -->
-```{r code-version, echo=FALSE, results='asis'}
-```
 
 In this analysis, I will use the Divvy trip and station data to
 generate a map of Chicago. 
+
+```{r knitr-opts, include=FALSE}
+knitr::opts_chunk$set(comment = "#",collapse = TRUE,fig.align = "center")
+```
 
 I begin by loading a few packages, as well as some additional
 functions I wrote for this project.
@@ -64,7 +50,7 @@ scaling the area of each circle by the number of trips.
 
 The University of Chicago Divvy station is highlighted in red.
 
-```{r create-stations-map, fig.width=6.5, fig.height=7.5}
+```{r create-stations-map, fig.width=3, fig.height=4}
 divvy$stations <-
   transform(divvy$stations,
             at.uchicago = (name == "University Ave & 57th St"))
@@ -79,10 +65,5 @@ ggplot(divvy$stations,aes(x    = longitude,
         panel.grid.minor = element_blank())
 ```
 
-## Session information
-
 This is the version of R and the packages that were used to generate
 these results.
-
-```{r session-info}
-```
