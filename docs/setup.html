@@ -342,7 +342,7 @@ div.section {
 </details>
 </li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/57f2519e82e8b903de6d0c84d9edad3653a1ac5b" target="_blank">57f2519</a> </summary></p>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/f4f5c96a8f45426280f511e59fa03f291a365dd0" target="_blank">f4f5c96</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
@@ -360,17 +360,6 @@ Ignored files:
     Ignored:    data/README.txt
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
-
-Unstaged changes:
-    Modified:   _workflowr.yml
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/chunks.R
-    Modified:   analysis/first-glance.Rmd
-    Modified:   analysis/index.Rmd
-    Modified:   analysis/license.Rmd
-    Modified:   analysis/seasonal-trends.Rmd
-    Modified:   analysis/station-map.Rmd
-    Modified:   analysis/time-of-day-trends.Rmd
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
@@ -399,6 +388,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f4f5c96a8f45426280f511e59fa03f291a365dd0/analysis/setup.Rmd" target="_blank">f4f5c96</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+wflow_publish(“setup.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/7c0675a47de561dee2db4c05086701ffe0100ce1/docs/setup.html" target="_blank">7c0675a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Re-built setup.html with workflowr v0.11.0.9000.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -1033,7 +1056,9 @@ wflow_publish(list.files(pattern = “*.Rmd“))
 </ul>
 <p></details></p>
 <hr />
-<p>To reproduce the results on your own computer, please follow these setup instructions. ## Setup instructions</p>
+<p>To reproduce the results on your own computer, please follow these setup instructions.</p>
+<div id="setup-instructions" class="section level2">
+<h2>Setup instructions</h2>
 <p>Download or clone the <a href="https://github.com/stephenslab/wflow-divvy">git repository</a> on your computer.</p>
 <p>Download the Divvy data files and copy the files to the “data” directory. I have provided a script <code>code/retrieve_divvy_data.sh</code> that will automatically retrieve the data files and move them to the expected location. Alternatively, you can view this script and follow the steps by hand. After completing this step, these files should be in the data directory:</p>
 <pre><code>Divvy_Stations_2016_Q1Q2.csv
@@ -1052,6 +1077,17 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <pre class="r"><code>getwd()
 # [1] &quot;/Users/pcarbo/git/wflow-divvy/analysis&quot;</code></pre>
 <p>This is the version of R and the packages that were used to generate the results from the R Markdown documents.</p>
+</div>
+<div id="plotting-test" class="section level2">
+<h2>Plotting test</h2>
+<pre class="r"><code>library(ggplot2)
+ggplot(cars,aes(x = speed,y = dist)) +
+  geom_point(shape = 20)</code></pre>
+<div class="figure">
+<img src="figure/setup.Rmd/plot-test-1.png" />
+
+</div>
+</div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
 <pre class="r"><code>sessionInfo()
@@ -1069,14 +1105,21 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 # attached base packages:
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
+# other attached packages:
+# [1] ggplot2_2.2.1
+# 
 # loaded via a namespace (and not attached):
-#  [1] workflowr_0.11.0.9001 Rcpp_0.12.15          digest_0.6.15        
-#  [4] rprojroot_1.3-2       R.methodsS3_1.7.1     backports_1.1.2      
-#  [7] git2r_0.21.0          magrittr_1.5          evaluate_0.10.1      
-# [10] stringi_1.1.6         whisker_0.3-2         R.oo_1.21.0          
-# [13] R.utils_2.6.0         rmarkdown_1.9         tools_3.4.3          
-# [16] stringr_1.3.0         yaml_2.1.18           compiler_3.4.3       
-# [19] htmltools_0.3.6       knitr_1.20</code></pre>
+#  [1] Rcpp_0.12.15          knitr_1.20            whisker_0.3-2        
+#  [4] magrittr_1.5          workflowr_0.11.0.9001 munsell_0.4.3        
+#  [7] colorspace_1.3-2      rlang_0.2.0.9000      stringr_1.3.0        
+# [10] plyr_1.8.4            tools_3.4.3           grid_3.4.3           
+# [13] gtable_0.2.0          R.oo_1.21.0           git2r_0.21.0         
+# [16] htmltools_0.3.6       yaml_2.1.18           lazyeval_0.2.1       
+# [19] rprojroot_1.3-2       digest_0.6.15         tibble_1.4.2         
+# [22] R.utils_2.6.0         evaluate_0.10.1       rmarkdown_1.9        
+# [25] labeling_0.3          stringi_1.1.6         pillar_1.2.1         
+# [28] compiler_3.4.3        scales_0.5.0          backports_1.1.2      
+# [31] R.methodsS3_1.7.1</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
