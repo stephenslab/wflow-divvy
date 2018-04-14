@@ -1,7 +1,7 @@
 ---
 title: "License"
 output:
-  html_document:
+  workflowr::wflow_html:
     toc: false
 ---
 
