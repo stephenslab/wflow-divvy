@@ -1,4 +1,1 @@
-# workflowr options
-# Version 0.11.0.9001
-
-# See ?wflow_html to learn how to customize workflowr.
+seed: 1

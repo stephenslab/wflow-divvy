@@ -15,7 +15,7 @@ navbar:
   - text: source
     href: https://github.com/stephenslab/wflow-divvy
 output:
-  html_document:
+  workflowr::wflow_html:
     toc: yes
     toc_float: yes
     theme: readable
