@@ -9,7 +9,8 @@ knitr::opts_chunk$set(comment = "#",collapse = TRUE)
 ```
 
 To reproduce the results on your own computer, please follow these
-setup instructions. 
+setup instructions.
+
 ## Setup instructions
 
 Download or clone the
@@ -54,3 +55,11 @@ getwd()
 
 This is the version of R and the packages that were used to generate
 the results from the R Markdown documents.
+
+## Plotting test
+
+```{r plot-test, fig.width=3, fig.height=4}
+library(ggplot2)
+ggplot(cars,aes(x = speed,y = dist)) +
+  geom_point(shape = 20)
+```
