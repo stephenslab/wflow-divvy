@@ -50,7 +50,7 @@ scaling the area of each circle by the number of trips.
 
 The University of Chicago Divvy station is highlighted in red.
 
-```{r create-stations-map, fig.width=3, fig.height=4}
+```{r create-stations-map, fig.width=6.5, fig.height=7.5}
 divvy$stations <-
   transform(divvy$stations,
             at.uchicago = (name == "University Ave & 57th St"))
