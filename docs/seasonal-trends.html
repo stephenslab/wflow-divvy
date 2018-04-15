@@ -322,7 +322,8 @@ div.section {
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
-<p><details> <summary> <strong style="color:red;">✖</strong> <strong>R Markdown file:</strong> uncommitted changes </summary> The R Markdown file has unstaged changes. To know which version of the R Markdown file created these results, you’ll want to first commit it to the Git repo. If you’re still working on the analysis, you can ignore this warning. When you’re finished, you can run <code>wflow_publish</code> to commit the R Markdown file and build the HTML.</p>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
 </details>
 </li>
 <li>
@@ -341,7 +342,7 @@ div.section {
 </details>
 </li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/39bbd3ae3a8563b675ab16287489b8edcf168bb8" target="_blank">39bbd3a</a> </summary></p>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/de31b2401edcf81060f0e2a92cba2642720d6224" target="_blank">de31b24</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
@@ -359,14 +360,6 @@ Ignored files:
     Ignored:    data/README.txt
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
-
-Unstaged changes:
-    Modified:   _workflowr.yml
-    Modified:   analysis/_site.yml
-    Deleted:    analysis/chunks.R
-    Modified:   analysis/seasonal-trends.Rmd
-    Modified:   analysis/station-map.Rmd
-    Modified:   analysis/time-of-day-trends.Rmd
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
@@ -395,6 +388,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/analysis/seasonal-trends.Rmd" target="_blank">f163fe4</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Updates for new workflowr version, v0.11.0.9000.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/seasonal-trends.html" target="_blank">f163fe4</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Updates for new workflowr version, v0.11.0.9000.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 html
@@ -710,10 +737,7 @@ ggplot(data.frame(day = 1:366,departures = counts.day),
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<div class="figure">
-<img src="figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" />
-
-</div>
+<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" width="576" style="display: block; margin: auto;" /></p>
 <details> <summary><em>Expand here to see past versions of plot-trips-by-day-1.png:</em></summary>
 <table style="border-collapse:separate; border-spacing:5px;">
 <thead>
@@ -730,6 +754,17 @@ Date
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" target="_blank">f163fe4</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 <a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" target="_blank">b32e833</a>
@@ -764,10 +799,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<div class="figure">
-<img src="figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" />
-
-</div>
+<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" width="576" style="display: block; margin: auto;" /></p>
 <details> <summary><em>Expand here to see past versions of plot-trips-by-week-1.png:</em></summary>
 <table style="border-collapse:separate; border-spacing:5px;">
 <thead>
@@ -823,10 +855,7 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
   theme_minimal() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
-<div class="figure">
-<img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" />
-
-</div>
+<p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" width="576" style="display: block; margin: auto;" /></p>
 <details> <summary><em>Expand here to see past versions of plot-trips-by-week-uchicago-1.png:</em></summary>
 <table style="border-collapse:separate; border-spacing:5px;">
 <thead>
