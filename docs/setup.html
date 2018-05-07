@@ -318,7 +318,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-04-14</p>
+<p><strong>Last updated:</strong> 2018-05-07</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -342,7 +342,7 @@ div.section {
 </details>
 </li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/f4f5c96a8f45426280f511e59fa03f291a365dd0" target="_blank">f4f5c96</a> </summary></p>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/54fcf4ebd2f91d5197f90e5a24f1195ec02fb5de" target="_blank">54fcf4e</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
@@ -360,6 +360,9 @@ Ignored files:
     Ignored:    data/README.txt
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
+
+Unstaged changes:
+    Modified:   analysis/_site.yml
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
@@ -388,6 +391,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9bcbf62217bc9c26f14e390940fffab380a65414/docs/setup.html" target="_blank">9bcbf62</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Added plotting test to setup.Rmd.
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -1083,10 +1103,37 @@ Divvy_Trips_2016_Q4.csv</code></pre>
 <pre class="r"><code>library(ggplot2)
 ggplot(cars,aes(x = speed,y = dist)) +
   geom_point(shape = 20)</code></pre>
-<div class="figure">
-<img src="figure/setup.Rmd/plot-test-1.png" />
-
-</div>
+<p><img src="figure/setup.Rmd/plot-test-1.png" width="288" style="display: block; margin: auto;" /></p>
+<details> <summary><em>Expand here to see past versions of plot-test-1.png:</em></summary>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/9bcbf62217bc9c26f14e390940fffab380a65414/docs/figure/setup.Rmd/plot-test-1.png" target="_blank">9bcbf62</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+</tr>
+</tbody>
+</table>
+<p></details></p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
@@ -1109,16 +1156,16 @@ ggplot(cars,aes(x = speed,y = dist)) +
 # [1] ggplot2_2.2.1
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.15          knitr_1.20            whisker_0.3-2        
-#  [4] magrittr_1.5          workflowr_0.11.0.9001 munsell_0.4.3        
-#  [7] colorspace_1.3-2      rlang_0.2.0.9000      stringr_1.3.0        
-# [10] plyr_1.8.4            tools_3.4.3           grid_3.4.3           
-# [13] gtable_0.2.0          R.oo_1.21.0           git2r_0.21.0         
-# [16] htmltools_0.3.6       yaml_2.1.18           lazyeval_0.2.1       
-# [19] rprojroot_1.3-2       digest_0.6.15         tibble_1.4.2         
-# [22] R.utils_2.6.0         evaluate_0.10.1       rmarkdown_1.9        
-# [25] labeling_0.3          stringi_1.1.6         pillar_1.2.1         
-# [28] compiler_3.4.3        scales_0.5.0          backports_1.1.2      
+#  [1] Rcpp_0.12.16         knitr_1.20           whisker_0.3-2       
+#  [4] magrittr_1.5         workflowr_1.0.1.9000 munsell_0.4.3       
+#  [7] colorspace_1.3-2     rlang_0.2.0.9000     stringr_1.3.0       
+# [10] plyr_1.8.4           tools_3.4.3          grid_3.4.3          
+# [13] gtable_0.2.0         R.oo_1.21.0          git2r_0.21.0        
+# [16] htmltools_0.3.6      yaml_2.1.18          lazyeval_0.2.1      
+# [19] rprojroot_1.3-2      digest_0.6.15        tibble_1.4.2        
+# [22] R.utils_2.6.0        evaluate_0.10.1      rmarkdown_1.9       
+# [25] labeling_0.3         stringi_1.1.7        pillar_1.2.1        
+# [28] compiler_3.4.3       scales_0.5.0         backports_1.1.2     
 # [31] R.methodsS3_1.7.1</code></pre>
 </div>
 
@@ -1143,7 +1190,7 @@ footer is added to webpages before the MathJax javascript. -->
 <p>
   This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
   analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 0.11.0.9001
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.0.1.9000
 </p>
 <hr>
 
