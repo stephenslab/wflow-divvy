@@ -1,7 +1,7 @@
 ---
-site: workflowr::wflow_site
 title: "Divvy data exploration project"
 author: "Peter Carbonetto"
+site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
     toc: false
