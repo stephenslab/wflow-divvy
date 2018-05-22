@@ -50,11 +50,9 @@ running the code, make sure your working directory is set to the
 "analysis" directory, e.g.,
 
 ```{r working-dir}
+cat("Checking directory.\n")
 getwd()
 ```
-
-This is the version of R and the packages that were used to generate
-the results from the R Markdown documents.
 
 ## Plotting test
 
