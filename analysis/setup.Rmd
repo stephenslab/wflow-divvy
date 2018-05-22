@@ -50,7 +50,6 @@ running the code, make sure your working directory is set to the
 "analysis" directory, e.g.,
 
 ```{r working-dir}
-cat("Checking directory.\n")
 getwd()
 ```
 
