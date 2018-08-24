@@ -318,7 +318,7 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-04-14</p>
+<p><strong>Last updated:</strong> 2018-08-24</p>
 <strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
 <ul>
 <li>
@@ -342,7 +342,7 @@ div.section {
 </details>
 </li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/de31b2401edcf81060f0e2a92cba2642720d6224" target="_blank">de31b24</a> </summary></p>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/a860deda4d39896ef1716ca17b11271087f91a51" target="_blank">a860ded</a> </summary></p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 <pre><code>
 Ignored files:
@@ -360,6 +360,15 @@ Ignored files:
     Ignored:    data/README.txt
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
+
+Untracked files:
+    Untracked:  analysis/about.Rmd
+    Untracked:  analysis/about.md
+    Untracked:  analysis/default.Rmd
+    Untracked:  analysis/test.Rmd
+
+Unstaged changes:
+    Modified:   README.md
 
 </code></pre>
 Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
@@ -388,6 +397,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/a860deda4d39896ef1716ca17b11271087f91a51/analysis/station-map.Rmd" target="_blank">a860ded</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-08-24
+</td>
+<td style="text-align:left;">
+wflow_publish(“station-map.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/54fcf4ebd2f91d5197f90e5a24f1195ec02fb5de/docs/station-map.html" target="_blank">54fcf4e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Re-built station-map, time-of-day-trends and seasonal-trends webpages
+</td>
+</tr>
 <tr>
 <td style="text-align:left;">
 Rmd
@@ -753,7 +796,9 @@ wflow_publish(“first-look.Rmd”)
 <p>In this analysis, I will use the Divvy trip and station data to generate a map of Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
+# Warning: package &#39;data.table&#39; was built under R version 3.4.4
 library(ggplot2)
+# Warning: package &#39;ggplot2&#39; was built under R version 3.4.4
 source(&quot;../code/functions.R&quot;)</code></pre>
 <div id="read-the-data" class="section level2">
 <h2>Read the data</h2>
@@ -775,6 +820,21 @@ source(&quot;../code/functions.R&quot;)</code></pre>
 <pre class="r"><code>divvy$stations &lt;-
   cbind(divvy$stations,
     data.frame(departures = as.vector(table(divvy$trips$from_station_id))))
+head(divvy$stations)
+#                           name latitude longitude dpcapacity online_date
+# 456        2112 W Peterson Ave 41.99118 -87.68359         15   5/12/2015
+# 101              63rd St Beach 41.78102 -87.57612         23   4/20/2015
+# 109          900 W Harrison St 41.87468 -87.65002         19    8/6/2013
+# 21  Aberdeen St &amp; Jackson Blvd 41.87773 -87.65479         15   6/21/2013
+# 80     Aberdeen St &amp; Monroe St 41.88042 -87.65560         19   6/26/2013
+# 346   Ada St &amp; Washington Blvd 41.88283 -87.66121         15  10/10/2013
+#     departures
+# 456        500
+# 101       1068
+# 109       4813
+# 21        9425
+# 80       10577
+# 346       8480
 summary(divvy$stations$departures)
 #    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #       1     557    3058    6188    9029   90042</code></pre>
@@ -844,7 +904,7 @@ Peter Carbonetto
 <pre class="r"><code>sessionInfo()
 # R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS High Sierra 10.13.4
+# Running under: macOS High Sierra 10.13.6
 # 
 # Matrix products: default
 # BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
@@ -857,20 +917,23 @@ Peter Carbonetto
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # other attached packages:
-# [1] ggplot2_2.2.1       data.table_1.10.4-3
+# [1] ggplot2_3.0.0     data.table_1.11.4
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.15          knitr_1.20            whisker_0.3-2        
-#  [4] magrittr_1.5          workflowr_0.11.0.9001 munsell_0.4.3        
-#  [7] colorspace_1.3-2      rlang_0.2.0.9000      stringr_1.3.0        
-# [10] plyr_1.8.4            tools_3.4.3           grid_3.4.3           
-# [13] gtable_0.2.0          R.oo_1.21.0           git2r_0.21.0         
-# [16] htmltools_0.3.6       lazyeval_0.2.1        yaml_2.1.18          
-# [19] rprojroot_1.3-2       digest_0.6.15         tibble_1.4.2         
-# [22] R.utils_2.6.0         evaluate_0.10.1       rmarkdown_1.9        
-# [25] labeling_0.3          stringi_1.1.6         pillar_1.2.1         
-# [28] compiler_3.4.3        scales_0.5.0          backports_1.1.2      
-# [31] R.methodsS3_1.7.1</code></pre>
+#  [1] Rcpp_0.12.17      compiler_3.4.3    pillar_1.2.1     
+#  [4] git2r_0.21.0      plyr_1.8.4        workflowr_1.1.1  
+#  [7] bindr_0.1.1       R.methodsS3_1.7.1 R.utils_2.6.0    
+# [10] tools_3.4.3       digest_0.6.15     evaluate_0.10.1  
+# [13] tibble_1.4.2      gtable_0.2.0      pkgconfig_2.0.1  
+# [16] rlang_0.2.1       yaml_2.1.19       bindrcpp_0.2.2   
+# [19] withr_2.1.2       stringr_1.3.0     dplyr_0.7.5      
+# [22] knitr_1.20        rprojroot_1.3-2   grid_3.4.3       
+# [25] tidyselect_0.2.4  glue_1.2.0        R6_2.2.2         
+# [28] rmarkdown_1.9     purrr_0.2.5       magrittr_1.5     
+# [31] whisker_0.3-2     backports_1.1.2   scales_0.5.0     
+# [34] htmltools_0.3.6   assertthat_0.2.0  colorspace_1.4-0 
+# [37] labeling_0.3      stringi_1.1.7     lazyeval_0.2.1   
+# [40] munsell_0.4.3     R.oo_1.21.0</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
@@ -894,7 +957,7 @@ footer is added to webpages before the MathJax javascript. -->
 <p>
   This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
   analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 0.11.0.9001
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.1.1
 </p>
 <hr>
 
