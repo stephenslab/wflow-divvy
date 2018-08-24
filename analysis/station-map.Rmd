@@ -38,6 +38,7 @@ From these data, I create a "departures" column.
 divvy$stations <-
   cbind(divvy$stations,
     data.frame(departures = as.vector(table(divvy$trips$from_station_id))))
+head(divvy$stations)
 summary(divvy$stations$departures)
 ```
 
