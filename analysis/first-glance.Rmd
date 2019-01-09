@@ -1,28 +1,14 @@
 ---
 title: "A first glance at the Divvy data"
 author: "Peter Carbonetto"
-output: html_document
+output: workflowr::wflow_html
 ---
 
-<!-- Define defaults shared by all workflowr files. -->
-```{r read-chunk, include=FALSE, cache=FALSE}
-knitr::read_chunk("chunks.R")
-```
-
-<!-- Update knitr chunk options -->
-```{r knitr-opts-chunk, include=FALSE}
-```
-
-<!-- Insert the date the file was last updated -->
-```{r last-updated, echo=FALSE, results='asis'}
-```
-
-<!-- Insert the code version (Git commit SHA1) if Git repository
- exists and R package git2r is installed -->
-```{r code-version, echo=FALSE, results='asis'}
-```
-
 Here, we will take a brief look at the data provided by Divvy.
+
+```{r knitr-opts, include=FALSE}
+knitr::opts_chunk$set(comment = "#",collapse = TRUE)
+```
 
 I begin by loading a few packages, as well as some additional
 functions I wrote for this project.
@@ -81,10 +67,5 @@ were rented almost 8,000 times in 2016 at that location.
 sum(divvy$trips$from_station_name == "University Ave & 57th St",na.rm = TRUE)
 ```
 
-## Session information
-
 This is the version of R and the packages that were used to generate
 these results.
-
-```{r session-info}
-```

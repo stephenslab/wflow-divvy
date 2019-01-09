@@ -103,34 +103,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 66px;
+  padding-top: 51px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 
 .section h2 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h3 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h4 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h5 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 .section h6 {
-  padding-top: 71px;
-  margin-top: -71px;
+  padding-top: 56px;
+  margin-top: -56px;
 }
 </style>
 
@@ -301,6 +301,13 @@ div.section {
 }
 </style>
 
+<!-- Add a small amount of space between sections. -->
+<style type="text/css">
+div.section {
+  padding-top: 12px;
+}
+</style>
+
 <div class="fluid-row" id="header">
 
 
@@ -311,13 +318,608 @@ div.section {
 </div>
 
 
-<!-- Define defaults shared by all workflowr files. -->
-<!-- Update knitr chunk options -->
-<!-- Insert the date the file was last updated -->
-<p><strong>Last updated:</strong> 2018-01-23</p>
-<!-- Insert the code version (Git commit SHA1) if Git repository
- exists and R package git2r is installed -->
-<p><strong>Code version:</strong> 96c320f</p>
+<p><strong>Last updated:</strong> 2018-04-14</p>
+<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
+<ul>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Environment:</strong> empty </summary></p>
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Seed:</strong> <code>set.seed(1)</code> </summary></p>
+<p>The command <code>set.seed(1)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Session information:</strong> recorded </summary></p>
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</details>
+</li>
+<li>
+<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/de31b2401edcf81060f0e2a92cba2642720d6224" target="_blank">de31b24</a> </summary></p>
+Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+<pre><code>
+Ignored files:
+    Ignored:    .DS_Store
+    Ignored:    analysis/.DS_Store
+    Ignored:    data/Divvy_Stations_2016_Q1Q2.csv
+    Ignored:    data/Divvy_Stations_2016_Q3.csv
+    Ignored:    data/Divvy_Stations_2016_Q4.csv
+    Ignored:    data/Divvy_Trips_2016_04.csv
+    Ignored:    data/Divvy_Trips_2016_05.csv
+    Ignored:    data/Divvy_Trips_2016_06.csv
+    Ignored:    data/Divvy_Trips_2016_Q1.csv
+    Ignored:    data/Divvy_Trips_2016_Q3.csv
+    Ignored:    data/Divvy_Trips_2016_Q4.csv
+    Ignored:    data/README.txt
+    Ignored:    data/data.tar.gz
+    Ignored:    docs/.DS_Store
+
+</code></pre>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
+</li>
+</ul>
+<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
+<ul>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+File
+</th>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+<th style="text-align:left;">
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/de31b2401edcf81060f0e2a92cba2642720d6224/analysis/time-of-day-trends.Rmd" target="_blank">de31b24</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+wflow_publish(c(“station-map.Rmd”, “seasonal-trends.Rmd”,
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/analysis/time-of-day-trends.Rmd" target="_blank">f163fe4</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Updates for new workflowr version, v0.11.0.9000.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/time-of-day-trends.html" target="_blank">f163fe4</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+<td style="text-align:left;">
+Updates for new workflowr version, v0.11.0.9000.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/51163d7598ad869fcb3cb02f00f6439715a105f9/docs/time-of-day-trends.html" target="_blank">51163d7</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-12
+</td>
+<td style="text-align:left;">
+Ran wflow_publish(“*.Rmd“) with version v0.11.0 of workflowr.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/ab9176e74d17342aef10259784f3059964d34b0b/docs/time-of-day-trends.html" target="_blank">ab9176e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-03-09
+</td>
+<td style="text-align:left;">
+Added code_hiding to the analysis R Markdown files.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/time-of-day-trends.html" target="_blank">b32e833</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-01-18
+</td>
+<td style="text-align:left;">
+Re-built all webpages using workflowr v0.1.0.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/0401587544d2d17622959a6992dc474c1109cd06/docs/time-of-day-trends.html" target="_blank">0401587</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-11-16
+</td>
+<td style="text-align:left;">
+Updated license.html, setup.html, station-map.html and
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/9463eb61ba20c8f6a1de8c6928ac99e2b4c282bd/analysis/time-of-day-trends.Rmd" target="_blank">9463eb6</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-11-16
+</td>
+<td style="text-align:left;">
+wflow_publish(c(“setup.Rmd”, “license.Rmd”, “time-of-day-trends.Rmd”,
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/6b9ddf1669eaae0911b0940de25d3b8c62d1f30f/analysis/time-of-day-trends.Rmd" target="_blank">6b9ddf1</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-08-02
+</td>
+<td style="text-align:left;">
+Added header with between-section spacing adjustment, and removed &lt;br&gt; tags from R Markdown files.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/c6e868616fc34d7fe772ccf01c2cd3b7da81b987/analysis/time-of-day-trends.Rmd" target="_blank">c6e8686</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-31
+</td>
+<td style="text-align:left;">
+wflow_publish(Sys.glob(“*.Rmd“))
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/0976f2d24ab58deb27540baed2bafc9a66a2ba62/analysis/time-of-day-trends.Rmd" target="_blank">0976f2d</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Minor edit.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/10193aedd5adb18d60063a7622d1e4b68aa318f6/docs/time-of-day-trends.html" target="_blank">10193ae</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/bfb87df8001ad9b6090d38cbe60f37c0f22e514b/analysis/time-of-day-trends.Rmd" target="_blank">bfb87df</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Added math formula example in time-of-day-trends.Rmd, and fixed
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/b1fe78a92aa041290f788d7bc9b3112b25544754/docs/time-of-day-trends.html" target="_blank">b1fe78a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Reverted MathJax source.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/af6b9bec73ad982c9a7c34cc2defd285d003b18a/docs/time-of-day-trends.html" target="_blank">af6b9be</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+More testing of local MathJax.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/cbf531a92d599197559192f64cc6717296600025/docs/time-of-day-trends.html" target="_blank">cbf531a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Testing local MathJax files.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/abf5116d158d4f93731d9a24367e2dae339a246a/docs/time-of-day-trends.html" target="_blank">abf5116</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/795b2140f5202543d22cd0fd6da8ac7ea17f00af/analysis/time-of-day-trends.Rmd" target="_blank">795b214</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-24
+</td>
+<td style="text-align:left;">
+Added math formulae to time-of-day trends .Rmd file.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/time-of-day-trends.html" target="_blank">727b8d9</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-13
+</td>
+<td style="text-align:left;">
+Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/6d02ffc0b43bde32d70d2912d46b951034d319ae/analysis/time-of-day-trends.Rmd" target="_blank">6d02ffc</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-13
+</td>
+<td style="text-align:left;">
+Made a dozen or so small adjustments to the .Rmd files.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/597355da8ce6dbb8dc47039d55ae25b2e0da14b0/docs/time-of-day-trends.html" target="_blank">597355d</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-07
+</td>
+<td style="text-align:left;">
+Ran wflow_publish(c(index.Rmd,first-glance.Rmd,station-map.Rmd,time-of-day-trends.Rmd)).
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f7da4f672203b8b3fdafc2ac2024cbf6405e055c/analysis/time-of-day-trends.Rmd" target="_blank">f7da4f6</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-07
+</td>
+<td style="text-align:left;">
+Fixed a broken link, and made a bunch of small revisions to the notebooks.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/2431e84841a147612ba998f8ef61ee2b833967d6/docs/time-of-day-trends.html" target="_blank">2431e84</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+wflow_publish(time-of-day-trends.Rmd)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/c8f7e106dd258c5663a77f6dac09faee51b1fef8/analysis/time-of-day-trends.Rmd" target="_blank">c8f7e10</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+Implemented first draft of seasonal trends notebook.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/eb228f2a76f02289e5459ffae7d3310fe4a29a86/docs/time-of-day-trends.html" target="_blank">eb228f2</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+A bunch of small revisions to time-of-day trends notebook.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/426d23898f7a7110b49d597ebf1e6e6fbc36acb3/analysis/time-of-day-trends.Rmd" target="_blank">426d238</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+wflow_publish(“time-of-day-trends.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9a36e9ebca3f131943834295b85f798534c38203/docs/time-of-day-trends.html" target="_blank">9a36e9e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/e67cefb3baa32cd61a51ad76b02a00ef82a7148e/analysis/time-of-day-trends.Rmd" target="_blank">e67cefb</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+Added text to time-of-day-trends.Rmd and fixed up figures a bit.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+html
+</td>
+<td style="text-align:left;">
+<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/52f577aebc2d25e3d0436172b782a6d567a11fd9/docs/time-of-day-trends.html" target="_blank">52f577a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f86e267a1f97d1cdd6e057fe203443d22733501d/analysis/time-of-day-trends.Rmd" target="_blank">f86e267</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+wflow_publish(“time-of-day-trends.Rmd”)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Rmd
+</td>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/9088b6a051bdcc6d83b0a0392088a3243dd499e0/analysis/time-of-day-trends.Rmd" target="_blank">9088b6a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+<td style="text-align:left;">
+Build site.
+</td>
+</tr>
+</tbody>
+</table>
+</ul>
+<p></details></p>
+<hr />
 <p>Here we use the Divvy trip data to examine biking trends over the course of a typical day in Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -348,6 +950,69 @@ source(&quot;../code/functions.R&quot;)</code></pre>
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" width="480" style="display: block; margin: auto;" /></p>
+<details> <summary><em>Expand here to see past versions of timeofday-barchart-1.png:</em></summary>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" target="_blank">f163fe4</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-04-14
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" target="_blank">b32e833</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-01-18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/eb228f2a76f02289e5459ffae7d3310fe4a29a86/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" target="_blank">eb228f2</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/52f577aebc2d25e3d0436172b782a6d567a11fd9/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-1.png" target="_blank">52f577a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+</tbody>
+</table>
+<p></details></p>
 <p>However, this bar chart is a bit muddled because it is counting trips during the week and on the weekends. Consider that the bin count <span class="math inline">\(x[h]\)</span> for hour <span class="math inline">\(h\)</span> in the histogram above is a sum of the counts for each day of the week:</p>
 <p><span class="math display">\[
 \begin{align}
@@ -368,6 +1033,69 @@ x_{\mathsf{Sun}}[h]
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" width="576" style="display: block; margin: auto;" /></p>
+<details> <summary><em>Expand here to see past versions of timeofday-barchart-2-1.png:</em></summary>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" target="_blank">b32e833</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-01-18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/eb228f2a76f02289e5459ffae7d3310fe4a29a86/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" target="_blank">eb228f2</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/9a36e9ebca3f131943834295b85f798534c38203/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" target="_blank">9a36e9e</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/52f577aebc2d25e3d0436172b782a6d567a11fd9/docs/figure/time-of-day-trends.Rmd/timeofday-barchart-2-1.png" target="_blank">52f577a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+</tbody>
+</table>
+<p></details></p>
 </div>
 <div id="time-of-day-trends-at-university-of-chicago" class="section level2">
 <h2>Time-of-day trends at University of Chicago</h2>
@@ -381,14 +1109,66 @@ x_{\mathsf{Sun}}[h]
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/time-of-day-trends.Rmd/timeofday-uchicago-barchart-1.png" width="576" style="display: block; margin: auto;" /></p>
+<details> <summary><em>Expand here to see past versions of timeofday-uchicago-barchart-1.png:</em></summary>
+<table style="border-collapse:separate; border-spacing:5px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Version
+</th>
+<th style="text-align:left;">
+Author
+</th>
+<th style="text-align:left;">
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/time-of-day-trends.Rmd/timeofday-uchicago-barchart-1.png" target="_blank">b32e833</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2018-01-18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/eb228f2a76f02289e5459ffae7d3310fe4a29a86/docs/figure/time-of-day-trends.Rmd/timeofday-uchicago-barchart-1.png" target="_blank">eb228f2</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<a href="https://github.com/stephenslab/wflow-divvy/blob/52f577aebc2d25e3d0436172b782a6d567a11fd9/docs/figure/time-of-day-trends.Rmd/timeofday-uchicago-barchart-1.png" target="_blank">52f577a</a>
+</td>
+<td style="text-align:left;">
+Peter Carbonetto
+</td>
+<td style="text-align:left;">
+2017-07-06
+</td>
+</tr>
+</tbody>
+</table>
+<p></details></p>
+<p>This is the version of R and the packages that were used to generate these results.</p>
 </div>
 <div id="session-information" class="section level2">
 <h2>Session information</h2>
-<p>This is the version of R and the packages that were used to generate these results.</p>
 <pre class="r"><code>sessionInfo()
 # R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS High Sierra 10.13.2
+# Running under: macOS High Sierra 10.13.4
 # 
 # Matrix products: default
 # BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
@@ -404,13 +1184,17 @@ x_{\mathsf{Sun}}[h]
 # [1] ggplot2_2.2.1       data.table_1.10.4-3
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.15     knitr_1.18       magrittr_1.5     munsell_0.4.3   
-#  [5] colorspace_1.3-2 rlang_0.1.6      stringr_1.2.0    plyr_1.8.4      
-#  [9] tools_3.4.3      grid_3.4.3       gtable_0.2.0     git2r_0.21.0    
-# [13] htmltools_0.3.6  yaml_2.1.16      lazyeval_0.2.1   rprojroot_1.3-2 
-# [17] digest_0.6.13    tibble_1.3.4     evaluate_0.10.1  rmarkdown_1.8   
-# [21] labeling_0.3     stringi_1.1.6    compiler_3.4.3   scales_0.5.0    
-# [25] backports_1.1.2</code></pre>
+#  [1] Rcpp_0.12.15          knitr_1.20            whisker_0.3-2        
+#  [4] magrittr_1.5          workflowr_0.11.0.9001 munsell_0.4.3        
+#  [7] colorspace_1.3-2      rlang_0.2.0.9000      stringr_1.3.0        
+# [10] plyr_1.8.4            tools_3.4.3           grid_3.4.3           
+# [13] gtable_0.2.0          R.oo_1.21.0           git2r_0.21.0         
+# [16] htmltools_0.3.6       lazyeval_0.2.1        yaml_2.1.18          
+# [19] rprojroot_1.3-2       digest_0.6.15         tibble_1.4.2         
+# [22] R.utils_2.6.0         evaluate_0.10.1       rmarkdown_1.9        
+# [25] labeling_0.3          stringi_1.1.6         pillar_1.2.1         
+# [28] compiler_3.4.3        scales_0.5.0          backports_1.1.2      
+# [31] R.methodsS3_1.7.1</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
@@ -418,11 +1202,23 @@ x_{\mathsf{Sun}}[h]
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+<!-- Adjust MathJax settings so that all math formulae are shown using
+TeX fonts only; see
+http://docs.mathjax.org/en/latest/configuration.html.  This will make
+the presentation more consistent at the cost of the webpage sometimes
+taking slightly longer to load. Note that this only works because the
+footer is added to webpages before the MathJax javascript. -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
 
 <hr>
-<p>This <a href="http://rmarkdown.rstudio.com">R Markdown</a> site was
-created with <a href="https://github.com/jdblischak/workflowr">workflowr</a>
-0.10.1.
+<p>
+  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
+  analysis was created with
+  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 0.11.0.9001
 </p>
 <hr>
 
