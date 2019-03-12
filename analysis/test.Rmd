@@ -1,5 +1,5 @@
 ---
-title: "Setup for Divvy data analysis"
+title: "Testing the collapse=TRUE knitr option."
 author: "Peter Carbonetto"
 output: workflowr::wflow_html
 ---
