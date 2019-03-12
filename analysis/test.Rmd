@@ -1,0 +1,26 @@
+---
+title: "Setup for Divvy data analysis"
+author: "Peter Carbonetto"
+output: workflowr::wflow_html
+---
+
+A quick look at the "cars" data set:
+
+```{r test-1}
+data(cars)
+summary(cars$speed)
+summary(cars$dist)
+```
+
+```{r knitr-opts, include=FALSE}
+knitr::opts_chunk$set(comment = "#",collapse = TRUE)
+```
+
+Another quick look at the "cars" data set:
+
+
+```{r test-2}
+data(cars)
+summary(cars$speed)
+summary(cars$dist)
+```
