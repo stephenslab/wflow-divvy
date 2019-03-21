@@ -341,7 +341,7 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-03-12
+<strong>Last updated:</strong> 2019-03-21
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -351,7 +351,7 @@ div.section {
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0.9000). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -420,10 +420,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef9f534758a69b329a82786e0e805675dc09a35catargetblankf9f5347a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/f9f534758a69b329a82786e0e805675dc09a35ca" target="_blank">f9f5347</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreea8cf3a086c2cb2188d7ec348cd2415d21ebe7e4btargetblanka8cf3a0a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/a8cf3a086c2cb2188d7ec348cd2415d21ebe7e4b" target="_blank">a8cf3a0</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef9f534758a69b329a82786e0e805675dc09a35catargetblankf9f5347a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreea8cf3a086c2cb2188d7ec348cd2415d21ebe7e4btargetblanka8cf3a0a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -444,9 +444,6 @@ Ignored files:
     Ignored:    data/README.txt
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
-
-Untracked files:
-    Untracked:  analysis/test.Rmd~
 
 </code></pre>
 <p>
@@ -536,11 +533,11 @@ summary(cars$speed)</code></pre>
    2.00   26.00   36.00   42.98   56.00  120.00 </code></pre>
 <p>Another quick look at the “cars” data set:</p>
 <pre class="r"><code>data(cars)
-summary(cars$speed)</code></pre>
-<pre><code>#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#     4.0    12.0    15.0    15.4    19.0    25.0</code></pre>
-<pre class="r"><code>summary(cars$dist)</code></pre>
-<pre><code>#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+summary(cars$speed)
+#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#     4.0    12.0    15.0    15.4    19.0    25.0
+summary(cars$dist)
+#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #    2.00   26.00   36.00   42.98   56.00  120.00</code></pre>
 <br> <br>
 <p>
@@ -549,8 +546,8 @@ summary(cars$speed)</code></pre>
 </button>
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
-<pre class="r"><code>sessionInfo()</code></pre>
-<pre><code># R version 3.4.3 (2017-11-30)
+<pre class="r"><code>sessionInfo()
+# R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
 # Running under: macOS High Sierra 10.13.6
 # 
@@ -565,11 +562,13 @@ summary(cars$speed)</code></pre>
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # loaded via a namespace (and not attached):
-#  [1] workflowr_1.2.0 Rcpp_1.0.0      digest_0.6.17   rprojroot_1.3-2
-#  [5] backports_1.1.2 git2r_0.23.3    magrittr_1.5    evaluate_0.11  
-#  [9] stringi_1.2.4   fs_1.2.6        whisker_0.3-2   rmarkdown_1.10 
-# [13] tools_3.4.3     stringr_1.3.1   glue_1.3.0      yaml_2.2.0     
-# [17] compiler_3.4.3  htmltools_0.3.6 knitr_1.20</code></pre>
+#  [1] workflowr_1.2.0.9000 Rcpp_1.0.0           digest_0.6.17       
+#  [4] rprojroot_1.3-2      backports_1.1.2      git2r_0.23.3        
+#  [7] magrittr_1.5         evaluate_0.11        stringi_1.2.4       
+# [10] fs_1.2.6             whisker_0.3-2        rmarkdown_1.10      
+# [13] tools_3.4.3          stringr_1.3.1        glue_1.3.0          
+# [16] yaml_2.2.0           compiler_3.4.3       htmltools_0.3.6     
+# [19] knitr_1.20</code></pre>
 </div>
 
 <script type="text/x-mathjax-config">
