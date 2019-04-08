@@ -91,6 +91,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -220,17 +223,65 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-05-07</p>
-<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
-<ul>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
-<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
-</details>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/54fcf4ebd2f91d5197f90e5a24f1195ec02fb5de" target="_blank">54fcf4e</a> </summary></p>
+<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2019-04-08
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>wflow-divvy/analysis/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="report" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreecb178d04fba3dd29c52c7ad345282571baf6709etargetblankcb178d0a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/cb178d04fba3dd29c52c7ad345282571baf6709e" target="_blank">cb178d0</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreecb178d04fba3dd29c52c7ad345282571baf6709etargetblankcb178d0a" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
@@ -248,1265 +299,1308 @@ Ignored files:
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
 
-Unstaged changes:
-    Modified:   analysis/_site.yml
-
 </code></pre>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
-</li>
-</ul>
-<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
-<ul>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 File
 </th>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
-<th style="text-align:left;">
+<th>
 Message
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-html
+<td>
+Rmd
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/55cd7b0e83f803ec980248180be57f04f48e8d2b/docs/index.html" target="_blank">55cd7b0</a>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/ab84173e1be9d42b9b12eb9f8d314ad3b4c5e717/analysis/index.Rmd" target="_blank">ab84173</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
+2018-05-07
+</td>
+<td>
+Small adjustment to YAML header in index.Rmd.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/df8858b92dad0752f2f299c768350fc0a7eed75c/docs/index.html" target="_blank">df8858b</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-05-07
+</td>
+<td>
+Re-built index and setup pages to test; fixed some indenting in _site.yml.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/55cd7b0e83f803ec980248180be57f04f48e8d2b/docs/index.html" target="_blank">55cd7b0</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
 2018-04-14
 </td>
-<td style="text-align:left;">
+<td>
 Re-built index and license pages with workflowr v0.11.0.9000.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/4643632ec0f0a30a3f5733f08454f8703da1bb76/analysis/index.Rmd" target="_blank">4643632</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-04-14
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(c(“index.Rmd”, “license.Rmd”))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/891978b6a68b86fdb25b122bd4e7c76977886010/analysis/index.Rmd" target="_blank">891978b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-09
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(c(“index.Rmd”, “setup.Rmd”, “license.Rmd”))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/c18057f8275bd8e875aa36e6db4a3326910ed035/analysis/index.Rmd" target="_blank">c18057f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-30
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/index.html" target="_blank">b32e833</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/index.html" target="_blank">b32e833</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-18
 </td>
-<td style="text-align:left;">
+<td>
 Re-built all webpages using workflowr v0.1.0.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/ef26c39dd62c3897e3df3a2d4ae1afe3e2f080e6/docs/index.html" target="_blank">ef26c39</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/ef26c39dd62c3897e3df3a2d4ae1afe3e2f080e6/docs/index.html" target="_blank">ef26c39</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-16
 </td>
-<td style="text-align:left;">
+<td>
 Adjusted footer and re-built index.html.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/3502da788d0d156e509c7a6dd6803dc75e91e0e7/docs/index.html" target="_blank">3502da7</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/3502da788d0d156e509c7a6dd6803dc75e91e0e7/docs/index.html" target="_blank">3502da7</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-16
 </td>
-<td style="text-align:left;">
+<td>
 Re-built index.Rmd with workflowr v0.8.0.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/d0a1fd2be9c95b03f45818c4630ccd0416bef51d/analysis/index.Rmd" target="_blank">d0a1fd2</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-16
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“analysis/index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6b9ddf1669eaae0911b0940de25d3b8c62d1f30f/analysis/index.Rmd" target="_blank">6b9ddf1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-08-02
 </td>
-<td style="text-align:left;">
+<td>
 Added header with between-section spacing adjustment, and removed &lt;br&gt; tags from R Markdown files.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/c6e868616fc34d7fe772ccf01c2cd3b7da81b987/analysis/index.Rmd" target="_blank">c6e8686</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-31
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(Sys.glob(“*.Rmd“))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/45c4f1f371eec934707be776675bd7dddb2de443/docs/index.html" target="_blank">45c4f1f</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/45c4f1f371eec934707be776675bd7dddb2de443/docs/index.html" target="_blank">45c4f1f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-24
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/index.html" target="_blank">727b8d9</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/index.html" target="_blank">727b8d9</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-13
 </td>
-<td style="text-align:left;">
+<td>
 Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6d02ffc0b43bde32d70d2912d46b951034d319ae/analysis/index.Rmd" target="_blank">6d02ffc</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-13
 </td>
-<td style="text-align:left;">
+<td>
 Made a dozen or so small adjustments to the .Rmd files.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9bc94ce51c3e501d7bcafa4c06a4776caaafee9d/docs/index.html" target="_blank">9bc94ce</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/9bc94ce51c3e501d7bcafa4c06a4776caaafee9d/docs/index.html" target="_blank">9bc94ce</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-12
 </td>
-<td style="text-align:left;">
+<td>
 Added title back to index.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/bf04dffb33a4f5db435f432bfa369068678ef4f0/analysis/index.Rmd" target="_blank">bf04dff</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-12
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/fb5ab7d3cb9a496afd4996ca945f390d3df899e0/docs/index.html" target="_blank">fb5ab7d</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/fb5ab7d3cb9a496afd4996ca945f390d3df899e0/docs/index.html" target="_blank">fb5ab7d</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 Commented out title from index.Rmd temporarily to demonstrate ‘bug’.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/61dc9c62a4bc7eadcff9ca09ea059b5465869d7c/analysis/index.Rmd" target="_blank">61dc9c6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/461fd5b77d814226dd13bb1f5659694a096fe378/docs/index.html" target="_blank">461fd5b</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/461fd5b77d814226dd13bb1f5659694a096fe378/docs/index.html" target="_blank">461fd5b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 Fixed index.html formatting.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/7fff285883d0fc68cf0e899f3f20935cafdee6e1/analysis/index.Rmd" target="_blank">7fff285</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/71b0c1a1cd78d92b4ee3da1b3b2b42b6b7b6389e/docs/index.html" target="_blank">71b0c1a</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/71b0c1a1cd78d92b4ee3da1b3b2b42b6b7b6389e/docs/index.html" target="_blank">71b0c1a</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 Small adjustment to overview page.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/64641c393046c3c2d40353db2c92fb5f4b152842/analysis/index.Rmd" target="_blank">64641c3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/551ef0c0b0845ffa7769d249fe8aa57ed1d6886e/docs/index.html" target="_blank">551ef0c</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/551ef0c0b0845ffa7769d249fe8aa57ed1d6886e/docs/index.html" target="_blank">551ef0c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 Fixing title again.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/79cae9c670441c67889bc555e1826e929c44b092/analysis/index.Rmd" target="_blank">79cae9c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/e6d1a103e8e0490979baf20d7f03c615362a9ebb/docs/index.html" target="_blank">e6d1a10</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/e6d1a103e8e0490979baf20d7f03c615362a9ebb/docs/index.html" target="_blank">e6d1a10</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 Fixed title for index.html.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/938e5811e1d4bacd1d69c38dcbae5899606a962a/analysis/index.Rmd" target="_blank">938e581</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-10
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/bf818d815f55eab9355c820302e1ac1b83bc023e/docs/index.html" target="_blank">bf818d8</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/bf818d815f55eab9355c820302e1ac1b83bc023e/docs/index.html" target="_blank">bf818d8</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Ran wflow_publish(c(“index.Rmd”, “setup.Rmd”, “station-map.Rmd”,
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/e4ba03348a35b6432945764452be471807e478ae/analysis/index.Rmd" target="_blank">e4ba033</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Removed use of word ‘notebook’.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/cded488c1ee7945c52d572a51b2148a277813a9b/docs/index.html" target="_blank">cded488</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/cded488c1ee7945c52d572a51b2148a277813a9b/docs/index.html" target="_blank">cded488</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Changed name of divvy photo.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/fed3991e6c3a2bf5c6de562e15f4ede5e3b5b003/analysis/index.Rmd" target="_blank">fed3991</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/23a7d0e1eb68c795b106130da627576ad7a97350/docs/index.html" target="_blank">23a7d0e</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/23a7d0e1eb68c795b106130da627576ad7a97350/docs/index.html" target="_blank">23a7d0e</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Small change to index.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/4cb1cbfceaf45533afc592c7ab870311b8d7b667/analysis/index.Rmd" target="_blank">4cb1cbf</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/597355da8ce6dbb8dc47039d55ae25b2e0da14b0/docs/index.html" target="_blank">597355d</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/597355da8ce6dbb8dc47039d55ae25b2e0da14b0/docs/index.html" target="_blank">597355d</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Ran wflow_publish(c(index.Rmd,first-glance.Rmd,station-map.Rmd,time-of-day-trends.Rmd)).
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/f7da4f672203b8b3fdafc2ac2024cbf6405e055c/analysis/index.Rmd" target="_blank">f7da4f6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Fixed a broken link, and made a bunch of small revisions to the notebooks.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/efb013d0dab693bbbff2db847ff8191c97148b48/docs/index.html" target="_blank">efb013d</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/efb013d0dab693bbbff2db847ff8191c97148b48/docs/index.html" target="_blank">efb013d</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 A couple more revisions to overview page.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/d4cd0f43937726240785c42d9b5d7dac6457ff88/analysis/index.Rmd" target="_blank">d4cd0f4</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/e3c7c9b15180d79c136ac4821afe0d61fbaace9c/docs/index.html" target="_blank">e3c7c9b</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/e3c7c9b15180d79c136ac4821afe0d61fbaace9c/docs/index.html" target="_blank">e3c7c9b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 A few revisions to overview page.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/eed6bc5e11e789d0ae6071f10ae29e01d02aadcf/analysis/index.Rmd" target="_blank">eed6bc5</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/93e3af6a5bd588fe464528d9439fe21f50244c4e/docs/index.html" target="_blank">93e3af6</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/93e3af6a5bd588fe464528d9439fe21f50244c4e/docs/index.html" target="_blank">93e3af6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Revised photo on overview page.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/e686a189eee23163735e7f75541f7a42c68a748e/analysis/index.Rmd" target="_blank">e686a18</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/c5f1fa85194f634536c89975c6bbc413d251e1be/docs/index.html" target="_blank">c5f1fa8</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/c5f1fa85194f634536c89975c6bbc413d251e1be/docs/index.html" target="_blank">c5f1fa8</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Added photo to overview page.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/57573ce9798692f9e278a55518640adc97033132/analysis/index.Rmd" target="_blank">57573ce</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9216ca2aa75e3a8b5078ccdead1137114a5d68c5/docs/index.html" target="_blank">9216ca2</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/9216ca2aa75e3a8b5078ccdead1137114a5d68c5/docs/index.html" target="_blank">9216ca2</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Filled out overview page.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6f742cb3334037ee8fc93a0ded1ff798ad7cb40f/analysis/index.Rmd" target="_blank">6f742cb</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/e978d6740e32e61dc068479118f1c023fd1a89f1/docs/index.html" target="_blank">e978d67</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/e978d6740e32e61dc068479118f1c023fd1a89f1/docs/index.html" target="_blank">e978d67</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Updated index.html.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6936e8710fa15bf2b79be8c3ecd55bc56fc7b233/analysis/index.Rmd" target="_blank">6936e87</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Added sentence to README.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/d4dafb478070de217ecc3f28c2f4b9c5429ebdd6/docs/index.html" target="_blank">d4dafb4</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/d4dafb478070de217ecc3f28c2f4b9c5429ebdd6/docs/index.html" target="_blank">d4dafb4</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Small adjustement to index.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/f7114e6bdf4ece77af0a29e83f449355bd52b1dc/analysis/index.Rmd" target="_blank">f7114e6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9dfb8e74cac24cc838a67675f0cc95e96130b4d8/docs/index.html" target="_blank">9dfb8e7</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/9dfb8e74cac24cc838a67675f0cc95e96130b4d8/docs/index.html" target="_blank">9dfb8e7</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Added link in index to seasonal trends notebook.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/872910bb4fa33f22686aae94ffd7c100b07a2b8b/analysis/index.Rmd" target="_blank">872910b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/98a667da72afc997ceea933190d51518bb2ed8bc/docs/index.html" target="_blank">98a667d</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/98a667da72afc997ceea933190d51518bb2ed8bc/docs/index.html" target="_blank">98a667d</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Trivial change to index.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/96c180a2c2cfcb7518d1de3cdcfdcf6531ef2aba/analysis/index.Rmd" target="_blank">96c180a</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/908cc151c1afe28d01835abfc24761501fe2da79/docs/index.html" target="_blank">908cc15</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/908cc151c1afe28d01835abfc24761501fe2da79/docs/index.html" target="_blank">908cc15</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Added link in index to time-of-day-trends.Rmd notebook.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/63f2b9c4cb2b00b0526abb1a681d85a55cd1472d/analysis/index.Rmd" target="_blank">63f2b9c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“index.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/4a43c4b9c456026c050d6f7d827ac4c3b41d3c09/analysis/index.Rmd" target="_blank">4a43c4b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Small revision to index.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9088b6a051bdcc6d83b0a0392088a3243dd499e0/docs/index.html" target="_blank">9088b6a</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/9088b6a051bdcc6d83b0a0392088a3243dd499e0/docs/index.html" target="_blank">9088b6a</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/617e1f17a02ee82ff5163bfb4596d64472dddff3/analysis/index.Rmd" target="_blank">617e1f1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Working on analysis of Divvy departures by time-of-day; fixed start.day column.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/08c0318d9d623550e5608c5257203ad39831ffcd/docs/index.html" target="_blank">08c0318</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/08c0318d9d623550e5608c5257203ad39831ffcd/docs/index.html" target="_blank">08c0318</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-05
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/5e5329742ab89457b6230065a15f7a4c2f578e3c/analysis/index.Rmd" target="_blank">5e53297</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-05
 </td>
-<td style="text-align:left;">
+<td>
 Filled out first-glance.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/533137c80ba50d89d7af2e205582e231559d37c1/docs/index.html" target="_blank">533137c</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/533137c80ba50d89d7af2e205582e231559d37c1/docs/index.html" target="_blank">533137c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-04
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/67b8d2bbfd5a863bea571a9c8d36903b86c8a395/analysis/index.Rmd" target="_blank">67b8d2b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-04
 </td>
-<td style="text-align:left;">
+<td>
 A variety of improvements to the data analysis notebooks.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/82473df6051772447576c183b12e53aed3314d01/docs/index.html" target="_blank">82473df</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/82473df6051772447576c183b12e53aed3314d01/docs/index.html" target="_blank">82473df</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/e4e8996f0443130e874dbd3bc2b8d2c9b234c6c9/analysis/index.Rmd" target="_blank">e4e8996</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Wrote first draft of function read.divvy.data to read in the Divvy data.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/5fcd514522003359b87583f34f3332546315179b/docs/index.html" target="_blank">5fcd514</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/5fcd514522003359b87583f34f3332546315179b/docs/index.html" target="_blank">5fcd514</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/e803dcdd1f452963e12d9cfde44bf4f8b2f5ce7c/analysis/index.Rmd" target="_blank">e803dcd</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(list.files(pattern = “*.Rmd“))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/8b33acc42e2d7c7597c053d51992744cd3785bcd/docs/index.html" target="_blank">8b33acc</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/8b33acc42e2d7c7597c053d51992744cd3785bcd/docs/index.html" target="_blank">8b33acc</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Re-built site with addition of setup and “first look” notebooks.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/538951e0e30a5cf8fac46d410dd01500b9100521/analysis/index.Rmd" target="_blank">538951e</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(list.files(pattern = “*.Rmd“))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/54a9c154f13393c5eee33f0be35e8f39c80be896/docs/index.html" target="_blank">54a9c15</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/54a9c154f13393c5eee33f0be35e8f39c80be896/docs/index.html" target="_blank">54a9c15</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Trying readable theme.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/fa2912388b0e23094af49b9da9a4e3807a5848c8/docs/index.html" target="_blank">fa29123</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/fa2912388b0e23094af49b9da9a4e3807a5848c8/docs/index.html" target="_blank">fa29123</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/66fc380500e0cc92bb267bbe4ff9ce6fd5f1cec0/docs/index.html" target="_blank">66fc380</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/66fc380500e0cc92bb267bbe4ff9ce6fd5f1cec0/docs/index.html" target="_blank">66fc380</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Updated index.html and license.html using wflow_publish().
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/ce27a1b640d0ff31b0b8dbd876bbf2bf8c99635d/analysis/index.Rmd" target="_blank">ce27a1b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 Added license info and deleted about.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/9a169a0656ad4812284f6ac1312752724214feba/docs/index.html" target="_blank">9a169a0</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/9a169a0656ad4812284f6ac1312752724214feba/docs/index.html" target="_blank">9a169a0</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-28
 </td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/b300c7c161b343a74a3d5eec2cacbebc8668ce70/analysis/index.Rmd" target="_blank">b300c7c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-28
 </td>
-<td style="text-align:left;">
+<td>
 Start workflowr project.
 </td>
 </tr>
 </tbody>
 </table>
-</ul>
-<p></details></p>
-<hr />
+</div>
+<hr>
+</div>
+</div>
+</div>
 <p><br> <img src="divvy.jpg" alt="Divvy bikes" /> <br> <em><a href="https://www.flickr.com/photos/jamesbondsv/9041673199">Photo</a> by <a href="https://www.flickr.com/photos/jamesbondsv">Steven Vance</a> / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></em></p>
 <div id="project-overview" class="section level2">
 <h2>Project overview</h2>
@@ -1531,6 +1625,7 @@ Start workflowr project.
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
 http://docs.mathjax.org/en/latest/configuration.html.  This will make
@@ -1542,14 +1637,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-  analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.0.1.9000
-</p>
-<hr>
 
 
 
