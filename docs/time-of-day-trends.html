@@ -420,10 +420,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef4e627f235354ae5402bd31b30cd59b596f7b1e5targetblankf4e627fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/f4e627f235354ae5402bd31b30cd59b596f7b1e5" target="_blank">f4e627f</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytree61c85b2a921633470153e924493ad3214adac1cbtargetblank61c85b2a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/61c85b2a921633470153e924493ad3214adac1cb" target="_blank">61c85b2</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef4e627f235354ae5402bd31b30cd59b596f7b1e5targetblankf4e627fa" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytree61c85b2a921633470153e924493ad3214adac1cbtargetblank61c85b2a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -482,6 +482,23 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/61c85b2a921633470153e924493ad3214adac1cb/analysis/time-of-day-trends.Rmd" target="_blank">61c85b2</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2019-04-10
+</td>
+<td>
+wflow_publish(c(“seasonal-trends.Rmd”, “station-map.Rmd”,
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -1036,9 +1053,7 @@ Build site.
 <p>Here we use the Divvy trip data to examine biking trends over the course of a typical day in Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
-# Warning: package &#39;data.table&#39; was built under R version 3.4.4
 library(ggplot2)
-# Warning: package &#39;ggplot2&#39; was built under R version 3.4.4
 source(&quot;../code/functions.R&quot;)</code></pre>
 <div id="read-the-data" class="section level2">
 <h2>Read the data</h2>
