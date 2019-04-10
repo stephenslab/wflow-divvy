@@ -94,6 +94,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -318,32 +321,113 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-04-14</p>
-<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
-<ul>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2019-04-10
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>wflow-divvy/analysis/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0.9000). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="report" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
 <p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Environment:</strong> empty </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
 <p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Seed:</strong> <code>set.seed(1)</code> </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(1)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed1code" class="panel-collapse collapse">
+<div class="panel-body">
 <p>The command <code>set.seed(1)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Session information:</strong> recorded </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
 <p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/de31b2401edcf81060f0e2a92cba2642720d6224" target="_blank">de31b24</a> </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef4e627f235354ae5402bd31b30cd59b596f7b1e5targetblankf4e627fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/f4e627f235354ae5402bd31b30cd59b596f7b1e5" target="_blank">f4e627f</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef4e627f235354ae5402bd31b30cd59b596f7b1e5targetblankf4e627fa" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
@@ -362,347 +446,378 @@ Ignored files:
     Ignored:    docs/.DS_Store
 
 </code></pre>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
-</li>
-</ul>
-<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
-<ul>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 File
 </th>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
-<th style="text-align:left;">
+<th>
 Message
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/54fcf4ebd2f91d5197f90e5a24f1195ec02fb5de/docs/seasonal-trends.html" target="_blank">54fcf4e</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-04-14
+</td>
+<td>
+Re-built station-map, time-of-day-trends and seasonal-trends webpages
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/analysis/seasonal-trends.Rmd" target="_blank">f163fe4</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-04-14
 </td>
-<td style="text-align:left;">
+<td>
 Updates for new workflowr version, v0.11.0.9000.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/seasonal-trends.html" target="_blank">f163fe4</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/seasonal-trends.html" target="_blank">f163fe4</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-04-14
 </td>
-<td style="text-align:left;">
+<td>
 Updates for new workflowr version, v0.11.0.9000.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/51163d7598ad869fcb3cb02f00f6439715a105f9/docs/seasonal-trends.html" target="_blank">51163d7</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/51163d7598ad869fcb3cb02f00f6439715a105f9/docs/seasonal-trends.html" target="_blank">51163d7</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-12
 </td>
-<td style="text-align:left;">
+<td>
 Ran wflow_publish(“*.Rmd“) with version v0.11.0 of workflowr.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/ab9176e74d17342aef10259784f3059964d34b0b/docs/seasonal-trends.html" target="_blank">ab9176e</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/ab9176e74d17342aef10259784f3059964d34b0b/docs/seasonal-trends.html" target="_blank">ab9176e</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-03-09
 </td>
-<td style="text-align:left;">
+<td>
 Added code_hiding to the analysis R Markdown files.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/seasonal-trends.html" target="_blank">b32e833</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/seasonal-trends.html" target="_blank">b32e833</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-18
 </td>
-<td style="text-align:left;">
+<td>
 Re-built all webpages using workflowr v0.1.0.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/93a3a86b3f7083e2141a802bfd63be702227dc5f/docs/seasonal-trends.html" target="_blank">93a3a86</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/93a3a86b3f7083e2141a802bfd63be702227dc5f/docs/seasonal-trends.html" target="_blank">93a3a86</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-16
 </td>
-<td style="text-align:left;">
+<td>
 Re-built seasonal-trends.html using workflowr v0.8.0.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/5b8e33f43fc19062cf85e12c9ad27806f167a08d/analysis/seasonal-trends.Rmd" target="_blank">5b8e33f</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-11-16
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“seasonal-trends.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6b9ddf1669eaae0911b0940de25d3b8c62d1f30f/analysis/seasonal-trends.Rmd" target="_blank">6b9ddf1</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-08-02
 </td>
-<td style="text-align:left;">
+<td>
 Added header with between-section spacing adjustment, and removed &lt;br&gt; tags from R Markdown files.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/c6e868616fc34d7fe772ccf01c2cd3b7da81b987/analysis/seasonal-trends.Rmd" target="_blank">c6e8686</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-31
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(Sys.glob(“*.Rmd“))
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/seasonal-trends.html" target="_blank">727b8d9</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/seasonal-trends.html" target="_blank">727b8d9</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-13
 </td>
-<td style="text-align:left;">
+<td>
 Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6d02ffc0b43bde32d70d2912d46b951034d319ae/analysis/seasonal-trends.Rmd" target="_blank">6d02ffc</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-13
 </td>
-<td style="text-align:left;">
+<td>
 Made a dozen or so small adjustments to the .Rmd files.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/bf818d815f55eab9355c820302e1ac1b83bc023e/docs/seasonal-trends.html" target="_blank">bf818d8</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/bf818d815f55eab9355c820302e1ac1b83bc023e/docs/seasonal-trends.html" target="_blank">bf818d8</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Ran wflow_publish(c(“index.Rmd”, “setup.Rmd”, “station-map.Rmd”,
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/e4ba03348a35b6432945764452be471807e478ae/analysis/seasonal-trends.Rmd" target="_blank">e4ba033</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Removed use of word ‘notebook’.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/cbee77b6d081298b85cac05196eaffde3ad7ab4f/docs/seasonal-trends.html" target="_blank">cbee77b</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/cbee77b6d081298b85cac05196eaffde3ad7ab4f/docs/seasonal-trends.html" target="_blank">cbee77b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Ran wflow_publish(seasonal-trends.Rmd).
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/984143c64eaf9aa2ea9b7d0c03d84eab19c75adb/analysis/seasonal-trends.Rmd" target="_blank">984143c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-07
 </td>
-<td style="text-align:left;">
+<td>
 Made a few small revisions to seasonal-trends.Rmd.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 html
 </td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/34518f3422e7846a4a9f897b55f5da439590da51/docs/seasonal-trends.html" target="_blank">34518f3</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/34518f3422e7846a4a9f897b55f5da439590da51/docs/seasonal-trends.html" target="_blank">34518f3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Built first draft of seasonal trends notebook.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/6ef7a6cc29a21cb7dddab8aa0115179f68fae3ea/analysis/seasonal-trends.Rmd" target="_blank">6ef7a6c</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“seasonal-trends.Rmd”)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/c8f7e106dd258c5663a77f6dac09faee51b1fef8/analysis/seasonal-trends.Rmd" target="_blank">c8f7e10</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
-<td style="text-align:left;">
+<td>
 Implemented first draft of seasonal trends notebook.
 </td>
 </tr>
 </tbody>
 </table>
-</ul>
-<p></details></p>
-<hr />
+</div>
+<hr>
+</div>
+</div>
+</div>
 <p>In this last analysis, I use the Divvy trip data to examine biking trends in Chicago over the course of one year.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
+# Warning: package &#39;data.table&#39; was built under R version 3.4.4
 library(ggplot2)
+# Warning: package &#39;ggplot2&#39; was built under R version 3.4.4
 source(&quot;../code/functions.R&quot;)</code></pre>
 <div id="read-the-data" class="section level2">
 <h2>Read the data</h2>
@@ -738,58 +853,65 @@ ggplot(data.frame(day = 1:366,departures = counts.day),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" width="576" style="display: block; margin: auto;" /></p>
-<details> <summary><em>Expand here to see past versions of plot-trips-by-day-1.png:</em></summary>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-trips-by-day-1">
+Past versions of plot-trips-by-day-1.png
+</button>
+</p>
+<div id="fig-plot-trips-by-day-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/f163fe475a1b32c1b3a79282cb48c7d08f06f25c/docs/figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" target="_blank">f163fe4</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-04-14
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" target="_blank">b32e833</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-18
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/34518f3422e7846a4a9f897b55f5da439590da51/docs/figure/seasonal-trends.Rmd/plot-trips-by-day-1.png" target="_blank">34518f3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
 </tr>
 </tbody>
 </table>
-<p></details></p>
+</div>
+</div>
 <p>This plot shows a sizeable increase in bike trips during summer days, but since the number of trips varies widely from one day to the next, I think the plot will look nicer if instead we count the number of trips <em>per week</em>.</p>
 <pre class="r"><code>counts.week &lt;- as.vector(table(divvy$trips$start.week))
 ggplot(data.frame(week = 0:52,departures = counts.week),
@@ -800,47 +922,54 @@ ggplot(data.frame(week = 0:52,departures = counts.week),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" width="576" style="display: block; margin: auto;" /></p>
-<details> <summary><em>Expand here to see past versions of plot-trips-by-week-1.png:</em></summary>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-trips-by-week-1">
+Past versions of plot-trips-by-week-1.png
+</button>
+</p>
+<div id="fig-plot-trips-by-week-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" target="_blank">b32e833</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-18
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/34518f3422e7846a4a9f897b55f5da439590da51/docs/figure/seasonal-trends.Rmd/plot-trips-by-week-1.png" target="_blank">34518f3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
 </tr>
 </tbody>
 </table>
-<p></details></p>
+</div>
+</div>
 <p>Indeed, the seasonal trends are less noisy in this plot; the majority of Divvy bike trips in Chicago are taken when the weather is warmer (weeks 20–40), and very few people are using the Divvy bikes in the cold winter months.</p>
 </div>
 <div id="seasonal-trends-at-the-university-of-chicago" class="section level2">
@@ -856,55 +985,65 @@ ggplot(data.frame(week = 0:52,departures = counts.week.uchicago),
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" width="576" style="display: block; margin: auto;" /></p>
-<details> <summary><em>Expand here to see past versions of plot-trips-by-week-uchicago-1.png:</em></summary>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-plot-trips-by-week-uchicago-1">
+Past versions of plot-trips-by-week-uchicago-1.png
+</button>
+</p>
+<div id="fig-plot-trips-by-week-uchicago-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" target="_blank">b32e833</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-01-18
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/34518f3422e7846a4a9f897b55f5da439590da51/docs/figure/seasonal-trends.Rmd/plot-trips-by-week-uchicago-1.png" target="_blank">34518f3</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-06
 </td>
 </tr>
 </tbody>
 </table>
-<p></details></p>
-<p>This is the version of R and the packages that were used to generate these results.</p>
 </div>
-<div id="session-information" class="section level2">
-<h2>Session information</h2>
+</div>
+This is the version of R and the packages that were used to generate these results. <br> <br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()
 # R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
-# Running under: macOS High Sierra 10.13.4
+# Running under: macOS High Sierra 10.13.6
 # 
 # Matrix products: default
 # BLAS: /Library/Frameworks/R.framework/Versions/3.4/Resources/lib/libRblas.0.dylib
@@ -917,20 +1056,23 @@ Peter Carbonetto
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # other attached packages:
-# [1] ggplot2_2.2.1       data.table_1.10.4-3
+# [1] ggplot2_3.1.0     data.table_1.11.4
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.15          knitr_1.20            whisker_0.3-2        
-#  [4] magrittr_1.5          workflowr_0.11.0.9001 munsell_0.4.3        
-#  [7] colorspace_1.3-2      rlang_0.2.0.9000      stringr_1.3.0        
-# [10] plyr_1.8.4            tools_3.4.3           grid_3.4.3           
-# [13] gtable_0.2.0          R.oo_1.21.0           git2r_0.21.0         
-# [16] htmltools_0.3.6       lazyeval_0.2.1        yaml_2.1.18          
-# [19] rprojroot_1.3-2       digest_0.6.15         tibble_1.4.2         
-# [22] R.utils_2.6.0         evaluate_0.10.1       rmarkdown_1.9        
-# [25] labeling_0.3          stringi_1.1.6         pillar_1.2.1         
-# [28] compiler_3.4.3        scales_0.5.0          backports_1.1.2      
-# [31] R.methodsS3_1.7.1</code></pre>
+#  [1] Rcpp_1.0.0           knitr_1.20           whisker_0.3-2       
+#  [4] magrittr_1.5         workflowr_1.2.0.9000 tidyselect_0.2.5    
+#  [7] munsell_0.4.3        colorspace_1.4-0     R6_2.2.2            
+# [10] rlang_0.3.1          dplyr_0.8.0.1        stringr_1.3.1       
+# [13] plyr_1.8.4           tools_3.4.3          grid_3.4.3          
+# [16] gtable_0.2.0         withr_2.1.2          git2r_0.23.3        
+# [19] htmltools_0.3.6      assertthat_0.2.0     yaml_2.2.0          
+# [22] lazyeval_0.2.1       rprojroot_1.3-2      digest_0.6.17       
+# [25] tibble_2.1.1         crayon_1.3.4         purrr_0.2.5         
+# [28] fs_1.2.6             glue_1.3.0           evaluate_0.11       
+# [31] rmarkdown_1.10       labeling_0.3         stringi_1.2.4       
+# [34] pillar_1.3.1         compiler_3.4.3       scales_0.5.0        
+# [37] backports_1.1.2      pkgconfig_2.0.2</code></pre>
+</div>
 </div>
 
 <script type="text/x-mathjax-config">
@@ -938,6 +1080,7 @@ Peter Carbonetto
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
 http://docs.mathjax.org/en/latest/configuration.html.  This will make
@@ -949,14 +1092,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-  analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 0.11.0.9001
-</p>
-<hr>
 
 
 </div>

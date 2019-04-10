@@ -94,6 +94,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -318,32 +321,113 @@ div.section {
 </div>
 
 
-<p><strong>Last updated:</strong> 2018-08-24</p>
-<strong>workflowr checks:</strong> <small>(Click a bullet for more information)</small>
-<ul>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span> workflowr <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</button>
+</p>
+<div id="workflowr-report" class="collapse">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#summary">Summary</a>
+</li>
 <li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>R Markdown file:</strong> up-to-date </summary></p>
+<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+</li>
+<li>
+<a data-toggle="tab" href="#versions">Past versions</a>
+</li>
+</ul>
+<div class="tab-content">
+<div id="summary" class="tab-pane fade in active">
+<p>
+<strong>Last updated:</strong> 2019-04-10
+</p>
+<p>
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+</p>
+<p>
+<strong>Knit directory:</strong> <code>wflow-divvy/analysis/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
+</p>
+<p>
+This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0.9000). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+</p>
+<hr>
+</div>
+<div id="report" class="tab-pane fade">
+<div id="workflowr-checks" class="panel-group">
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date </a>
+</p>
+</div>
+<div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
+<div class="panel-body">
 <p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Environment:</strong> empty </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
 <p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Seed:</strong> <code>set.seed(1)</code> </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed1code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(1)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed1code" class="panel-collapse collapse">
+<div class="panel-body">
 <p>The command <code>set.seed(1)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Session information:</strong> recorded </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
 <p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
-</details>
-</li>
-<li>
-<p><details> <summary> <strong style="color:blue;">✔</strong> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/a860deda4d39896ef1716ca17b11271087f91a51" target="_blank">a860ded</a> </summary></p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef4e627f235354ae5402bd31b30cd59b596f7b1e5targetblankf4e627fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/f4e627f235354ae5402bd31b30cd59b596f7b1e5" target="_blank">f4e627f</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytreef4e627f235354ae5402bd31b30cd59b596f7b1e5targetblankf4e627fa" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
+</p>
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
@@ -361,438 +445,458 @@ Ignored files:
     Ignored:    data/data.tar.gz
     Ignored:    docs/.DS_Store
 
-Untracked files:
-    Untracked:  analysis/about.Rmd
-    Untracked:  analysis/about.md
-    Untracked:  analysis/default.Rmd
-    Untracked:  analysis/test.Rmd
-
-Unstaged changes:
-    Modified:   README.md
-
 </code></pre>
-Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes. </details>
-</li>
-</ul>
-<details> <summary> <small><strong>Expand here to see past versions:</strong></small> </summary>
-<ul>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+Note that any generated files, e.g. HTML, png, CSS, etc., are not included in this status report because it is ok for generated content to have uncommitted changes.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr>
+</div>
+<div id="versions" class="tab-pane fade">
+
+<p>
+These are the previous versions of the R Markdown and HTML files. If you’ve configured a remote Git repository (see <code>?wflow_git_remote</code>), click on the hyperlinks in the table below to view them.
+</p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 File
 </th>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
-<th style="text-align:left;">
+<th>
 Message
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-Rmd
+<td>
+html
 </td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/a860deda4d39896ef1716ca17b11271087f91a51/analysis/station-map.Rmd" target="_blank">a860ded</a>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/df35db6809e3b1f7cfb695669969019a45eb256b/docs/station-map.html" target="_blank">df35db6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2018-08-24
 </td>
-<td style="text-align:left;">
-wflow_publish(“station-map.Rmd”)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/54fcf4ebd2f91d5197f90e5a24f1195ec02fb5de/docs/station-map.html" target="_blank">54fcf4e</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-04-14
-</td>
-<td style="text-align:left;">
-Re-built station-map, time-of-day-trends and seasonal-trends webpages
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/de31b2401edcf81060f0e2a92cba2642720d6224/analysis/station-map.Rmd" target="_blank">de31b24</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-04-14
-</td>
-<td style="text-align:left;">
-wflow_publish(c(“station-map.Rmd”, “seasonal-trends.Rmd”,
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/db2ffe0440cff4854db15eef3b722777d1c88b1a/analysis/station-map.Rmd" target="_blank">db2ffe0</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-04-14
-</td>
-<td style="text-align:left;">
-wflow_publish(“station-map.Rmd”)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/51163d7598ad869fcb3cb02f00f6439715a105f9/docs/station-map.html" target="_blank">51163d7</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-03-12
-</td>
-<td style="text-align:left;">
-Ran wflow_publish(“*.Rmd“) with version v0.11.0 of workflowr.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/ab9176e74d17342aef10259784f3059964d34b0b/docs/station-map.html" target="_blank">ab9176e</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-03-09
-</td>
-<td style="text-align:left;">
-Added code_hiding to the analysis R Markdown files.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/e48700b2a6a9d87af38b169c9c3bf06548bcb852/docs/station-map.html" target="_blank">e48700b</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-01-30
-</td>
-<td style="text-align:left;">
-Ran wflow_publish(“station-map.Rmd”) for demo with Simon.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/station-map.html" target="_blank">b32e833</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2018-01-18
-</td>
-<td style="text-align:left;">
-Re-built all webpages using workflowr v0.1.0.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/0401587544d2d17622959a6992dc474c1109cd06/docs/station-map.html" target="_blank">0401587</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-11-16
-</td>
-<td style="text-align:left;">
-Updated license.html, setup.html, station-map.html and
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/9463eb61ba20c8f6a1de8c6928ac99e2b4c282bd/analysis/station-map.Rmd" target="_blank">9463eb6</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-11-16
-</td>
-<td style="text-align:left;">
-wflow_publish(c(“setup.Rmd”, “license.Rmd”, “time-of-day-trends.Rmd”,
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/6b9ddf1669eaae0911b0940de25d3b8c62d1f30f/analysis/station-map.Rmd" target="_blank">6b9ddf1</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-08-02
-</td>
-<td style="text-align:left;">
-Added header with between-section spacing adjustment, and removed &lt;br&gt; tags from R Markdown files.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/station-map.html" target="_blank">727b8d9</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-13
-</td>
-<td style="text-align:left;">
-Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/6d02ffc0b43bde32d70d2912d46b951034d319ae/analysis/station-map.Rmd" target="_blank">6d02ffc</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-13
-</td>
-<td style="text-align:left;">
-Made a dozen or so small adjustments to the .Rmd files.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/bf818d815f55eab9355c820302e1ac1b83bc023e/docs/station-map.html" target="_blank">bf818d8</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-07
-</td>
-<td style="text-align:left;">
-Ran wflow_publish(c(“index.Rmd”, “setup.Rmd”, “station-map.Rmd”,
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/e4ba03348a35b6432945764452be471807e478ae/analysis/station-map.Rmd" target="_blank">e4ba033</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-07
-</td>
-<td style="text-align:left;">
-Removed use of word ‘notebook’.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/597355da8ce6dbb8dc47039d55ae25b2e0da14b0/docs/station-map.html" target="_blank">597355d</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-07
-</td>
-<td style="text-align:left;">
-Ran wflow_publish(c(index.Rmd,first-glance.Rmd,station-map.Rmd,time-of-day-trends.Rmd)).
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/f7da4f672203b8b3fdafc2ac2024cbf6405e055c/analysis/station-map.Rmd" target="_blank">f7da4f6</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-07
-</td>
-<td style="text-align:left;">
-Fixed a broken link, and made a bunch of small revisions to the notebooks.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/f62f674424517c705888bc5a32a9875866c9bf0d/docs/station-map.html" target="_blank">f62f674</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-05
-</td>
-<td style="text-align:left;">
-Re-built all the files without cached chunks.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/96f2db43a65ee5e1d81670016e3262daa0ca0835/analysis/station-map.Rmd" target="_blank">96f2db4</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-05
-</td>
-<td style="text-align:left;">
-wflow_publish(c(“index.Rmd”, “first-glance.Rmd”, “station-map.Rmd”))
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/stephenslab/wflow-divvy/08c0318d9d623550e5608c5257203ad39831ffcd/docs/station-map.html" target="_blank">08c0318</a>
-</td>
-<td style="text-align:left;">
-Peter Carbonetto
-</td>
-<td style="text-align:left;">
-2017-07-05
-</td>
-<td style="text-align:left;">
+<td>
 Build site.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/8113086cfd2d26c86e02e9047804eb7bcb17bc62/analysis/station-map.Rmd" target="_blank">8113086</a>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/a860deda4d39896ef1716ca17b11271087f91a51/analysis/station-map.Rmd" target="_blank">a860ded</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
+2018-08-24
+</td>
+<td>
+wflow_publish(“station-map.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/54fcf4ebd2f91d5197f90e5a24f1195ec02fb5de/docs/station-map.html" target="_blank">54fcf4e</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-04-14
+</td>
+<td>
+Re-built station-map, time-of-day-trends and seasonal-trends webpages
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/de31b2401edcf81060f0e2a92cba2642720d6224/analysis/station-map.Rmd" target="_blank">de31b24</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-04-14
+</td>
+<td>
+wflow_publish(c(“station-map.Rmd”, “seasonal-trends.Rmd”,
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/db2ffe0440cff4854db15eef3b722777d1c88b1a/analysis/station-map.Rmd" target="_blank">db2ffe0</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-04-14
+</td>
+<td>
+wflow_publish(“station-map.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/51163d7598ad869fcb3cb02f00f6439715a105f9/docs/station-map.html" target="_blank">51163d7</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-03-12
+</td>
+<td>
+Ran wflow_publish(“*.Rmd“) with version v0.11.0 of workflowr.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/ab9176e74d17342aef10259784f3059964d34b0b/docs/station-map.html" target="_blank">ab9176e</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-03-09
+</td>
+<td>
+Added code_hiding to the analysis R Markdown files.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/e48700b2a6a9d87af38b169c9c3bf06548bcb852/docs/station-map.html" target="_blank">e48700b</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-01-30
+</td>
+<td>
+Ran wflow_publish(“station-map.Rmd”) for demo with Simon.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/b32e83313772ae727452641f7098359fcf80317d/docs/station-map.html" target="_blank">b32e833</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-01-18
+</td>
+<td>
+Re-built all webpages using workflowr v0.1.0.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/0401587544d2d17622959a6992dc474c1109cd06/docs/station-map.html" target="_blank">0401587</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-11-16
+</td>
+<td>
+Updated license.html, setup.html, station-map.html and
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/9463eb61ba20c8f6a1de8c6928ac99e2b4c282bd/analysis/station-map.Rmd" target="_blank">9463eb6</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-11-16
+</td>
+<td>
+wflow_publish(c(“setup.Rmd”, “license.Rmd”, “time-of-day-trends.Rmd”,
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/6b9ddf1669eaae0911b0940de25d3b8c62d1f30f/analysis/station-map.Rmd" target="_blank">6b9ddf1</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-08-02
+</td>
+<td>
+Added header with between-section spacing adjustment, and removed &lt;br&gt; tags from R Markdown files.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/station-map.html" target="_blank">727b8d9</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-13
+</td>
+<td>
+Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/6d02ffc0b43bde32d70d2912d46b951034d319ae/analysis/station-map.Rmd" target="_blank">6d02ffc</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-13
+</td>
+<td>
+Made a dozen or so small adjustments to the .Rmd files.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/bf818d815f55eab9355c820302e1ac1b83bc023e/docs/station-map.html" target="_blank">bf818d8</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-07
+</td>
+<td>
+Ran wflow_publish(c(“index.Rmd”, “setup.Rmd”, “station-map.Rmd”,
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/e4ba03348a35b6432945764452be471807e478ae/analysis/station-map.Rmd" target="_blank">e4ba033</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-07
+</td>
+<td>
+Removed use of word ‘notebook’.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/597355da8ce6dbb8dc47039d55ae25b2e0da14b0/docs/station-map.html" target="_blank">597355d</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-07
+</td>
+<td>
+Ran wflow_publish(c(index.Rmd,first-glance.Rmd,station-map.Rmd,time-of-day-trends.Rmd)).
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/f7da4f672203b8b3fdafc2ac2024cbf6405e055c/analysis/station-map.Rmd" target="_blank">f7da4f6</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-07
+</td>
+<td>
+Fixed a broken link, and made a bunch of small revisions to the notebooks.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/f62f674424517c705888bc5a32a9875866c9bf0d/docs/station-map.html" target="_blank">f62f674</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
 2017-07-05
 </td>
-<td style="text-align:left;">
+<td>
+Re-built all the files without cached chunks.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/96f2db43a65ee5e1d81670016e3262daa0ca0835/analysis/station-map.Rmd" target="_blank">96f2db4</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-05
+</td>
+<td>
+wflow_publish(c(“index.Rmd”, “first-glance.Rmd”, “station-map.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/08c0318d9d623550e5608c5257203ad39831ffcd/docs/station-map.html" target="_blank">08c0318</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-05
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/8113086cfd2d26c86e02e9047804eb7bcb17bc62/analysis/station-map.Rmd" target="_blank">8113086</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-05
+</td>
+<td>
 I have a first draft of the station map notebook.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/67b8d2bbfd5a863bea571a9c8d36903b86c8a395/analysis/station-map.Rmd" target="_blank">67b8d2b</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-04
 </td>
-<td style="text-align:left;">
+<td>
 A variety of improvements to the data analysis notebooks.
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 Rmd
 </td>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/5c4fd93e404656627821f10327cd39ba6e331f58/analysis/station-map.Rmd" target="_blank">5c4fd93</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-06-29
 </td>
-<td style="text-align:left;">
+<td>
 wflow_publish(“first-look.Rmd”)
 </td>
 </tr>
 </tbody>
 </table>
-</ul>
-<p></details></p>
-<hr />
+</div>
+<hr>
+</div>
+</div>
+</div>
 <p>In this analysis, I will use the Divvy trip and station data to generate a map of Chicago.</p>
 <p>I begin by loading a few packages, as well as some additional functions I wrote for this project.</p>
 <pre class="r"><code>library(data.table)
@@ -856,51 +960,72 @@ ggplot(divvy$stations,aes(x    = longitude,
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())</code></pre>
 <p><img src="figure/station-map.Rmd/create-stations-map-1.png" width="624" style="display: block; margin: auto;" /></p>
-<details> <summary><em>Expand here to see past versions of create-stations-map-1.png:</em></summary>
-<table style="border-collapse:separate; border-spacing:5px;">
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-create-stations-map-1">
+Past versions of create-stations-map-1.png
+</button>
+</p>
+<div id="fig-create-stations-map-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
 <thead>
 <tr>
-<th style="text-align:left;">
+<th>
 Version
 </th>
-<th style="text-align:left;">
+<th>
 Author
 </th>
-<th style="text-align:left;">
+<th>
 Date
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left;">
-<a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/station-map.Rmd/create-stations-map-1.png" target="_blank">b32e833</a>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/df35db6809e3b1f7cfb695669969019a45eb256b/docs/figure/station-map.Rmd/create-stations-map-1.png" target="_blank">df35db6</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
+2018-08-24
+</td>
+</tr>
+<tr>
+<td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/b32e83313772ae727452641f7098359fcf80317d/docs/figure/station-map.Rmd/create-stations-map-1.png" target="_blank">b32e833</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
 2018-01-18
 </td>
 </tr>
 <tr>
-<td style="text-align:left;">
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/f62f674424517c705888bc5a32a9875866c9bf0d/docs/figure/station-map.Rmd/create-stations-map-1.png" target="_blank">f62f674</a>
 </td>
-<td style="text-align:left;">
+<td>
 Peter Carbonetto
 </td>
-<td style="text-align:left;">
+<td>
 2017-07-05
 </td>
 </tr>
 </tbody>
 </table>
-<p></details></p>
-<p>This is the version of R and the packages that were used to generate these results.</p>
 </div>
-<div id="session-information" class="section level2">
-<h2>Session information</h2>
+</div>
+This is the version of R and the packages that were used to generate these results. <br> <br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()
 # R version 3.4.3 (2017-11-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
@@ -917,23 +1042,23 @@ Peter Carbonetto
 # [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # other attached packages:
-# [1] ggplot2_3.0.0     data.table_1.11.4
+# [1] ggplot2_3.1.0     data.table_1.11.4
 # 
 # loaded via a namespace (and not attached):
-#  [1] Rcpp_0.12.17      compiler_3.4.3    pillar_1.2.1     
-#  [4] git2r_0.21.0      plyr_1.8.4        workflowr_1.1.1  
-#  [7] bindr_0.1.1       R.methodsS3_1.7.1 R.utils_2.6.0    
-# [10] tools_3.4.3       digest_0.6.15     evaluate_0.10.1  
-# [13] tibble_1.4.2      gtable_0.2.0      pkgconfig_2.0.1  
-# [16] rlang_0.2.1       yaml_2.1.19       bindrcpp_0.2.2   
-# [19] withr_2.1.2       stringr_1.3.0     dplyr_0.7.5      
-# [22] knitr_1.20        rprojroot_1.3-2   grid_3.4.3       
-# [25] tidyselect_0.2.4  glue_1.2.0        R6_2.2.2         
-# [28] rmarkdown_1.9     purrr_0.2.5       magrittr_1.5     
-# [31] whisker_0.3-2     backports_1.1.2   scales_0.5.0     
-# [34] htmltools_0.3.6   assertthat_0.2.0  colorspace_1.4-0 
-# [37] labeling_0.3      stringi_1.1.7     lazyeval_0.2.1   
-# [40] munsell_0.4.3     R.oo_1.21.0</code></pre>
+#  [1] Rcpp_1.0.0           knitr_1.20           whisker_0.3-2       
+#  [4] magrittr_1.5         workflowr_1.2.0.9000 tidyselect_0.2.5    
+#  [7] munsell_0.4.3        colorspace_1.4-0     R6_2.2.2            
+# [10] rlang_0.3.1          dplyr_0.8.0.1        stringr_1.3.1       
+# [13] plyr_1.8.4           tools_3.4.3          grid_3.4.3          
+# [16] gtable_0.2.0         withr_2.1.2          git2r_0.23.3        
+# [19] htmltools_0.3.6      assertthat_0.2.0     yaml_2.2.0          
+# [22] lazyeval_0.2.1       rprojroot_1.3-2      digest_0.6.17       
+# [25] tibble_2.1.1         crayon_1.3.4         purrr_0.2.5         
+# [28] fs_1.2.6             glue_1.3.0           evaluate_0.11       
+# [31] rmarkdown_1.10       labeling_0.3         stringi_1.2.4       
+# [34] pillar_1.3.1         compiler_3.4.3       scales_0.5.0        
+# [37] backports_1.1.2      pkgconfig_2.0.2</code></pre>
+</div>
 </div>
 
 <script type="text/x-mathjax-config">
@@ -941,6 +1066,7 @@ Peter Carbonetto
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
+
 <!-- Adjust MathJax settings so that all math formulae are shown using
 TeX fonts only; see
 http://docs.mathjax.org/en/latest/configuration.html.  This will make
@@ -952,14 +1078,6 @@ footer is added to webpages before the MathJax javascript. -->
     "HTML-CSS": { availableFonts: ["TeX"] }
   });
 </script>
-
-<hr>
-<p>
-  This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-  analysis was created with
-  <a href="https://github.com/jdblischak/workflowr">workflowr</a> 1.1.1
-</p>
-<hr>
 
 
 </div>
