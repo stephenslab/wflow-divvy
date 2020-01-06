@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -14,6 +14,7 @@
 <title>License</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -83,7 +84,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -232,6 +232,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -243,18 +244,6 @@ $(document).ready(function () {
   display: none;
 }
 </style>
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
 
 <!-- code folding -->
 
@@ -308,12 +297,15 @@ div.section {
 }
 </style>
 
+
 <!-- Add a small amount of space between sections. -->
 <style type="text/css">
 div.section {
   padding-top: 12px;
 }
 </style>
+
+
 
 <div class="fluid-row" id="header">
 
@@ -344,7 +336,7 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-07-31
+<strong>Last updated:</strong> 2020-01-06
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -354,7 +346,7 @@ div.section {
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.4.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.6.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
@@ -375,10 +367,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytree89ccc0da426431503add17fe5f11f779b2783b0btargetblank89ccc0da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/89ccc0da426431503add17fe5f11f779b2783b0b" target="_blank">89ccc0d</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytree657ecf6797a90a65cf7a426a2a2e89c644130178targetblank657ecf6a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/stephenslab/wflow-divvy/tree/657ecf6797a90a65cf7a426a2a2e89c644130178" target="_blank">657ecf6</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytree89ccc0da426431503add17fe5f11f779b2783b0btargetblank89ccc0da" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomstephenslabwflowdivvytree657ecf6797a90a65cf7a426a2a2e89c644130178targetblank657ecf6a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -398,7 +390,6 @@ Ignored files:
     Ignored:    data/Divvy_Trips_2016_Q4.csv
     Ignored:    data/README.txt
     Ignored:    data/data.tar.gz
-    Ignored:    docs/.DS_Store
 
 </code></pre>
 <p>
@@ -442,6 +433,40 @@ Message
 html
 </td>
 <td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/77a65c1ac6082784ce80245568fb78d7faf3bc3e/docs/license.html" target="_blank">77a65c1</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2019-07-31
+</td>
+<td>
+Re-built license, setup and home pages using workflowr 1.4.0.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/bf33f2c38c473adc2847beb4d51f5f0f73dbfc64/docs/license.html" target="_blank">bf33f2c</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2019-04-10
+</td>
+<td>
+Re-built license page using workflowr 1.2.0.9000.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
 <a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/55cd7b0e83f803ec980248180be57f04f48e8d2b/docs/license.html" target="_blank">55cd7b0</a>
 </td>
 <td>
@@ -476,6 +501,23 @@ wflow_publish(c(“index.Rmd”, “license.Rmd”))
 Rmd
 </td>
 <td>
+<a href="https://github.com/stephenslab/wflow-divvy/blob/1b4b3dfdc2d108fb0c53b61ddbc7ab9b5a9c6125/analysis/license.Rmd" target="_blank">1b4b3df</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-03-09
+</td>
+<td>
+wflow_publish("*.Rmd")
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/stephenslab/wflow-divvy/blob/891978b6a68b86fdb25b122bd4e7c76977886010/analysis/license.Rmd" target="_blank">891978b</a>
 </td>
 <td>
@@ -486,6 +528,23 @@ Peter Carbonetto
 </td>
 <td>
 wflow_publish(c(“index.Rmd”, “setup.Rmd”, “license.Rmd”))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/97cbef6550e9512d760f854a7a5c920d9a982bac/docs/license.html" target="_blank">97cbef6</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2018-01-23
+</td>
+<td>
+Adjusted footer and re-built all pages.
 </td>
 </tr>
 <tr>
@@ -544,6 +603,57 @@ Updated footer.
 html
 </td>
 <td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/797935854ba81e225db80d5d710d511a56320765/docs/license.html" target="_blank">7979358</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-08-02
+</td>
+<td>
+Re-built all webpages.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/6d2c5f4737daa2c340cfa1d5640dadb7a24c0585/docs/license.html" target="_blank">6d2c5f4</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-24
+</td>
+<td>
+Re-built website after fixing MathJax settings in footer.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/e3afc60d19938d87a574ccac846b274307245f20/docs/license.html" target="_blank">e3afc60</a>
+</td>
+<td>
+Peter Carbonetto
+</td>
+<td>
+2017-07-24
+</td>
+<td>
+Re-built all the R Markdown documents using workflowr 0.7.0, and with
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
 <a href="https://rawcdn.githack.com/stephenslab/wflow-divvy/727b8d932f6f0a15657840fde5c82932e2cb7963/docs/license.html" target="_blank">727b8d9</a>
 </td>
 <td>
@@ -553,7 +663,7 @@ Peter Carbonetto
 2017-07-13
 </td>
 <td>
-Re-built all the analysis files; wflow_publish(Sys.glob(“*.Rmd“)).
+Re-built all the analysis files; wflow_publish(Sys.glob("*.Rmd")).
 </td>
 </tr>
 <tr>
@@ -621,7 +731,7 @@ Peter Carbonetto
 2017-06-29
 </td>
 <td>
-wflow_publish(list.files(pattern = “*.Rmd“))
+wflow_publish(list.files(pattern = "*.Rmd"))
 </td>
 </tr>
 <tr>
@@ -655,7 +765,7 @@ Peter Carbonetto
 2017-06-29
 </td>
 <td>
-wflow_publish(list.files(pattern = “*.Rmd“))
+wflow_publish(list.files(pattern = "*.Rmd"))
 </td>
 </tr>
 <tr>
@@ -790,6 +900,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+
+
 </div>
 
 <script>
@@ -804,6 +916,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
