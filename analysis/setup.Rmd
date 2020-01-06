@@ -8,7 +8,7 @@ output: workflowr::wflow_html
 knitr::opts_chunk$set(comment = "#",collapse = TRUE)
 ```
 
-To reproduce the results on your own computer, please follow these
+To reproduce the results on your own computer, please follow these 
 setup instructions.
 
 ## Setup instructions
